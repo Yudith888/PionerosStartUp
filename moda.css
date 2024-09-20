@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+.container{
+    width: 300px;
+    height: 420px;
+    position: absolute;
+    background: #fff;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 15px;
+    perspective: 2000px;
+    transition: 1.5s;
+    box-shadow: inset 300px 0 50px rgba(189, 195, 199, .5),
+                      0 20px 100px rgba(189, 195, 199, .5);
+
+}
+.container:hover{
+    box-shadow: inset 5px 0 9px rgba(0, 0, 0, .5),
+                      0 10px 100px rgba(0, 0, 0, .5);
+}
+.card{
+    width: 300px;
+    height: 420px;
+    position: absolute;
+    background: #fff;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 15px;
+    transform: rotateY(0);
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: all 1s ease-in;
+
+}
+img{
+    position: relative;
+    top: 90px;
+    margin-left: 45px;
+    border-radius: 130px;
+    border: 8px solid #fff;
+}
+.front{
+    width: 300px;
+    height: 200px;
+    background-image: linear-gradient(-225deg, #7742B2 0%, #F180FF 52%, #FD8BD9 100%);
+    border-radius: 15px 15px 0 0 ;
+}
+.front h1,h3{
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Merienda', cursive;
+}
+.front h1{
+    position: relative;
+    top: 80px;
+    text-align: center;
+    color: #4A235A;
+    font-size: 28px;
+    
+}
+.front h3{
+    position: relative;
+    top: 75px;
+    text-align: center;
+    color: #D2B4DE;
+    font-size: 22px;
+}
+figure{
+    margin: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+figure.back{
+    background: #fff;
+    transform: rotateY(180deg);
+    border-radius: 15px;
+    box-shadow: inset -5px 0 9px 0 #BDC3C7; 
+}
+.container:hover .card{
+    transform: rotateY(-180deg);
+}
+/*Estilo de la parte trasera*/
+.details{
+    position: relative;
+    top: 120px;
+    font-size: 20px;
+    color: #E8DAEF;
+    margin-left: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Merienda', cursive;
+    z-index: -1; 
+
+}
+.details i{
+    position: relative;
+    color: #4A235A;
+    margin-right: 10px;
+    padding-top: 20px;
+}
+.social{
+    position: relative;
+    top: 200px;
+    margin-left: 35px;
+    z-index: -1;
+
+}
+.social i{
+    margin-right: 30px;
+    font-size: 20px;
+    color: #E8DAEF;
+}
+.social i:hover{
+    color: #8E44AD;
+    cursor: pointer;
+}
+/*El borde de la tarjeta trasera*/
+.container::before{
+    content: '';
+    width: 280px;
+    height: 400px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 2px solid #6C3483;
+    border-radius: 15px;
+    z-index: -1;
+}
