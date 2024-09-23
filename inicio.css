@@ -20,8 +20,11 @@
   
   .cards-container {
     display: flex;
-    justify-content: space-between; /* Alinea una tarjeta a la izquierda y otra a la derecha */
-    width:70%; /* Ajusta esto según el espacio disponible */
+    align-items: center;
+    justify-content: center; /* Alinea una tarjeta a la izquierda y otra a la derecha */
+    flex-wrap: wrap;
+    gap:70px;
+    
   }
   
   .card {
