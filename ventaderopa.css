@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    background-image: url(image/17788416_5894048.jpg);
+}
+
+.container__cards{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card{
+    width: 300px;
+    margin: 10px;
+    transition: all 300ms;
+}
+
+.card:hover{
+    width: 350px;
+}
+
+.card .cover{
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card .cover img{
+    width: 250px;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 40px;
+    z-index: 1;
+    filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));
+    transition: all 400ms;
+}
+
+.card:hover .cover img{
+    top: 0px;
+    filter: none;
+}
+
+.card .img__back{
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    background-size: cover;
+    border-radius: 20px;
+    transition: all 300ms;
+}
+
+.card:nth-of-type(1) .img__back{
+    background-image: url(../images/bg1.jpg);
+}
+
+.card:nth-of-type(2) .img__back{
+    background-image: url(../images/bg2.jpg);
+}
+
+.card:nth-of-type(3) .img__back{
+    background-image: url(../images/bg3.jpg);
+}
+
+.card:nth-of-type(4) .img__back{
+    background-image: url(../images/bg3.jpg);
+}
+
+.read {
+    background: linear-gradient(90deg, #3264ee, #22b4ce);
+    padding: 6px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+
+
+.card:hover .img__back{
+    bottom: -40px;
+}
+
+.card .description{
+    background: white;
+    margin-top: -10px;
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px;
+    transition: all 300ms;
+}
+
+.card:hover .description{
+    padding: 40px;
+}
+
+.card .description h2{
+    margin-top: 10px;
+}
+
+.card .description p{
+    margin-top: 10px;
+}
+
+.card .description input{
+    padding: 10px 40px;
+    margin-top: 20px;
+    border: none;
+    background: #A6359D;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 300ms;
+}
+
+.card .description input:hover{
+    background: #83277b;
+}
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 10px 0; /* Aumenta el padding superior e inferior */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navegación */
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Añade margen superior para bajar el menú */
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Logo dentro del header */
+.header-content {
+    margin-right: 20px;
+}
+
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navegación */
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+}
+
+/* Lista de navegación */
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Asegura que todos los elementos del menú, incluidos los logos, estén alineados verticalmente */
+}
+
+/* Logo y otros contenidos */
+.header-content,
+.logo {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los logos */
+}
+
+.logo img {
+    display: block; /* Asegura que las imágenes no tengan espacio en línea sobrante */
+    margin-right: 1px; /* Espacio entre logos y otros elementos si es necesario */
+}
+/* Estilo para quitar las líneas de los enlaces en el menú */
+.navigation ul li a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: inherit; /* Mantiene el color del texto o el que hayas asignado previamente */
+}
+
+.navigation ul li a:hover {
+    text-decoration: none; /* Asegura que al pasar el mouse no se muestre el subrayado */
+}

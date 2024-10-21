@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(image/17788416_5894048.jpg);
+  }
+
+.read-more {
+    background: linear-gradient(90deg, #3730a3, #7e22ce);
+    padding: 12px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+ }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00080e;
+  }
+  .wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    height: 60%;
+    max-height: 600px;
+    perspective: 500px;
+    transform-style: preserve-3d;
+    transition: opacity 150ms ease-in-out;
+  }
+  .cards {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+    text-shadow: 0 0 6px #00080e;
+    transition: all 150ms ease-out;
+  }
+  .cards img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+  }
+  .cards::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: opacity 100ms ease-in;
+    mix-blend-mode: multiply;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .cards.unfolded {
+    flex: 8 1;
+  }
+  .cards.unfolded.front {
+    transform: translateZ(20px);
+  }
+  .cards.unfolded.back {
+    transform: translateZ(-20px);
+  }
+  .cards.unfolded.back::after {
+    background: linear-gradient(to right, black 0%, white 25%, white 75%, black 100%);
+    opacity: 0.5;
+  }
+  .cards.folded {
+    flex: 1 8;
+  }
+  .cards.folded h1, .cards.folded hr, .cards.folded p, .cards.folded button {
+    display: none;
+  }
+  .cards.folded::after {
+    opacity: 0.6;
+  }
+  .cards.folded.right {
+    transform: rotateY(-30deg) scaleX(1.16);
+  }
+  .cards.folded.right::after {
+    background: linear-gradient(to left, white, black);
+  }
+  .cards.folded.left {
+    transform: rotateY(30deg) scaleX(1.16);
+  }
+  .cards.folded.left::after {
+    background: linear-gradient(to right, white, black);
+  }
+  .cards.folded.left {
+      transform: rotateY(30deg) scaleX(1.16);
+  }
+  .cards.folded.right {
+      transform: rotateY(-30deg) scaleX(1.16);
+  }
+  
+  @media screen and (max-width: 500px) {
+      html, body {
+          font-size: 0.8rem;
+      }
+  }
+  @media screen and (max-height: 500px) {
+      html, body {
+          font-size: 0.8rem;
+      }
+  }
+
+  /* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgb(255, 255, 255);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Navegación */
+  .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+  }
+  
+  /* Lista de navegación */
+  .navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Asegura que todos los elementos del menú, incluidos los logos, estén alineados verticalmente */
+  }
+  
+  /* Logo y otros contenidos */
+  .header-content,
+  .logo {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los logos */
+  }
+  
+  .logo img {
+    display: block; /* Asegura que las imágenes no tengan espacio en línea sobrante */
+    margin-right: 1px; /* Espacio entre logos y otros elementos si es necesario */
+  }
+  
+  /* Estilo para quitar las líneas de los enlaces en el menú y hacer el texto blanco */
+  .navigation ul li a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: white; /* Cambia el color de los enlaces a blanco */
+    font-size: 16px; /* Tamaño de letra (opcional, ajustable) */
+  }
+  
+  .navigation ul li a:hover {
+    text-decoration: none; /* Asegura que al pasar el mouse no se muestre el subrayado */
+    color: #5fccff; /* Efecto hover con un color llamativo al pasar el mouse */
+  }

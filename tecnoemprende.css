@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(image/17788416_5894048.jpg);
+    }
+    .contenedor{
+    position: relative;
+    width: 420px;
+    height: 300px;
+    cursor: pointer;
+    box-shadow: 1px 10px 25px rgba(0,0,0,0.55);
+    }
+    .contenedor div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    }
+    .caja1{
+    background: url(image/energía\ renovable\ \(1\).png);
+    background-size: 100% 100%;
+    }
+    .caja2{
+    background: url(image/energía\ renovable.png);
+    background-size: 100% 100%;
+    transition: 0.6s;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);
+    }
+    .caja2:hover{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    .caja1:hover ~ .caja2{
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .caj3{
+      background: url(image/aprendizaje\ con\ gafas\ virtuales.png);
+      background-size: 100% 100%;
+      }
+      .caj4{
+      background: url(image/aprendizaje\ con\ gafas\ virtuales\ \(1\).png);
+      background-size: 100% 100%;
+      transition: 0.6s;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);
+      }
+      .caj4:hover{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      }
+      .caj3:hover ~ .caj4{
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      }
+
+      .caja5{
+        background: url(image/intelligent\ waste\ bins.png);
+        background-size: 100% 100%;
+        }
+        .caja6{
+        background: url(image/intelligent\ waste\ bins\ \(1\).png);
+        background-size: 100% 100%;
+        transition: 0.6s;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);
+        }
+        .caja6:hover{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+        .caja5:hover ~ .caja6{
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        }
+    
+
+
+    @media only screen and (min-width:320px) and (max-width:768px){
+    .contenedor{
+    width: 95%;
+    height: 250px;
+    }
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    .read {
+      background: linear-gradient(90deg, #3264ee, #22b4ce);
+      padding: 10px;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      display: flexbox;
+      margin-top: 500px;
+    }
+    
+    
+    
+    .btn {
+        background-color: #2ecc71; /* Color de fondo del botón */
+        color: white; /* Color del texto del botón */
+        border: none; /* Sin borde */
+        padding: 10px 20px; /* Espaciado interno */
+        border-radius: 5px; /* Bordes redondeados */
+        cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+        transition: background-color 0.3s; /* Transición suave para el fondo */
+    }
+    
+    .btn:hover {
+        background-color: #27ae60; /* Color de fondo al pasar el mouse */
+    }
+    /* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgb(255, 255, 255);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Navegación */
+  .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+  }
+  
+  /* Lista de navegación */
+  .navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Asegura que todos los elementos del menú, incluidos los logos, estén alineados verticalmente */
+  }
+  
+  /* Logo y otros contenidos */
+  .header-content,
+  .logo {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los logos */
+  }
+  
+  .logo img {
+    display: block; /* Asegura que las imágenes no tengan espacio en línea sobrante */
+    margin-right: 1px; /* Espacio entre logos y otros elementos si es necesario */
+  }
+  
+  /* Estilo para quitar las líneas de los enlaces en el menú y hacer el texto blanco */
+  .navigation ul li a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: white; /* Cambia el color de los enlaces a blanco */
+    font-size: 16px; /* Tamaño de letra (opcional, ajustable) */
+  }
+  
+  .navigation ul li a:hover {
+    text-decoration: none; /* Asegura que al pasar el mouse no se muestre el subrayado */
+    color: #5fccff; /* Efecto hover con un color llamativo al pasar el mouse */
+  }
+
+  p{
+    color: white;
+  }
+
+  h2{
+    color: white;
+  }
+
+  
+  /* Estilos para las ventanas modales */
+  .modal {
+      display: none; /* Oculto por defecto */
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+  }
+
+  .modal-content {
+      background-color: rgb(12, 11, 11);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      width: 60%;
+      margin: auto;
+  }
+
+  .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+  }
+
+  .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+
+  
+h2 {
+  text-align: center;
+  color: #333;
+}
+label {
+  display: block;
+  margin: 10px 0 5px;
+  color: #666;
+}
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: #007bff;
+}
+
+

@@ -1,0 +1,334 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(image/17788416_5894048.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+.read {
+    background: linear-gradient(90deg, #3264ee, #22b4ce);
+    padding: 6px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+
+  .modal {
+    display: none; /* Ocultamos el modal por defecto */
+    position: fixed; /* Posición fija */
+    z-index: 1; /* Se asegura que el modal esté en la parte superior */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    overflow: auto; /* Habilitar desplazamiento si es necesario */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con transparencia */
+}
+
+.modal-content {
+    background-color: #fefefe; /* Color de fondo del contenido del modal */
+    margin: 30% auto; /* Margen superior e inferior */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #888; /* Borde gris */
+    width: 10%; /* Ancho del modal */
+    max-width: 500px; /* Ancho máximo */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+   
+}
+
+.close {
+    color: #aaa; /* Color del botón de cierre */
+    float: right; /* Colocar a la derecha */
+    font-size: 28px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Color al pasar el mouse o enfocarse */
+    text-decoration: none; /* Sin subrayado */
+    cursor: pointer; /* Cambia el cursor */
+}
+
+h2 {
+    margin-bottom: 20px; /* Espaciado inferior */
+    font-family: 'Arial', sans-serif; /* Fuente del encabezado */
+}
+
+form {
+    display: flex; /* Usamos flexbox para el formulario */
+    flex-direction: column; /* Columnas para el formulario */
+
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 15px; /* Espaciado inferior */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #66afe9; /* Color del borde al enfocar */
+    outline: none; /* Sin contorno al enfocar */
+}
+
+button[type="submit"] {
+    background-color: #28a745; /* Color de fondo verde */
+    color: white; /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor */
+    transition: background-color 0.3s; /* Transición suave para el color */
+}
+
+button[type="submit"]:hover {
+    background-color: #218838; /* Color más oscuro al pasar el mouse */
+}
+
+        /* Estilos para las ventanas modales */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.4); 
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 100%;
+            max-width: 500px;
+            margin-top: 80px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal input, .modal button {
+            width: 100%;
+            padding: 5px;
+            margin: 8px 0;
+        }
+    
+
+.card {
+    width: 200px;
+    height: 300px;
+    perspective: 1000px; /* Para la perspectiva del efecto 3D */
+}
+
+/* Alternar el margen de las tarjetas */
+.card:nth-child(odd) {
+    margin-top: 100px; /* Añadir margen superior a tarjetas impares */
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg); /* Efecto de rotación en hover */
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Ocultar la parte trasera cuando no está visible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.card-front {
+    background-color: #ffffff; /* Color de fondo frontal */
+}
+
+.card-back {
+    background-color: #007BFF; /* Color de fondo trasero */
+    color: white;
+    transform: rotateY(180deg); /* Voltea la parte trasera */
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Navegación */
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation ul li {
+    display: inline-block;
+}
+
+.navigation ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1px 2px;
+    transition: background-color 0.3s ease;
+}
+
+.navigation ul li a:hover {
+    background-color: #10c7d4;
+    border-radius: 5px;
+}
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 10px 0; /* Aumenta el padding superior e inferior */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navegación */
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Añade margen superior para bajar el menú */
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Logo dentro del header */
+.header-content {
+    margin-right: 20px;
+}
+
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navegación */
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+}
+
+/* Lista de navegación */
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Asegura que todos los elementos del menú, incluidos los logos, estén alineados verticalmente */
+}
+
+/* Logo y otros contenidos */
+.header-content,
+.logo {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los logos */
+}
+
+.logo img {
+    display: block; /* Asegura que las imágenes no tengan espacio en línea sobrante */
+    margin-right: 1px; /* Espacio entre logos y otros elementos si es necesario */
+}
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Ocultar la parte trasera cuando no está visible */
+    display: flex;
+    flex-direction: column; /* Para apilar el texto y la imagen verticalmente */
+    justify-content: center; /* Centrar el contenido verticalmente */
+    align-items: center; /* Centrar el contenido horizontalmente */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.card-front img, .card-back img {
+    margin-top: 10px; /* Espacio entre el texto y la imagen */
+}

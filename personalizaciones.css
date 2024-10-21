@@ -1,0 +1,161 @@
+:root {
+    --card-height: 350px;
+    --card-width: calc(var(--card-height) / 1.5);
+  }
+*{
+    box-sizing: border-box;
+}
+
+.read {
+    background: linear-gradient(90deg, #3264ee, #22b4ce);
+    padding: 6px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(image/17788416_5894048.jpg);
+  }
+  .card {
+    width: var(--card-width);
+    height: var(--card-height);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 36px;
+    perspective: 2500px;
+    margin: 0 50px;
+  }
+.cover-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.wrapper{
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+.card:hover .wrapper{
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow:2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow:2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+.wrapper::before,
+.wrapper::after{
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+}
+.wrapper::before{
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(
+        to top,
+        transparent 46%,
+        rgba(12, 13, 19, 0.5)68%,
+        rgba(12, 13, 19) 97%
+    );
+}
+.wrapper::after{
+    bottom: 0;
+    opacity: 1;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 46%,
+        rgba(12, 13, 19, 0.5) 68%,
+        rgba(12, 13, 19)97%
+    );
+}
+.card:hover .wrapper::before,
+.wrapper::after{
+    opacity: 1;
+}
+.card:hover .wrapper::after{
+    height: 120px;
+}
+.title {
+    width: 100%;
+    transition: transform 0.5s;
+  }
+  .card:hover .title {
+    transform: translate3d(0%, -50px, 100px);
+  }
+  .character {
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: -1;
+  }
+  .card:hover .character {
+    opacity: 1;
+    transform: translate3d(0%, -30%, 100px);
+  }
+  
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Navegación */
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+}
+
+/* Lista de navegación */
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Asegura que todos los elementos del menú, incluidos los logos, estén alineados verticalmente */
+}
+
+/* Logo y otros contenidos */
+.header-content,
+.logo {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los logos */
+}
+
+.logo img {
+    display: block; /* Asegura que las imágenes no tengan espacio en línea sobrante */
+    margin-right: 1px; /* Espacio entre logos y otros elementos si es necesario */
+}
+/* Estilo para quitar las líneas de los enlaces en el menú */
+.navigation ul li a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: inherit; /* Mantiene el color del texto o el que hayas asignado previamente */
+}
+
+.navigation ul li a:hover {
+    text-decoration: none; /* Asegura que al pasar el mouse no se muestre el subrayado */
+}

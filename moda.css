@@ -1,147 +1,235 @@
-*{
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+    font-family: 'Poppins', sans-serif; 
+}
+
+/* Fondo del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(image/17788416_5894048.jpg);
+    background-repeat: no-repeat;
+   
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Navegación */
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
     margin: 0;
     padding: 0;
 }
-html,body{
-    width: 100%;
-    height: 100%;
-}
-body{
-    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
-}
-.container{
-    width: 300px;
-    height: 420px;
-    position: absolute;
-    background: #fff;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border-radius: 15px;
-    perspective: 2000px;
-    transition: 1.5s;
-    box-shadow: inset 300px 0 50px rgba(189, 195, 199, .5),
-                      0 20px 100px rgba(189, 195, 199, .5);
 
+.navigation ul li {
+    display: inline-block;
 }
-.container:hover{
-    box-shadow: inset 5px 0 9px rgba(0, 0, 0, .5),
-                      0 10px 100px rgba(0, 0, 0, .5);
-}
-.card{
-    width: 300px;
-    height: 420px;
-    position: absolute;
-    background: #fff;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border-radius: 15px;
-    transform: rotateY(0);
-    transform-style: preserve-3d;
-    transform-origin: left;
-    transition: all 1s ease-in;
 
+.navigation ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1px 2px;
+    transition: background-color 0.3s ease;
 }
-img{
-    position: relative;
-    top: 90px;
-    margin-left: 45px;
-    border-radius: 130px;
-    border: 8px solid #fff;
+
+.navigation ul li a:hover {
+    background-color: #10c7d4;
+    border-radius: 5px;
 }
-.front{
-    width: 300px;
-    height: 200px;
-    background-image: linear-gradient(-225deg, #7742B2 0%, #F180FF 52%, #FD8BD9 100%);
-    border-radius: 15px 15px 0 0 ;
+
+/* Container */
+.container {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
 }
-.front h1,h3{
-    font-family: 'Nunito', sans-serif;
-    font-family: 'Merienda', cursive;
+
+/* Estilos de las tarjetas */
+.card {
+    background-color: transparent;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 45%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
-.front h1{
-    position: relative;
-    top: 80px;
-    text-align: center;
-    color: #4A235A;
-    font-size: 28px;
-    
+
+.card:hover {
+    transform: scale(1.05); /* Efecto de agrandamiento */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.055); /* Sombra más fuerte */
+    background-color: #000000; /* Color de fondo cuando se hace hover */
 }
-.front h3{
-    position: relative;
-    top: 75px;
-    text-align: center;
-    color: #D2B4DE;
-    font-size: 22px;
+
+/* Estilo alterno para tarjetas */
+.left {
+    align-self: flex-start;
 }
-figure{
-    margin: 0;
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
+
+.right {
+    align-self: flex-end;
 }
-figure.back{
-    background: #fff;
-    transform: rotateY(180deg);
-    border-radius: 15px;
-    box-shadow: inset -5px 0 9px 0 #BDC3C7; 
+
+/* Contenido de las tarjetas */
+h3 {
+    margin-bottom: 15px;
+    color: #ffffff;
 }
-.container:hover .card{
-    transform: rotateY(-180deg);
+
+p {
+    font-size: 14px;
+    color: #ffffff;
 }
-/*Estilo de la parte trasera*/
-.details{
-    position: relative;
-    top: 120px;
-    font-size: 20px;
-    color: #E8DAEF;
+
+/* Imagen y logo dentro de las tarjetas */
+.card img {
+    border-radius: 50%; /* Hace que la imagen sea circular */
     margin-left: 20px;
-    font-family: 'Nunito', sans-serif;
-    font-family: 'Merienda', cursive;
-    z-index: -1; 
+}
 
+.card .logo {
+    margin-top: 10px;
 }
-.details i{
-    position: relative;
-    color: #4A235A;
-    margin-right: 10px;
-    padding-top: 20px;
-}
-.social{
-    position: relative;
-    top: 200px;
-    margin-left: 35px;
-    z-index: -1;
 
+/* Alineación horizontal de las tarjetas con contenido e imagen */
+.card.right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.social i{
-    margin-right: 30px;
-    font-size: 20px;
-    color: #E8DAEF;
+
+.card.left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
 }
-.social i:hover{
-    color: #8E44AD;
-    cursor: pointer;
-}
-/*El borde de la tarjeta trasera*/
-.container::before{
-    content: '';
-    width: 280px;
-    height: 400px;
-    position: absolute;
-    margin: auto;
+/* Header */
+.header {
+    position: fixed;
     top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border: 2px solid #6C3483;
-    border-radius: 15px;
-    z-index: -1;
+    width: 100%;
+    background-color: transparent;
+    padding: 10px 0; /* Aumenta el padding superior e inferior */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navegación */
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Añade margen superior para bajar el menú */
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Logo dentro del header */
+.header-content {
+    margin-right: 20px;
+}
+
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navegación */
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+}
+
+/* Lista de navegación */
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Asegura que todos los elementos del menú, incluidos los logos, estén alineados verticalmente */
+}
+
+/* Logo y otros contenidos */
+.header-content,
+.logo {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los logos */
+}
+
+.logo img {
+    display: block; /* Asegura que las imágenes no tengan espacio en línea sobrante */
+    margin-right: 1px; /* Espacio entre logos y otros elementos si es necesario */
+}
+
+.read {
+    background: linear-gradient(90deg, #3264ee, #22b4ce);
+    padding: 6px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+/* Estilos de las tarjetas */
+.card {
+    background-color: transparent; /* Fondo blanco con un poco de transparencia */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 45%;
+    display: flex; /* Hacer que el contenido sea flexible */
+    align-items: center; /* Alinear elementos verticalmente */
+    gap: 10px; /* Espaciado entre imagen y texto */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    border-radius: 10px; /* Redondear esquinas de la imagen */
 }

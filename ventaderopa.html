@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de ropa de segunda mano</title>
+    <link rel="stylesheet" href="ventaderopa.css">
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navigation">
+            <ul>
+                <div class="header-content">
+                    <div class="logo"><img src="image/start-up.png" alt="" width="50px" height="50px"></div>
+                </div>
+                <li><a href="inciio.html">Inicio</a></li>
+                <li><a href="moda.html">Moda</a></li>
+                <li><a href="nuevosdiseños.html">Nuevos diseños</a></li>
+                <li><a href="tuestilo.html">Tu estilo</a></li>
+                <li><a href="ventaderopa.html">Venta de ropa</a></li>
+                <li><a href="ecommerce.html">E-commerce</a></li>
+                <li><a href="personalizaciones.html">Personalizaciones</a></li>
+                <li><a href="emprendedores.html">Emprendedores</a></li>
+                <li><a href="contactanos.html">Contáctanos</a></li>
+                <div class="logo"><a href="compras.html"><img src="image/carro-de-la-compra.png" alt="" width="50px" height="50px"></a></div>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container__cards">
+
+        <div class="card">
+            <div class="cover">
+                <img src="image/realistic image of mens sweatpants.png" alt="">
+                <div class="img__back"></div>
+            </div>
+            <div class="description">
+                <h2>Jogger para hombre</h2>
+                <p>¡Renueva tu estilo y ahorra! Encuentra los joggers de hombre de segunda mano perfectos para lucir genial sin gastar de más.</p>
+                <input type="button" value="Agregar" onclick="openModal('modalJogger')"> <p>$15.000</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="cover">
+                <img src="image/woman-wearing-white-long-sleeve-shirt-with-green-skirt.jpg" alt="">
+                <div class="img__back"></div>
+            </div>
+            <div class="description">
+                <h2>Blusa elegante para mujer</h2>
+                <p>¡Descubre la elegancia que te mereces! Nuestras blusas de mujer son perfectas para brillar en cualquier ocasión.</p>
+                <input type="button" value="Agregar" onclick="openModal('modalBlusa')"> <p>$20.000</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="cover">
+                <img src="image/man-wearing-white-shirt-with-green-pants.jpg" alt="">
+                <div class="img__back"></div>
+            </div>
+            <div class="description">
+                <h2>Camisa manga corta para hombre</h2>
+                <p>Con nuestras camisas de manga corta, cada día es una oportunidad para expresarte. ¡Haz que cada look cuente!</p>
+                <input type="button" value="Agregar" onclick="openModal('modalCamisa')"><p>$30.000</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="cover">
+                <img src="image/medium-shot-woman-knitting-inside.jpg" alt="">
+                <div class="img__back"></div>
+            </div>
+            <div class="description">
+                <h2>Saco en hilo para mujer</h2>
+                <p>Realza tu estilo con nuestros sacos de hilo, perfectos para darle un toque chic a tu look diario.</p>
+                <input type="button" value="Agregar" onclick="openModal('modalSaco')"><p>$25.000</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modales -->
+    <div id="modalJogger" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalJogger')">&times;</span>
+            <h4>Color </h4>
+            <input type="checkbox"/> 
+            <label for="">Negro</label> <br>
+            <input type="checkbox"> 
+            <label for="">Blanco</label> <br>
+            <input type="checkbox"> 
+            <label for="">Rojo</label> <br>
+            <br>
+            <br>
+            <h4>Talla</h4>
+            <input type="checkbox"/> 
+            <label for="">M</label> <br>
+            <input type="checkbox"> 
+            <label for="">S</label> <br>
+            <input type="checkbox"> 
+            <label for="">L</label> <br>
+            <input type="checkbox"/> 
+            <label for="">XL</label> <br>
+            <input type="checkbox"> 
+            <label for="">XXL</label> <br>
+            <input type="checkbox"> 
+            <label for="">XXXL</label> <br>
+            <center><button class="read">Añadir</button></center>
+         </div>
+    </div>
+
+    <div id="modalBlusa" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalBlusa')">&times;</span>
+            <h4>Color </h4>
+            <input type="checkbox"/> 
+            <label for="">Negro</label> <br>
+            <input type="checkbox"> 
+            <label for="">Blanco</label> <br>
+            <input type="checkbox"> 
+            <label for="">Rojo</label> <br>
+            <br>
+            <br>
+            <h4>Talla</h4>
+            <input type="checkbox"/> 
+            <label for="">M</label> <br>
+            <input type="checkbox"> 
+            <label for="">S</label> <br>
+            <input type="checkbox"> 
+            <label for="">L</label> <br>
+            <input type="checkbox"/> 
+            <label for="">XL</label> <br>
+            <input type="checkbox"> 
+            <label for="">XXL</label> <br>
+            <input type="checkbox"> 
+            <label for="">XXXL</label> <br>
+            <center><button class="read">Añadir</button></center>    </div>
+    </div>
+
+    <div id="modalCamisa" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalCamisa')">&times;</span>
+            <h4>Color </h4>
+            <input type="checkbox"/> 
+            <label for="">Negro</label> <br>
+            <input type="checkbox"> 
+            <label for="">Blanco</label> <br>
+            <input type="checkbox"> 
+            <label for="">Rojo</label> <br>
+            <br>
+            <br>
+            <h4>Talla</h4>
+            <input type="checkbox"/> 
+            <label for="">M</label> <br>
+            <input type="checkbox"> 
+            <label for="">S</label> <br>
+            <input type="checkbox"> 
+            <label for="">L</label> <br>
+            <input type="checkbox"/> 
+            <label for="">XL</label> <br>
+            <input type="checkbox"> 
+            <label for="">XXL</label> <br>
+            <input type="checkbox"> 
+            <label for="">XXXL</label> <br>
+            <center><button class="read">Añadir</button></center> </div>
+    </div>
+
+    <div id="modalSaco" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalSaco')">&times;</span>
+            <h4>Color </h4>
+            <input type="checkbox"/> 
+            <label for="">Negro</label> <br>
+            <input type="checkbox"> 
+            <label for="">Blanco</label> <br>
+            <input type="checkbox"> 
+            <label for="">Rojo</label> <br>
+            <br>
+            <br>
+            <h4>Talla</h4>
+            <input type="checkbox"/> 
+            <label for="">M</label> <br>
+            <input type="checkbox"> 
+            <label for="">S</label> <br>
+            <input type="checkbox"> 
+            <label for="">L</label> <br>
+            <input type="checkbox"/> 
+            <label for="">XL</label> <br>
+            <input type="checkbox"> 
+            <label for="">XXL</label> <br>
+            <input type="checkbox"> 
+            <label for="">XXXL</label> <br>
+            <center><button class="read">Añadir</button></center>  </div>
+    </div>
+
+    <script>
+        // Funciones para abrir y cerrar modales
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Cerrar modal si se hace clic fuera del contenido
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(function(modal) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

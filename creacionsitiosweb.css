@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-image: url(image/17788416_5894048.jpg);
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+}
+.box{
+    width: 300px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    margin: 20px;
+    border:3px solid #fff;
+}
+.box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.capa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+    transform: scale(0);
+    transition: .3s ease;
+}
+.box:hover .capa{
+    transform: scale(1);
+}
+@media only screen and (max-width:900px){
+    .container{
+        width: 90%;
+        margin: auto;
+        flex-wrap: wrap;
+    }
+}
+.capa {
+    position: absolute; /* Asegura que la capa esté sobre la imagen */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    display: flex;
+    flex-direction: column; /* Alineación vertical */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    color: white;
+}
+
+.btn {
+    background-color: #693EFF; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición suave para el fondo */
+}
+
+.btn:hover {
+    background-color: #5a31cc; /* Color de fondo al pasar el mouse */
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgb(255, 255, 255);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Navegación */
+  .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+  }
+  
+  /* Lista de navegación */
+  .navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Asegura que todos los elementos del menú, incluidos los logos, estén alineados verticalmente */
+  }
+  
+  /* Logo y otros contenidos */
+  .header-content,
+  .logo {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los logos */
+  }
+  
+  .logo img {
+    display: block; /* Asegura que las imágenes no tengan espacio en línea sobrante */
+    margin-right: 1px; /* Espacio entre logos y otros elementos si es necesario */
+  }
+  
+  /* Estilo para quitar las líneas de los enlaces en el menú y hacer el texto blanco */
+  .navigation ul li a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: white; /* Cambia el color de los enlaces a blanco */
+    font-size: 16px; /* Tamaño de letra (opcional, ajustable) */
+  }
+  
+  .navigation ul li a:hover {
+    text-decoration: none; /* Asegura que al pasar el mouse no se muestre el subrayado */
+    color: #5fccff; /* Efecto hover con un color llamativo al pasar el mouse */
+  }
+
+
+p{
+    letter-spacing: 1px;
+    margin: 70px;
+    color: white;
+}

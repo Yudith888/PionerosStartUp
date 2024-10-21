@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tecno Emprende</title>
+    <link rel="stylesheet" href="tecnoemprende.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navigation">
+            <ul>
+                <div class="header-content">
+                    <div class="logo"><img src="image/start-up.png" alt="" width="50px" height="50px"></div>
+                </div>
+                <li><a href="inciio.html">Inicio</a></li>
+                <li><a href="tecnologia.html">Tecnologia</a></li>
+                <li><a href="creaciones.html">Creaciones</a></li>
+                <li><a href="creacionsitiosweb.html">Creacion de Sitios Web</a></li>
+                <li><a href="serviciotecnico.html">Servicio Tecnico</a></li>
+                <li><a href="gadgets.html">Gadgets</a></li>
+                <li><a href="tecnoemprende.html">Emprendedores</a></li>
+                <li><a href="tecnocontactos.html">Contáctanos</a></li>
+                <div class="logo"><a href="tecnocompras.html"><img src="image/carro-de-la-compra.png" alt=""
+                            width="50px" height="50px"></a></div>
+            </ul>
+        </nav>
+    </header>
+    
+    
+
+    <div class="contenedor">
+        <div class="caja1">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <center>
+                <button class="btn" onclick="openModal('modal1')">Conoce más</button>
+            </center>
+        </div>
+        <div class="caja2">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <center>
+                <h2>EcoCharge</h2>
+                <p>Una startup especializada en el desarrollo de soluciones de energía renovable portátiles.</p>
+            </center>
+        </div>
+    </div>
+    
+
+    <div class="contenedor">
+        <div class="caj3">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <center><button class="btn" onclick="openModal('modal2')">Conoce más</button></center>
+        </div>
+        <div class="caj4">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <center>
+                <h2>EduConnect VR</h2>
+                <p>Combina VR con análisis de datos para personalizar la experiencia de aprendizaje de cada usuario.</p>
+            </center>
+        </div>
+    </div>
+    
+
+    <div class="contenedor">
+        <div class="caja5">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <center><button class="btn" onclick="openModal('modal3')">Conoce más</button></center>
+        </div>
+        <div class="caja6">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <center>
+                <h2>ZeroWaste Tech</h2>
+                <p>Basureros inteligentes conectados a una app que recomienda formas de reducir, reciclar o reutilizar
+                    productos.</p>
+            </center>
+        </div>
+    </div>
+
+    
+    <!-- Modal 1 -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+
+            <img src="image/energía renovable (2).png" alt="" width="200px" height="200px">
+            <h2>EcoCharge</h2>
+            <p>Integración de paneles solares ultradelgados en mochilas, maletines y otros accesorios de uso diario.</p>
+
+
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <img src="image/plataforma de aprendizaje con gafas virtuales.png" alt="" width="200px" height="200px">
+            <h2>EduConnect VR</h2>
+            <p>Plataforma educativa que ofrece lecciones y experiencias inmersivas a través de realidad virtual (VR).
+            </p>
+
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <img src="image/intelligent waste management system.png" alt="" width="200px" height="200px">
+            <h2>ZeroWaste Tech</h2>
+            <p>Empresa que desarrolla soluciones tecnológicas para reducir el desperdicio en el hogar mediante un
+                sistema automatizado de gestión de residuos.</p>
+            <h3>Formulario de Inscripción</h3>
+
+        </div>
+    </div>
+    
+
+    <script>
+        // Función para abrir una ventana modal
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        // Función para cerrar una ventana modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Cerrar modal al hacer clic fuera del contenido
+        window.onclick = function (event) {
+            var modals = document.getElementsByClassName('modal');
+            for (var i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+            
+    
+  
+</body>
+
+</html>

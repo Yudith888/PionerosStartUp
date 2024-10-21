@@ -1,0 +1,365 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(image/17788416_5894048.jpg);
+    margin: 0; /* Elimina el margen por defecto */
+}
+
+.birthdayCardContainer {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en múltiples líneas */
+    justify-content: space-between; /* Espacio entre tarjetas */
+    padding: 20px;
+    max-width: 800px; /* Limita el ancho del contenedor */
+}
+
+/* Estilos para la ventana modal */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 600px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.read {
+    background: linear-gradient(90deg, #3264ee, #22b4ce);
+    padding: 6px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+
+.birthdayCard {
+    color: white;
+    position: relative;
+    width: 250px;
+    height: 350px;
+    margin: 10px; /* Espacio entre tarjetas */
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: 4s;
+}
+
+/* Efectos de hover para las tarjetas */
+.birthdayCard:hover {
+    transform: perspective(2500px) rotate(5deg);
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,.15), 0 10px 100px rgba(0,0,0,0.3);
+}
+
+/* Cambios en la parte frontal de la tarjeta */
+.birthdayCard:hover .cardFront {
+    transform: rotateY(-160deg); 
+}
+
+.birthdayCard:hover .front-text,
+.birthdayCard:hover .wrap-deco,
+.birthdayCard:hover .wrap-decoTwo,
+.birthdayCard:hover .plate {
+    display: none; /* Ocultar elementos al hacer hover */
+}
+
+/* Estilos para la parte frontal de la tarjeta */
+.cardFront, .cardInside {
+    position: relative;
+    background-image: url(image/12809572_5059287.jpg
+    );
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    transform-origin: left;
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,.13), 30px 0 50px rgba(0,0,0,0.1);
+    transition: .4s;
+}
+
+/* Texto de la tarjeta */
+.happy, .toyou {
+    position: relative;
+    font-family: didot;
+    text-align: center;
+    backface-visibility: hidden;
+    font-size: 30px; 
+    
+}
+
+
+
+.happy { top: 198px; }
+.toyou { top: 123px; }
+
+.bday {
+    position: relative;
+    font-family: arial;
+    font-size: 35px;
+    text-align: center;
+    top: 163px;
+}
+
+/* Decoraciones */
+.wrap-deco {
+    position: absolute;
+    top: -230px;
+    left: -200px;
+}
+
+.decorations {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    border: 3px solid #333;
+    border-radius: 50%;
+}
+
+/* Más decoraciones y efectos */
+.decorations:before, .decorations:after, .decorationsTwo:before, .decorationsTwo:after, .decorationsThree:before, .decorationsThree:after {
+    content: "";
+    position: absolute;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    width: 0;
+    height: 0;
+}
+
+/* Estilos adicionales para las decoraciones */
+.decorations:before { border-top: 40px solid #f15bb5; top: 297px; left: 210px; transform: rotate(-5deg); }
+.decorations:after { border-top: 40px solid #f4d35e; top: 288px; left: 260px; transform: rotate(-17deg); }
+.decorationsTwo:before { border-top: 40px solid #00f5d4; top: 268px; left: 315px; transform: rotate(-30deg); }
+.decorationsTwo:after, .decorationsThree:after { border-top: 40px solid #9b5de5; top: 238px; left: 355px; }
+
+.wrap-decoTwo {
+    transform: scaleX(-1);
+    position: absolute;
+    top: -230px;
+    left: 445px; 
+}
+
+.decorationsThree:before { border-top: 40px solid #00bbf9; top: 268px; left: 315px; transform: rotate(-30deg); }
+
+/* Placa y pastel */
+.plate {
+    position: absolute;
+    width: 130px;
+    height: 5px;
+    background-color: #00bbf9;
+    left: 60px;
+    top: 213px;
+}
+
+.cake {
+    position: absolute;
+    overflow: hidden;
+    width: 100px;
+    height: 50px;
+    background-color: #f15bb5;
+    border-radius: 10px 10px 0 0;
+    top: -50px;
+    left: 15px;
+    box-shadow: inset 0 -15px #f9c74f, inset 0 15px #432818;
+}
+
+/* Estilos para la llama del pastel */
+.flame {
+    position: absolute;
+    background-color: #fb5607;
+    border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+    transform: rotate(-45deg);
+    width: 15px;
+    height: 15px;
+    opacity: 0.7;
+    top: -93px;
+    left: 57px;
+}
+
+/* Estilos para la parte interior de la tarjeta */
+.cardInside {
+    position: absolute;
+    background-color: #fff;
+    width: 250px;
+    height: 350px;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2);
+}
+
+/* Texto interior y deseos */
+.inside-text {
+    position: relative;
+    top: -160px;
+    transform: scale(0.7);
+}
+
+.wishes {
+    position: relative;
+    top: -100px;
+    margin: 25px;
+}
+
+p {
+    font-family: 'Brush Script MT', cursive;
+    color: #333;
+}
+
+.name {
+    margin-left: 150px;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Navegación */
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation ul li {
+    display: inline-block;
+}
+
+.navigation ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1px 2px;
+    transition: background-color 0.3s ease;
+}
+
+.navigation ul li a:hover {
+    background-color: #10c7d4;
+    border-radius: 5px;
+}
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 10px 0; /* Aumenta el padding superior e inferior */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navegación */
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Añade margen superior para bajar el menú */
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Logo dentro del header */
+.header-content {
+    margin-right: 20px;
+}
+
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navegación */
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+}
+
+/* Lista de navegación */
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Asegura que todos los elementos del menú, incluidos los logos, estén alineados verticalmente */
+}
+
+/* Logo y otros contenidos */
+.header-content,
+.logo {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los logos */
+}
+
+.logo img {
+    display: block; /* Asegura que las imágenes no tengan espacio en línea sobrante */
+    margin-right: 1px; /* Espacio entre logos y otros elementos si es necesario */
+}
+.birthdayCardContainer {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en múltiples líneas */
+    justify-content: space-between; /* Espacio entre tarjetas */
+    margin-top: 200px; /* Agrega un margen superior para separarlo del menú */
+    padding: 100px 20px 20px; /* Ajusta el padding superior según sea necesario */
+    max-width: 800px; /* Limita el ancho del contenedor */
+}

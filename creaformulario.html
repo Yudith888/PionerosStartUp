@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="creaformulario.css">
+    <link rel="stylesheet" href="modal.css">
+    <title>Formulario de Creación de Sitios Web</title>
+   
+</head>
+<body>
+
+<div class="container">
+    <h2>Formulario para Creación de Sitio Web</h2>
+    <form action="" method="post">
+        <!-- Nombre del sitio -->
+        <div class="form-group">
+            <label for="nombre_sitio">Nombre del Sitio Web:</label>
+            <input type="text" id="nombre_sitio" name="nombre_sitio" placeholder="Ej: Mi Sitio Web" required>
+        </div>
+
+        <!-- Propósito del sitio -->
+        <div class="form-group">
+            <label for="proposito">Propósito del Sitio:</label>
+            <select id="proposito" name="proposito" required>
+                <option value="" disabled selected>Selecciona el propósito</option>
+                <option value="blog">Blog</option>
+                <option value="tienda_online">Tienda Online</option>
+                <option value="portafolio">Portafolio</option>
+                <option value="informativo">Sitio Informativo</option>
+                <option value="otro">Otro</option>
+            </select>
+        </div>
+
+        <!-- Esquema de colores -->
+        <div class="form-group">
+            <label for="colores">Esquema de Colores Preferido:</label>
+            <input type="text" id="colores" name="colores" placeholder="Ej: Azul y blanco" required>
+        </div>
+
+        <!-- Tipo de contenido -->
+        <div class="form-group">
+            <label for="contenido">Tipo de Contenido Principal:</label>
+            <select id="contenido" name="contenido" required>
+                <option value="" disabled selected>Selecciona el tipo de contenido</option>
+                <option value="texto">Texto</option>
+                <option value="imagenes">Imágenes</option>
+                <option value="videos">Videos</option>
+                <option value="multimedia">Multimedia (varios tipos)</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="paginas">Ingresa tu correo:</label>
+            <input class="controls" type="email" name="correo" id="correo" placeholder="Ingresa tu Correo">
+        </div>
+        <!-- Número de páginas -->
+        <div class="form-group">
+            <label for="paginas">Número Aproximado de Páginas:</label>
+            <input type="number" id="paginas" name="paginas" min="1" placeholder="Ej: 5" required>
+        </div>
+
+        <!-- Funcionalidades adicionales -->
+        <div class="form-group">
+            <label for="funcionalidades">Funcionalidades Adicionales (Opcional):</label>
+            <textarea id="funcionalidades" name="funcionalidades" rows="4" placeholder="Ej: Carrito de compras, chat en vivo, formulario de contacto"></textarea>
+        </div>
+
+        <!-- Información adicional -->
+        <div class="form-group">
+            <label for="info_adicional">Información Adicional (Opcional):</label>
+            <textarea id="info_adicional" name="info_adicional" rows="4" placeholder="Proporciona cualquier detalle adicional que consideres importante"></textarea>
+        </div>
+
+        <!-- Enviar -->
+        <div class="form-group">
+            
+        </div>
+        
+    </form>
+    <a href="#modal-container" class="modal-trigger">Enviar</a>
+            <div class="modal-container" id="modal-container">
+                <div class="modal">
+                    <a href="#" class="close">&times;</a>
+                    <div class="modal-header">
+                        <h1>Gracias por confiar en Pioneros Start Up</h1>
+                    </div>
+                    <div class="modal-body">
+                        <p>Enviaremos toda la informacion y contacto al correo que haz registrado</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="creacionsitiosweb.html" class="read">Gracias por tu confianza</a>
+                    </div>
+                </div>
+            </div>
+</div>
+
+</body>
+</html>

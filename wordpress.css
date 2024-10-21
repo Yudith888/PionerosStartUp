@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #6464d0;
+}
+.box{
+    top: 100px;
+    position: relative;
+    width: 20rem;
+    height: 25rem;
+    cursor: pointer;
+}
+.bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("image/17788416_5894048.jpg");
+    background-size: cover;
+    transition: 1s;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px;
+}
+
+.box:hover .bg{
+    transform: perspective(20px) rotateX(2deg) translateY(-50px);
+}
+
+.bird{
+    margin-left: 20px;
+    top: 30px;
+    position: absolute;
+    width: 2rem ;
+    height: 2rem;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: gifAnimation 0.2s linear infinite;
+    animation-play-state: paused!important;
+    transition: 1s;
+}
+p{
+    letter-spacing: 1px;
+    margin: 70px;
+    color: white;
+}
+h4{
+    letter-spacing: 1px;
+    margin: 70px;
+    color: white;
+}
+.box:hover .bird{
+    animation-play-state:running!important;
+    transform: translateY(-200px) translateX(-10px);
+}
+
+@keyframes gifAnimation{
+  
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgb(255, 255, 255);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Navegación */
+  .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+  }
+  
+  /* Lista de navegación */
+  .navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Asegura que todos los elementos del menú, incluidos los logos, estén alineados verticalmente */
+  }
+  
+  /* Logo y otros contenidos */
+  .header-content,
+  .logo {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los logos */
+  }
+  
+  .logo img {
+    display: block; /* Asegura que las imágenes no tengan espacio en línea sobrante */
+    margin-right: 1px; /* Espacio entre logos y otros elementos si es necesario */
+  }
+  
+  /* Estilo para quitar las líneas de los enlaces en el menú y hacer el texto blanco */
+  .navigation ul li a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: white; /* Cambia el color de los enlaces a blanco */
+    font-size: 16px; /* Tamaño de letra (opcional, ajustable) */
+  }
+  
+  .navigation ul li a:hover {
+    text-decoration: none; /* Asegura que al pasar el mouse no se muestre el subrayado */
+    color: #5fccff; /* Efecto hover con un color llamativo al pasar el mouse */
+  }
+  

@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-image: url('image/17788416_5894048.jpg');
+  }
+  
+  .form-register {
+    width: 400px;
+    background: #64abf3;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+  }
+  ::placeholder{
+    color: white;
+  }
+  .form-register h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .controls {
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #e4e5e9;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+  }
+  
+  .form-register p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+    color: white;
+  }
+  
+  .form-register a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .form-register a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  .form-register .botons {
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+  }
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 20px 0;
+  box-shadow: 0 4px 8px rgb(255, 255, 255);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Navegación */
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1px;
+}
+
+/* Lista de navegación */
+.navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  align-items: center; /* Asegura que todos los elementos del menú, incluidos los logos, estén alineados verticalmente */
+}
+
+/* Logo y otros contenidos */
+.header-content,
+.logo {
+  display: flex;
+  align-items: center; /* Alinea verticalmente los logos */
+}
+
+.logo img {
+  display: block; /* Asegura que las imágenes no tengan espacio en línea sobrante */
+  margin-right: 1px; /* Espacio entre logos y otros elementos si es necesario */
+}
+
+/* Estilo para quitar las líneas de los enlaces en el menú y hacer el texto blanco */
+.navigation ul li a {
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  color: white; /* Cambia el color de los enlaces a blanco */
+  font-size: 16px; /* Tamaño de letra (opcional, ajustable) */
+}
+
+.navigation ul li a:hover {
+  text-decoration: none; /* Asegura que al pasar el mouse no se muestre el subrayado */
+  color: #5fccff; /* Efecto hover con un color llamativo al pasar el mouse */
+}

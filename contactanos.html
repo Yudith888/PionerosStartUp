@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="contactanos.css">
+  <link rel="stylesheet" href="modalcontactos.css">
+  <title>Formulario Registro</title>
+</head>
+<body>
+  <header class="header">
+    <nav class="navigation">
+        <ul>
+            <div class="header-content">
+                <div class="logo"><img src="image/start-up.png" alt="" width="50px" height="50px"></div>
+            </div>
+            <li><a href="inciio.html">Inicio</a></li>
+            <li><a href="moda.html">Moda</a></li>
+            <li><a href="nuevosdiseños.html">Nuevos diseños</a></li>
+            <li><a href="tuestilo.html">Tu estilo</a></li>
+            <li><a href="ventaderopa.html">Venta de ropa</a></li>
+            <li><a href="ecommerce.html">E-commerce</a></li>
+            <li><a href="personalizaciones.html">Personalizaciones</a></li>
+            <li><a href="emprendedores.html">Emprendedores</a></li>
+            <li><a href="contactanos.html">Contáctanos</a></li>
+            <div class="logo"><a href="compras.html"><img src="image/carro-de-la-compra.png" alt="" width="50px" height="50px"></a></div>
+
+        </ul>
+    </nav>
+</header>
+<section class="form-register">
+  <h4>Formulario Registro</h4>
+  <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre" required>
+  <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido" required>
+  <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo" required>
+  <input class="controls" type="text" name="mensaje" id="mensaje" placeholder="Mensaje" required>
+  <p>Estoy de acuerdo con <a href="#">Términos y Condiciones</a></p>
+  <button class="botons" onclick="openModal()">Enviar</button>
+</section>
+
+<!-- Ventana Modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>¡Gracias!</h2>
+      <p>Tu formulario ha sido enviado exitosamente.</p>
+  </div>
+</div>
+
+<script>
+  // Función para abrir la ventana modal
+  function openModal() {
+      document.getElementById("myModal").style.display = "flex";
+  }
+
+  // Función para cerrar la ventana modal
+  function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+  }
+
+  // Cerrar la ventana modal al hacer clic fuera del contenido
+  window.onclick = function(event) {
+      var modal = document.getElementById("myModal");
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+</script>
+
+
+</body>
+</html>

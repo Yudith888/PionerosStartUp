@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesion y registro</title>
+    <link rel="stylesheet" href="logintecno.css">
+</head>
+<body>
+    <div class="wrapper">
+        <img src="image/ai-nuclear-energy-future-innovation-disruptive-technology.jpg" alt="">
+    <h2 class="text-right">Bienvenid@</h2>
+        <div class="form-wrapper login">
+            <form action="">
+                <h2>Inicio de Sesion</h2>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" placeholder="Contraseña" required>
+                </div>
+                <div class="forgot-pass">
+                    <a href="#">Haz olvidado tu contraseña?</a>
+                </div>
+                <center>
+                    <input type="button" class="read-more"  value="Ingresar" onclick="window.location.href='tecnologia.html'" required>
+
+                </center>
+                <div class="sign-link">
+                    <p>No tienes cuenta? <a href="#" class="read-more"  onclick="registerActive()">Registrarme</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="form-wrapper register">
+            <form action="">
+                <h2>Registrate</h2>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="person"></ion-icon>
+                    </span>
+                    <input type="text" placeholder="Nombre" required>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" placeholder="Contraseña" required>
+                </div>
+                <center>
+                    <input type="button" class="read-more"  value="Ingresar" onclick="window.location.href='tecnologia.html'" required>
+                </center>
+                <div class="sign-link">
+                    <p>Ya tienes una cuenta? <a href="#" class="read-more" onclick="loginActive()">Inicia Sesion</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="logintecno.js"></script>
+</body>
+</html>

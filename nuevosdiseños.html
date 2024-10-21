@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moda - Ventana Modal</title>
+    <link rel="stylesheet" href="nuevosdiseños.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navigation">
+            <ul>
+                <div class="header-content">
+                    <div class="logo"><img src="image/start-up.png" alt="" width="50px" height="50px"></div>
+                </div>
+                <li><a href="inciio.html">Inicio</a></li>
+                <li><a href="moda.html">Moda</a></li>
+                <li><a href="nuevosdiseños.html">Nuevos diseños</a></li>
+                <li><a href="tuestilo.html">Tu estilo</a></li>
+                <li><a href="ventaderopa.html">Venta de ropa</a></li>
+                <li><a href="ecommerce.html">E-commerce</a></li>
+                <li><a href="personalizaciones.html">Personalizaciones</a></li>
+                <li><a href="emprendedores.html">Emprendedores</a></li>
+                <li><a href="contactanos.html">Contáctanos</a></li>
+                <div class="logo"><a href="compras.html"><img src="image/carro-de-la-compra.png" alt="" width="50px"
+                            height="50px"></a></div>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="birthdayCardContainer">
+        <!-- Tarjeta 1 -->
+        <div class="birthdayCard">
+            <div class="cardFront">
+                <div class="front-text">
+                    <h3 class="toyou">Conjunto blusa y falda</h3>
+                </div>
+            </div>
+            <div class="cardInside">
+                <div class="inside-text">
+                    <br><br><br><br><br>
+                    <h2 class="bday">$80.000</h2>                    
+                </div>
+                <div class="wishes">
+                    <img src="image/realistic image of a woman in a blouse and skirt.png" alt="" width="180px" height="180px">
+                    <center><button class="read" onclick="openModal('modal1')">Agregar</button></center>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="birthdayCard">
+            <div class="cardFront">
+                <div class="front-text">
+                    <h3 class="toyou">Conjunto hombre y mujer</h3>
+                </div>
+            </div>
+            <div class="cardInside">
+                <div class="inside-text">
+                    <br><br><br><br><br>
+                    <h2 class="bday">$200.000</h2>
+                </div>
+                <div class="wishes">
+                    <img src="image/realistic image of a formal man and woman.png" alt="" width="180px" height="180px">
+                    <center><button class="read" onclick="openModal('modal2')">Agregar</button></center>
+                </div>
+            </div>
+        </div>
+
+        <div class="birthdayCard">
+            <div class="cardFront">
+                <div class="front-text">
+                    <h4 class="toyou">Chaqueta de jean y camisa</h4>
+                </div>
+            </div>
+            <div class="cardInside">
+                <div class="inside-text">
+                    <br><br><br><br><br>
+                    <h2 class="bday">$100.000</h2>
+                </div>
+                <div class="wishes">
+                    <img src="image/realistic image of a denim jacket and shirt.png" alt="" width="180px" height="180px">
+                    <center><button class="read" onclick="openModal('modal3')">Agregar</button></center>
+                </div>
+            </div>
+        </div>
+
+        <div class="birthdayCard">
+            <div class="cardFront">
+                <div class="front-text">
+                    <h3 class="toyou">Sudadera de hombre y mujer</h3>
+                </div>
+            </div>
+            <div class="cardInside">
+                <div class="inside-text">
+                    <br><br><br><br><br>
+                    <h2 class="bday">$300.000</h2>
+                </div>
+                <div class="wishes">
+                    <img src="image/realistic image of a man and a woman in a hoodie.png" alt="" width="180px" height="180px">
+                    <center><button class="read" onclick="openModal('modal4')">Agregar</button></center>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ventana Modal 1 -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h4>Color </h4>
+            <input type="checkbox"/> 
+            <label for="">Negro</label> <br>
+            <input type="checkbox"> 
+            <label for="">Blanco</label> <br>
+            <input type="checkbox"> 
+            <label for="">Rojo</label> <br>
+
+            <h4>Talla</h4>
+            <input type="checkbox"/> 
+            <label for="">M</label> <br>
+            <input type="checkbox"> 
+            <label for="">S</label> <br>
+            <input type="checkbox"> 
+            <label for="">L</label> <br>
+            <input type="checkbox"/> 
+            <label for="">XL</label> <br>
+            <input type="checkbox"> 
+            <label for="">XXL</label> <br>
+            <input type="checkbox"> 
+            <label for="">XXXL</label> <br>
+            <center><button class="read">Añadir</button></center>
+        </div>
+    </div>
+
+    <!-- Ventana Modal 2 -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <center><h1>Mujer</h1></center>
+            <h4>Color</h4>
+            <input type="checkbox"/> 
+            <label for="">Negro</label> <br>
+            <input type="checkbox"> 
+            <label for="">Blanco</label> <br>
+            <input type="checkbox"> 
+            <label for="">Rojo</label> <br>
+            <input type="checkbox"> 
+            <label for="">Gris</label> <br>
+            
+            <h4>Talla</h4>
+            <input type="checkbox"/> 
+            <label for="">M</label> <br>
+            <input type="checkbox"> 
+            <label for="">S</label> <br>
+            <input type="checkbox"> 
+            <label for="">L</label> <br>
+            <input type="checkbox"/> 
+            <label for="">XL</label> <br>
+            <input type="checkbox"> 
+            <label for="">XXL</label> <br>
+            <input type="checkbox"> 
+            <label for="">XXXL</label> <br>
+            <center><button class="read" onclick="openModal('modal5')">Siguiente</button></center>
+        </div>
+    </div>
+
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal5')">&times;</span>
+            <center><h1>Hombre</h1></center>
+            <h4>Color</h4>
+            <input type="checkbox"/> 
+            <label for="">Negro</label> <br>
+            <input type="checkbox"> 
+            <label for="">Blanco</label> <br>
+            <input type="checkbox"> 
+            <label for="">Rojo</label> <br>
+            <input type="checkbox"> 
+            <label for="">Gris</label> <br>
+            
+            <h4>Talla</h4>
+            <input type="checkbox"/> 
+            <label for="">M</label> <br>
+            <input type="checkbox"> 
+            <label for="">S</label> <br>
+            <input type="checkbox"> 
+            <label for="">L</label> <br>
+            <input type="checkbox"/> 
+            <label for="">XL</label> <br>
+            <input type="checkbox"> 
+            <label for="">XXL</label> <br>
+            <input type="checkbox"> 
+            <label for="">XXXL</label> <br>
+            <center><button class="read">Añadir</button></center>
+            
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <center><h1>Camisa</h1></center>
+            <h4>Color</h4>
+            <input type="checkbox"/> 
+            <label for="">Negro</label> <br>
+            <input type="checkbox"> 
+            <label for="">Blanco</label> <br>
+            <input type="checkbox"> 
+            <label for="">Rojo</label> <br>
+            <input type="checkbox"> 
+            <label for="">Gris</label> <br>
+            
+            <h4>Talla</h4>
+            <input type="checkbox"/> 
+            <label for="">M</label> <br>
+            <input type="checkbox"> 
+            <label for="">S</label> <br>
+            <input type="checkbox"> 
+            <label for="">L</label> <br>
+            <input type="checkbox"/> 
+            <label for="">XL</label> <br>
+            <input type="checkbox"> 
+            <label for="">XXL</label> <br>
+            <input type="checkbox"> 
+            <label for="">XXXL</label> <br>
+            <center><button class="read" onclick="openModal('modal6')">Siguiente</button></center>
+        </div>
+    </div>
+
+    <div id="modal6" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal6')">&times;</span>
+            <center><h1>Chaqueta</h1></center>
+            <h4>Color</h4>
+            <input type="checkbox"/> 
+            <label for="">Negro</label> <br>
+            <input type="checkbox"> 
+            <label for="">Blanco</label> <br>
+            <input type="checkbox"> 
+            <label for="">Rojo</label> <br>
+            <input type="checkbox"> 
+            <label for="">Gris</label> <br>
+            
+            <h4>Talla</h4>
+            <input type="checkbox"/> 
+            <label for="">M</label> <br>
+            <input type="checkbox"> 
+            <label for="">S</label> <br>
+            <input type="checkbox"> 
+            <label for="">L</label> <br>
+            <input type="checkbox"/> 
+            <label for="">XL</label> <br>
+            <input type="checkbox"> 
+            <label for="">XXL</label> <br>
+            <input type="checkbox"> 
+            <label for="">XXXL</label> <br>
+            <center><button class="read">Añadir</button></center>
+            
+        </div>
+    </div>
+
+
+
+
+
+
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <center><h1>Mujer</h1></center>
+            <h4>Color</h4>
+            <input type="checkbox"/> 
+            <label for="">Negro</label> <br>
+            <input type="checkbox"> 
+            <label for="">Blanco</label> <br>
+            <input type="checkbox"> 
+            <label for="">Rojo</label> <br>
+            <input type="checkbox"> 
+            <label for="">Gris</label> <br>
+            
+            <h4>Talla</h4>
+            <input type="checkbox"/> 
+            <label for="">M</label> <br>
+            <input type="checkbox"> 
+            <label for="">S</label> <br>
+            <input type="checkbox"> 
+            <label for="">L</label> <br>
+            <input type="checkbox"/> 
+            <label for="">XL</label> <br>
+            <input type="checkbox"> 
+            <label for="">XXL</label> <br>
+            <input type="checkbox"> 
+            <label for="">XXXL</label> <br>
+            <center><button class="read" onclick="openModal('modal7')">Siguiente</button></center>
+        </div>
+
+        
+    <div id="modal7" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal7')">&times;</span>
+            <center><h1>Hombre</h1></center>
+            <h4>Color</h4>
+            <input type="checkbox"/> 
+            <label for="">Negro</label> <br>
+            <input type="checkbox"> 
+            <label for="">Blanco</label> <br>
+            <input type="checkbox"> 
+            <label for="">Rojo</label> <br>
+            <input type="checkbox"> 
+            <label for="">Gris</label> <br>
+            
+            <h4>Talla</h4>
+            <input type="checkbox"/> 
+            <label for="">M</label> <br>
+            <input type="checkbox"> 
+            <label for="">S</label> <br>
+            <input type="checkbox"> 
+            <label for="">L</label> <br>
+            <input type="checkbox"/> 
+            <label for="">XL</label> <br>
+            <input type="checkbox"> 
+            <label for="">XXL</label> <br>
+            <input type="checkbox"> 
+            <label for="">XXXL</label> <br>
+            <center><button class="read">Añadir</button></center>
+            
+        </div>
+    </div>
+    </div>
+
+    <script>
+        // Función para abrir el modal
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        // Función para cerrar el modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Cierra el modal cuando se hace clic fuera de él
+        window.onclick = function(event) {
+            let modals = document.getElementsByClassName("modal");
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target === modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emprendedores</title>
+  <!--Google Fonts and Icons-->
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="emprendedores.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Foldit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+</head>
+
+<body>
+  <header class="header">
+    <nav class="navigation">
+      <ul>
+        <div class="header-content">
+          <div class="logo"><img src="image/start-up.png" alt="" width="50px" height="50px"></div>
+        </div>
+        <li><a href="inciio.html">Inicio</a></li>
+        <li><a href="moda.html">Moda</a></li>
+        <li><a href="nuevosdiseños.html">Nuevos diseños</a></li>
+        <li><a href="tuestilo.html">Tu estilo</a></li>
+        <li><a href="ventaderopa.html">Venta de ropa</a></li>
+        <li><a href="ecommerce.html">E-commerce</a></li>
+        <li><a href="personalizaciones.html">Personalizaciones</a></li>
+        <li><a href="emprendedores.html">Emprendedores</a></li>
+        <li><a href="contactanos.html">Contáctanos</a></li>
+        <div class="logo"><a href="compras.html"><img src="image/carro-de-la-compra.png" alt="" width="50px"
+              height="50px"></a></div>
+
+      </ul>
+    </nav>
+  </header>
+
+
+  <div class="center">
+    <div class="book">
+      <div class="pages">
+        <div class="beads">
+          <div class="bead"></div>
+          <div class="bead"></div>
+          <div class="bead"></div>
+          <div class="bead"></div>
+        </div>
+
+        <div class="page active">
+          <div class="page-side front">
+            <div class="page-head">
+              <div class="page-title">
+                Emprendedor
+              </div>
+            </div>
+            <img src="image/emprendedores.png" class="imagen" alt="" width="130px" height="130px">
+            <div class="page-content">
+              ¿Te gustaria ser parte de nuestra red de emprendedores de moda
+              para colaborar en diseños unicos y compartir tendencias emergentes?
+            </div>
+          </div>
+
+          <div class="page-side back">
+            <div class="page-head">
+              <div class="page-title">
+                Pasion por la moda
+              </div>
+              <img src="image/pasion a la moda.png" class="imagen" alt="" width="150px" height="150px">
+            </div>
+           </div>
+          </div>
+      
+          <div class="page">
+          <div class="page-side front">
+            <div class="page-head">
+              <div class="page-title">
+                <center>Habilidades de diseño</center>
+              </div>
+              <img src="image/habilidades de diseño.png" class="imagen" alt="" width="150px" height="150px">
+
+            </div>
+          </div>
+
+
+          <div class="page-side back">
+            <div class="page-head">
+              <div class="page-title">
+                <center> Habilidad para trabajar en equipo</center>
+              </div>
+              <img src="image/trabajo en equipo.png" class="imagen" alt="" width="150px" height="150px">
+            </div>
+          </div>
+         </div>
+
+
+          <div class="page">
+          <div class="page-side front">
+            <div class="page-head">
+              <div class="page-title">
+                <center>Unete a nosotros y juntos construiremos el futuro de la moda</center>
+              </div>
+            
+            </div>
+          </div>
+          
+          </div>
+         <div class="page"></div>
+           </div>
+         </div>
+    
+
+       <center><button class="read" onclick="openModal()">Inscribirme</button></center>
+        <!-- Ventana Modal -->
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="form-container">
+              <h2>Formulario de inscripción</h2>
+              <form action="" method="post">
+                <label for="name">Nombre completo:</label>
+                <input type="text" id="name" name="name" placeholder="Ingresa tu nombre completo" required>
+            
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
+            
+                <label for="phone">Teléfono:</label>
+                <input type="text" id="phone" name="phone" placeholder="Ingresa tu número de teléfono" required>
+            
+                <label for="project">Nombre de tu emprendimiento:</label>
+                <input type="text" id="project" name="project" placeholder="Nombre del proyecto/emprendimiento" required>
+            
+                <label for="sector">Sector de tu emprendimiento:</label>
+                <select id="sector" name="sector" required>
+                  <option value="">Selecciona el sector</option>
+                  <option value="moda">Moda</option>
+                  <option value="tecnología">Tecnología</option>
+                  <option value="arte">Arte</option>
+                  <option value="gastronomía">Gastronomía</option>
+                  <option value="otros">Otros</option>
+                </select>
+            
+                <label for="description">Descripción breve de tu emprendimiento:</label>
+                <textarea id="description" name="description" rows="4" placeholder="Describe tu emprendimiento en pocas palabras..." required></textarea>
+            
+                <button type="submit" class="read">Enviar Inscripción</button>
+              </form>
+            </div>
+          </div>
+
+       </div>
+  
+       <div class="controls">
+       <button type="button" class="btn" onclick="previous()">
+        <span class="material-icons-outlined">arrow_back</span>
+        </button>
+        <button type="button" class="btn" onclick="next()">
+        <span class="material-icons-outlined">arrow_forward</span>
+        </button>
+        </div>
+  
+       </div>
+      </div>
+
+
+
+
+  <script src="modalcontac.js"></script>
+  <script src="emprendedores.js"></script>
+</body>
+
+</html>

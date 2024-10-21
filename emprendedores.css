@@ -1,0 +1,321 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url(image/17788416_5894048.jpg);
+}
+.center {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.imagen{
+ justify-content: center;
+}
+.book {
+  width: 400px;
+  height: 300px;
+  position: relative;
+}
+.pages {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.page {
+  width: 380px;
+  height: 270px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 7mm;
+  margin: 0 6px;
+  transform-style: preserve-3d;
+  transform-origin: left;
+  transition: 0.25s;
+  box-shadow: 1px 2px 0 0 rgba(0, 0, 0, 0.15),
+    1px 3px 1px 0 rgba(0, 0, 0, 0.1);
+}
+.page-side {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  font-family: poppins;
+  border-radius: 7mm;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+.page-head {
+  width: 100%;
+}
+.page-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 500;
+  color: white;
+}
+.imagen {
+  display: block;
+  margin: 0 auto; /* Asegura que la imagen esté centrada horizontalmente */
+}
+.page-content {
+  flex-grow: 1;
+  font-size: 18px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: white;
+}
+.page-footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-size: 14px;
+}
+.pg-no {
+  width: 14px;
+  padding: 0 15px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: rgb(40, 40, 40);
+  background: white;
+  border-radius: 3mm;
+}
+.front {
+  background-image: url(image/un\ fondo\ de\ moda\ \(1\).png);
+  color: rgb(40, 40, 40);
+  padding-left: 40px;
+}
+.back {
+  background-image: url(image/un\ fondo\ \(1\).png);
+  color: white;
+  padding-right: 40px;
+  transform: rotateY(180deg);
+}
+
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+label {
+  display: block;
+  margin: 10px 0 5px;
+  color: #666;
+}
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: #007bff;
+}
+
+
+.read {
+  background: linear-gradient(90deg, #3264ee, #22b4ce);
+  padding: 6px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+}
+.beads {
+  position: absolute;
+  top: 0;
+  left: -12px;
+  height: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  z-index: 9999;
+}
+.bead {
+  width: 36px;
+  height: 12px;
+  background: white;
+  border-radius: 5mm;
+  z-index: 9999;
+  box-shadow: inset 1px 2px 0 0 rgba(0, 0, 0, 0.15),
+    inset 1px 3px 1px 0 rgba(0, 0, 0, 0.1);
+}
+.controls {
+  width: 350px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.controls button {
+  background: white;
+  width: 40px;
+  height: 40px;
+  border: 0.4mm solid rgb(40, 40, 40);
+  border-radius: 50%;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 10px 0; /* Aumenta el padding superior e inferior */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navegación */
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Añade margen superior para bajar el menú */
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Logo dentro del header */
+.header-content {
+    margin-right: 20px;
+}
+
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Navegación */
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+}
+
+/* Lista de navegación */
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Asegura que todos los elementos del menú, incluidos los logos, estén alineados verticalmente */
+}
+
+/* Logo y otros contenidos */
+.header-content,
+.logo {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los logos */
+}
+
+.logo img {
+    display: block; /* Asegura que las imágenes no tengan espacio en línea sobrante */
+    margin-right: 1px; /* Espacio entre logos y otros elementos si es necesario */
+}
+/* Estilo para quitar las líneas de los enlaces en el menú */
+.navigation ul li a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: inherit; /* Mantiene el color del texto o el que hayas asignado previamente */
+}
+
+.navigation ul li a:hover {
+    text-decoration: none; /* Asegura que al pasar el mouse no se muestre el subrayado */
+}
+
+
+        /* Estilos para la ventana modal */
+        .modal {
+          display: none; /* Oculto por defecto */
+          position: fixed;
+          z-index: 1000;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+          justify-content: center;
+          align-items: center;
+      }
+
+      .modal-content {
+          background-image: url(image/17788416_5894048.jpg);
+          padding: 20px;
+          border-radius: 10px;
+          text-align: center;
+          width: 300px;
+          margin: auto;
+      }
+
+      .close {
+          color: #aaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+      }
+
+      /* Estilo para los botones */
+      .botons {
+          padding: 10px 20px;
+          background-color: #333;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+  
