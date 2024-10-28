@@ -1,17 +1,21 @@
+/* Importación de fuente de Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-*{
+/* Reseteo de márgenes y configuración de tipografía global */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
 }
 
-body{
+/* Estilo de fondo del body */
+body {
     background-image: url(image/17788416_5894048.jpg);
 }
 
-.container__cards{
+/* Configuración del contenedor principal de tarjetas */
+.container__cards {
     max-width: 1200px;
     margin: auto;
     margin-top: 100px;
@@ -20,24 +24,28 @@ body{
     justify-content: center;
 }
 
-.card{
+/* Estilos básicos de las tarjetas */
+.card {
     width: 300px;
     margin: 10px;
     transition: all 300ms;
 }
 
-.card:hover{
+/* Efecto hover para ampliar la tarjeta */
+.card:hover {
     width: 350px;
 }
 
-.card .cover{
+/* Configuración de la imagen de portada de la tarjeta */
+.card .cover {
     width: 100%;
     height: 250px;
     position: relative;
     overflow: hidden;
 }
 
-.card .cover img{
+/* Imagen dentro de la portada */
+.card .cover img {
     width: 250px;
     display: block;
     margin: auto;
@@ -48,12 +56,14 @@ body{
     transition: all 400ms;
 }
 
-.card:hover .cover img{
+/* Efecto hover para ajustar la posición y sombra de la imagen */
+.card:hover .cover img {
     top: 0px;
     filter: none;
 }
 
-.card .img__back{
+/* Fondo de imagen para la tarjeta, ubicada detrás de la portada */
+.card .img__back {
     width: 100%;
     height: 200px;
     position: absolute;
@@ -64,36 +74,28 @@ body{
     transition: all 300ms;
 }
 
-.card:nth-of-type(1) .img__back{
-    background-image: url(../images/bg1.jpg);
-}
+/* Imagen de fondo específica para cada tarjeta según su posición */
+.card:nth-of-type(1) .img__back { background-image: url(../images/bg1.jpg); }
+.card:nth-of-type(2) .img__back { background-image: url(../images/bg2.jpg); }
+.card:nth-of-type(3) .img__back { background-image: url(../images/bg3.jpg); }
+.card:nth-of-type(4) .img__back { background-image: url(../images/bg3.jpg); }
 
-.card:nth-of-type(2) .img__back{
-    background-image: url(../images/bg2.jpg);
-}
-
-.card:nth-of-type(3) .img__back{
-    background-image: url(../images/bg3.jpg);
-}
-
-.card:nth-of-type(4) .img__back{
-    background-image: url(../images/bg3.jpg);
-}
-
+/* Botón "read" con fondo degradado */
 .read {
     background: linear-gradient(90deg, #3264ee, #22b4ce);
     padding: 6px;
     color: #fff;
     text-decoration: none;
     border-radius: 8px;
-  }
+}
 
-
-.card:hover .img__back{
+/* Efecto hover para la posición del fondo de la tarjeta */
+.card:hover .img__back {
     bottom: -40px;
 }
 
-.card .description{
+/* Contenedor de la descripción de la tarjeta */
+.card .description {
     background: white;
     margin-top: -10px;
     padding: 20px;
@@ -101,19 +103,23 @@ body{
     transition: all 300ms;
 }
 
-.card:hover .description{
+/* Efecto hover para expandir el contenedor de descripción */
+.card:hover .description {
     padding: 40px;
 }
 
-.card .description h2{
+/* Título dentro de la descripción */
+.card .description h2 {
     margin-top: 10px;
 }
 
-.card .description p{
+/* Párrafo dentro de la descripción */
+.card .description p {
     margin-top: 10px;
 }
 
-.card .description input{
+/* Estilo del botón en la descripción */
+.card .description input {
     padding: 10px 40px;
     margin-top: 20px;
     border: none;
@@ -125,16 +131,18 @@ body{
     transition: all 300ms;
 }
 
-.card .description input:hover{
+/* Efecto hover para el botón */
+.card .description input:hover {
     background: #83277b;
 }
-/* Header */
+
+/* Configuración del encabezado */
 .header {
     position: fixed;
     top: 0;
     width: 100%;
     background-color: transparent;
-    padding: 10px 0; /* Aumenta el padding superior e inferior */
+    padding: 10px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     display: flex;
@@ -142,14 +150,15 @@ body{
     align-items: center;
 }
 
-/* Navegación */
+/* Navegación dentro del encabezado */
 .navigation {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px; /* Añade margen superior para bajar el menú */
+    margin-top: 20px;
 }
 
+/* Lista de navegación */
 .navigation ul {
     list-style: none;
     display: flex;
@@ -158,13 +167,12 @@ body{
     padding: 0;
 }
 
-/* Logo dentro del header */
+/* Contenido del encabezado y logo */
 .header-content {
     margin-right: 20px;
 }
 
-
-/* Header */
+/* Segunda definición del encabezado */
 .header {
     position: fixed;
     top: 0;
@@ -179,7 +187,7 @@ body{
     align-items: center;
 }
 
-/* Navegación */
+/* Navegación dentro del encabezado */
 .navigation {
     display: flex;
     justify-content: center;
@@ -194,26 +202,64 @@ body{
     gap: 30px;
     margin: 0;
     padding: 0;
-    align-items: center; /* Asegura que todos los elementos del menú, incluidos los logos, estén alineados verticalmente */
+    align-items: center;
 }
 
 /* Logo y otros contenidos */
 .header-content,
 .logo {
     display: flex;
-    align-items: center; /* Alinea verticalmente los logos */
+    align-items: center;
 }
 
 .logo img {
-    display: block; /* Asegura que las imágenes no tengan espacio en línea sobrante */
-    margin-right: 1px; /* Espacio entre logos y otros elementos si es necesario */
+    display: block;
+    margin-right: 1px;
 }
-/* Estilo para quitar las líneas de los enlaces en el menú */
+
+/* Estilo para los enlaces del menú */
 .navigation ul li a {
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: inherit; /* Mantiene el color del texto o el que hayas asignado previamente */
+    text-decoration: none;
+    color: inherit;
 }
 
 .navigation ul li a:hover {
-    text-decoration: none; /* Asegura que al pasar el mouse no se muestre el subrayado */
+    text-decoration: none;
 }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    

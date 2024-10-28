@@ -47,8 +47,7 @@
                     Smartwatch
                   </h2>
                   <h3 class="food-rating">
-                    <input type="button" class="read-more"  value="Comprar"  onclick="window.location.href='tecnocompras.html'" required>
-                    
+                    <center><button class="read-more" onclick="addToCart('Smartwatch', 50000)">Comprar</button></center>
                   </h3>
                 </div>
               </div>
@@ -66,7 +65,7 @@
                     Auriculares inalámbricos con cancelación de ruido
                   </h2>
                   <h3 class="food-rating">
-                    <input type="button" class="read-more"  value="Comprar"  onclick="window.location.href='tecnocompras.html'" required>
+                    <center><button class="read-more" onclick="addToCart('Auriculares inalámbricos con cancelación de ruido', 200000)">Comprar</button></center>
 
                    
                   </h3>
@@ -86,7 +85,7 @@
                     Tablet híbrida (2 en 1)
                   </h2>
                   <h3 class="food-rating">
-                    <input type="button" class="read-more"  value="Comprar"  onclick="window.location.href='tecnocompras.html'" required>
+                    <center><button class="read-more" onclick="addToCart('Tablet híbrida (2 en 1)', 800000)">Comprar</button></center>
 
                     
                   </h3>
@@ -106,7 +105,7 @@
                     Drones con cámara
                   </h2>
                   <h3 class="food-rating">
-                    <input type="button" class="read-more"  value="Comprar"  onclick="window.location.href='tecnocompras.html'" required>
+                    <center><button class="read-more" onclick="addToCart('Drones con cámara', 180000)">Comprar</button></center>
 
               
                   </h3>
@@ -126,7 +125,7 @@
                     Cargador inalámbrico
                   </h2>
                   <h3 class="food-rating">
-                    <input type="button" class="read-more"  value="Comprar"  onclick="window.location.href='tecnocompras.html'" required>
+                    <center><button class="read-more" onclick="addToCart('Cargador inalámbrico', 15000)">Comprar</button></center>
 
                     
                   </h3>
@@ -146,7 +145,7 @@
                     Lentes de realidad aumentada
                   </h2>
                   <h3 class="food-rating">
-                    <input type="button" class="read-more"  value="Comprar"  onclick="window.location.href='tecnocompras.html'" required>
+                    <center><button class="read-more" onclick="addToCart('Lentes de realidad aumentada', 80000)">Comprar</button></center>
 
                   </h3>
                 </div>
@@ -163,7 +162,7 @@
                     Teclado mecánico retroiluminado
                   </h2>
                   <h3 class="food-rating">
-                    <input type="button" class="read-more"  value="Comprar"  onclick="window.location.href='tecnocompras.html'" required>
+                    <center><button class="read-more" onclick="addToCart('Teclado mecánico retroiluminado', 55000)">Comprar</button></center>
 
                   </h3>
                 </div>
@@ -181,7 +180,7 @@
                     Purificador de aire portátil
                   </h2>
                   <h3 class="food-rating">
-                    <input type="button" class="read-more"  value="Comprar"  onclick="window.location.href='tecnocompras.html'" required>
+                    <center><button class="read-more" onclick="addToCart('Purificador de aire portátil', 18000)">Comprar</button></center>
 
                   </h3>
                 </div>
@@ -199,7 +198,7 @@
                     Estación de carga múltiple
                   </h2>
                   <h3 class="food-rating">
-                    <input type="button" class="read-more"  value="Comprar"  onclick="window.location.href='tecnocompras.html'" required>
+                    <center><button class="read-more" onclick="addToCart('Estación de carga múltiple', 60000)">Comprar</button></center>
 
                   </h3>
                 </div>
@@ -217,7 +216,7 @@
                     Controlador de hogar inteligente
                   </h2>
                   <h3 class="food-rating">
-                    <input type="button" class="read-more"  value="Comprar"  onclick="window.location.href='tecnocompras.html'" required>
+                    <center><button class="read-more" onclick="addToCart('Controlador de hogar inteligente', 500000)">Comprar</button></center>
 
                     
                   </h3>
@@ -237,7 +236,7 @@
                     Mini proyector portátil
                   </h2>
                   <h3 class="food-rating">
-                    <input type="button" class="read-more"  value="Comprar"  onclick="window.location.href='tecnocompras.html'" required>
+                    <center><button class="read-more" onclick="addToCart('Mini proyector portátil', 85000)">Comprar</button></center>
 
                   </h3>
                 </div>
@@ -255,7 +254,7 @@
                     Cámara de seguridad inteligente
                   </h2>
                   <h3 class="food-rating">
-                    <input type="button" class="read-more"  value="Comprar"  onclick="window.location.href='tecnocompras.html'" required>
+                    <center><button class="read-more" onclick="addToCart('Cámara de seguridad inteligente', 100000)">Comprar</button></center>
 
                   </h3>
                 </div>
@@ -282,6 +281,18 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="gadgets.js"></script>
-  </body>
 
+
+
+
+    <script>
+       // Función para añadir producto al carrito
+       function addToCart(productName, productPrice) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push({ name: productName, price: productPrice });
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(`${productName} ha sido añadido al carrito.`);
+    }
+    </script>
+  </body>
 </html>

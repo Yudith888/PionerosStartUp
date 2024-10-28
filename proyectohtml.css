@@ -1,20 +1,24 @@
+/* Importa la fuente 'Poppins' desde Google Fonts y configura los pesos de fuente a usar */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
 
+/* Estilos globales para todos los elementos */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el relleno predeterminado */
+    box-sizing: border-box; /* Hace que el padding no afecte el tamaño total del elemento */
+    font-family: 'Poppins', sans-serif; /* Aplica la fuente 'Poppins' en todo el sitio */
 }
 
+/* Estilo para el cuerpo de la página */
 body {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-   background-image: url(image/17788416_5894048.jpg);
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    min-height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
+    background-image: url(image/17788416_5894048.jpg); /* Agrega una imagen de fondo */
 }
 
+/* Configuración de la tarjeta */
 .card {
     display: flex;
     justify-content: center;
@@ -22,16 +26,16 @@ body {
     height: 300px;
     position: relative;
     background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 0px 35px 80px rgba(0, 0, 0, 0.15);
-    transition: 0.5s;
-    
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0px 35px 80px rgba(0, 0, 0, 0.15); /* Sombra con desenfoque */
+    transition: 0.5s; /* Transición para cambios de altura en el hover */
 }
 
 .card:hover {
-    height: 400px;
+    height: 400px; /* Aumenta la altura al pasar el mouse */
 }
 
+/* Caja de imagen en la tarjeta */
 .card .img-box {
     position: absolute;
     width: 280px;
@@ -41,16 +45,18 @@ body {
 }
 
 .card:hover .img-box {
-    top: -100px;
-    scale: 0.75;
+    top: -100px; /* Mueve la imagen hacia arriba al pasar el mouse */
+    scale: 0.75; /* Escala la imagen al 75% de su tamaño original */
 }
 
+/* Estilo de la imagen dentro de la caja de imagen */
 .card .img-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Asegura que la imagen cubra completamente la caja */
 }
 
+/* Contenido de la tarjeta */
 .card .content {
     display: flex;
     flex-direction: column;
@@ -62,69 +68,66 @@ body {
     text-align: center;
     height: 30px;
     overflow: hidden;
-    transition: 0.5s;
- 
+    transition: 0.5s; /* Transición de desplazamiento del contenido */
 }
 
 .card:hover .content {
-    top: 130px;
-    height: 250px;
+    top: 130px; /* Desplaza el contenido hacia abajo al pasar el mouse */
+    height: 250px; /* Ajusta la altura para mostrar más contenido */
 }
 
-
-/* Header */
+/* Encabezado */
 .header {
-    position: fixed;
+    position: fixed; /* Fija el encabezado en la parte superior de la pantalla */
     top: 0;
     width: 100%;
     background-color: transparent;
     padding: 20px 0;
-    box-shadow: 0 4px 8px rgb(255, 255, 255);
-    z-index: 1000;
+    box-shadow: 0 4px 8px rgb(255, 255, 255); /* Sombra del encabezado */
+    z-index: 1000; /* Mantiene el encabezado sobre otros elementos */
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
   
-  /* Navegación */
-  .navigation {
+/* Navegación */
+.navigation {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 1px;
-  }
+}
   
-  /* Lista de navegación */
-  .navigation ul {
-    list-style: none;
+/* Lista de navegación */
+.navigation ul {
+    list-style: none; /* Elimina el estilo de lista predeterminado */
     display: flex;
-    gap: 30px;
+    gap: 30px; /* Espacio entre elementos del menú */
     margin: 0;
     padding: 0;
-    align-items: center; /* Asegura que todos los elementos del menú, incluidos los logos, estén alineados verticalmente */
-  }
+    align-items: center; /* Alinea verticalmente los elementos de la lista */
+}
   
-  /* Logo y otros contenidos */
-  .header-content,
-  .logo {
+/* Logo y otros contenidos en el encabezado */
+.header-content,
+.logo {
     display: flex;
     align-items: center; /* Alinea verticalmente los logos */
-  }
+}
   
-  .logo img {
-    display: block; /* Asegura que las imágenes no tengan espacio en línea sobrante */
-    margin-right: 1px; /* Espacio entre logos y otros elementos si es necesario */
-  }
+.logo img {
+    display: block; /* Evita espacio extra alrededor de la imagen */
+    margin-right: 1px; /* Espacio entre el logo y otros elementos si es necesario */
+}
   
-  /* Estilo para quitar las líneas de los enlaces en el menú y hacer el texto blanco */
-  .navigation ul li a {
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: white; /* Cambia el color de los enlaces a blanco */
-    font-size: 16px; /* Tamaño de letra (opcional, ajustable) */
-  }
+/* Estilo de los enlaces en la lista de navegación */
+.navigation ul li a {
+    text-decoration: none; /* Elimina el subrayado en los enlaces */
+    color: white; /* Color de los enlaces */
+    font-size: 16px; /* Tamaño del texto */
+}
   
-  .navigation ul li a:hover {
-    text-decoration: none; /* Asegura que al pasar el mouse no se muestre el subrayado */
-    color: #5fccff; /* Efecto hover con un color llamativo al pasar el mouse */
-  }
-  
+.navigation ul li a:hover {
+    text-decoration: none; /* Asegura que no aparezca subrayado en el hover */
+    color: #5fccff; /* Cambia el color del enlace en hover */
+}

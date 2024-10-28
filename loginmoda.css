@@ -1,222 +1,332 @@
 /* Google Font Link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* Estilos generales aplicados a todos los elementos */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  margin: 0; /* Elimina el margen por defecto de todos los elementos */
+  padding: 0; /* Elimina el padding por defecto de todos los elementos */
+  box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total del elemento */
+  font-family: "Poppins", sans-serif; /* Establece la fuente Poppins como la fuente predeterminada */
 }
+
+/* Estilos para la ventana modal */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed; /* Posiciona el modal de forma fija en la pantalla */
+  z-index: 1; /* Asegura que el modal esté por encima de otros elementos */
+  left: 0; /* Alinea el modal a la izquierda */
+  top: 0; /* Alinea el modal a la parte superior */
+  width: 100%; /* Establece el ancho del modal al 100% de la pantalla */
+  height: 100%; /* Establece la altura del modal al 100% de la pantalla */
+  overflow: auto; /* Permite el desplazamiento si el contenido excede el tamaño del modal */
+  background-color: rgb(0, 0, 0); /* Color de fondo negro */
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo negro con opacidad */
+  padding-top: 100px; /* Añade espacio en la parte superior para el contenido */
+}
+
+/* Estilos del contenido del modal */
+.modal-content {
+  background-color: #fefefe; /* Color de fondo blanco para el contenido del modal */
+  margin: 5% auto; /* Margen superior e inferior del 5% y centrado horizontalmente */
+  padding: 20px; /* Añade padding interno al contenido del modal */
+  border: 1px solid #888; /* Añade un borde gris al contenido del modal */
+  width: 80%; /* Establece el ancho del contenido del modal al 80% */
+  text-align: center; /* Centra el texto dentro del contenido del modal */
+}
+
+/* Estilos para el botón de cerrar */
+.close {
+  color: #aaa; /* Color gris claro para el botón de cerrar */
+  float: right; /* Alinea el botón de cerrar a la derecha */
+  font-size: 28px; /* Establece el tamaño de la fuente del botón de cerrar */
+  font-weight: bold; /* Establece el grosor de la fuente a negrita */
+}
+
+/* Estilos para el hover y el foco en el botón de cerrar */
+.close:hover,
+.close:focus {
+  color: black; /* Cambia el color a negro al pasar el mouse o al enfocar */
+  text-decoration: none; /* Elimina el subrayado del texto */
+  cursor: pointer; /* Cambia el cursor a mano al pasar el mouse */
+}
+
+/* Estilos del cuerpo */
 body {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url(image/13185393_5132104.jpg);
-  padding: 30px;
+  min-height: 100vh; /* Establece una altura mínima del 100% de la ventana */
+  display: flex; /* Usa Flexbox para alinear elementos */
+  align-items: center; /* Centra verticalmente el contenido */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  background-image: url(image/13185393_5132104.jpg); /* Establece una imagen de fondo para el cuerpo */
+  padding: 30px; /* Añade padding alrededor del cuerpo */
 }
 
+/* Estilos para el enlace de lectura */
 .read {
-  background: linear-gradient(90deg, #3264ee, #22b4ce);
-  padding: 6px;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
+  background: linear-gradient(90deg, #3264ee, #22b4ce); /* Fondo degradado para el enlace */
+  padding: 6px; /* Añade padding al enlace */
+  color: #fff; /* Establece el color del texto a blanco */
+  text-decoration: none; /* Elimina el subrayado del texto */
+  border-radius: 8px; /* Añade bordes redondeados al enlace */
 }
 
+/* Contenedor principal */
 .container {
-  position: relative;
-  max-width: 850px;
-  width: 100%;
-  background: #fff;
-  padding: 40px 30px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  perspective: 2700px;
+  position: relative; /* Permite el posicionamiento de elementos hijos */
+  max-width: 850px; /* Establece un ancho máximo para el contenedor */
+  width: 100%; /* Establece el ancho del contenedor al 100% */
+  background: #fff; /* Color de fondo blanco para el contenedor */
+  padding: 40px 30px; /* Añade padding interno al contenedor */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Añade sombra para un efecto de profundidad */
+  perspective: 2700px; /* Establece una perspectiva para los elementos 3D */
 }
+
+/* Estilos para la cubierta de la tarjeta */
 .container .cover {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  height: 100%;
-  width: 50%;
-  z-index: 98;
-  transition: all 1s ease;
-  transform-origin: left;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
+  position: absolute; /* Posiciona la cubierta de manera absoluta */
+  top: 0; /* Alinea la cubierta en la parte superior */
+  left: 50%; /* Alinea la cubierta al centro horizontalmente */
+  height: 100%; /* Establece la altura de la cubierta al 100% */
+  width: 50%; /* Establece el ancho de la cubierta al 50% */
+  z-index: 98; /* Asegura que la cubierta esté por encima de otros elementos */
+  transition: all 1s ease; /* Añade una transición suave al cambiar la transformación */
+  transform-origin: left; /* Establece el origen de transformación en el lado izquierdo */
+  transform-style: preserve-3d; /* Preserva el estilo 3D para elementos hijos */
+  backface-visibility: hidden; /* Oculta el lado opuesto de la cubierta */
 }
+
+/* Estilos para la rotación de la cubierta */
 .container #flip:checked ~ .cover {
-  transform: rotateY(-180deg);
+  transform: rotateY(-180deg); /* Rota la cubierta al hacer clic */
 }
+
+/* Desactiva eventos en el formulario de inicio de sesión al hacer clic */
 .container #flip:checked ~ .forms .login-form {
-  pointer-events: none;
+  pointer-events: none; /* Desactiva la interacción con el formulario de inicio de sesión */
 }
+
+/* Estilos para las caras de la cubierta */
 .container .cover .front,
 .container .cover .back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  position: absolute; /* Posiciona ambas caras de manera absoluta */
+  top: 0; /* Alinea en la parte superior */
+  left: 0; /* Alinea a la izquierda */
+  height: 100%; /* Establece la altura al 100% */
+  width: 100%; /* Establece el ancho al 100% */
 }
+
+/* Estilo para la parte posterior de la cubierta */
 .cover .back {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg); /* Rota la parte posterior de la cubierta */
 }
+
+/* Estilos para las imágenes de la cubierta */
 .container .cover img {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  z-index: 10;
+  position: absolute; /* Posiciona la imagen de manera absoluta */
+  height: 100%; /* Establece la altura al 100% */
+  width: 100%; /* Establece el ancho al 100% */
+  object-fit: cover; /* Asegura que la imagen cubra el área de la cubierta */
+  z-index: 10; /* Asegura que la imagen esté por encima de otros elementos */
 }
+
+/* Estilos para el texto en la cubierta */
 .container .cover .text {
-  position: absolute;
-  z-index: 10;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  position: absolute; /* Posiciona el texto de manera absoluta */
+  z-index: 10; /* Asegura que el texto esté por encima de otros elementos */
+  height: 100%; /* Establece la altura al 100% */
+  width: 100%; /* Establece el ancho al 100% */
+  display: flex; /* Usa Flexbox para alinear el texto */
+  flex-direction: column; /* Organiza el texto en columna */
+  align-items: center; /* Centra horizontalmente el texto */
+  justify-content: center; /* Centra verticalmente el texto */
 }
+
+/* Estilo para el fondo semi-transparente detrás del texto */
 .container .cover .text::before {
-  content: '';
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  opacity: 0.5;
-  
+  content: ''; /* Crea un pseudo-elemento vacío */
+  position: absolute; /* Posiciona el pseudo-elemento de manera absoluta */
+  height: 100%; /* Establece la altura al 100% */
+  width: 100%; /* Establece el ancho al 100% */
+  opacity: 0.5; /* Establece la opacidad para crear un efecto de fondo */
 }
+
+/* Estilos para el texto en la cubierta */
 .cover .text .text-1,
 .cover .text .text-2 {
-  z-index: 20;
-  font-size: 26px;
-  font-weight: 600;
-  color: #fff;
-  text-align: center;
+  z-index: 20; /* Asegura que el texto esté por encima de otros elementos */
+  font-size: 26px; /* Establece el tamaño de la fuente para el texto principal */
+  font-weight: 600; /* Establece el grosor de la fuente */
+  color: #fff; /* Establece el color del texto a blanco */
+  text-align: center; /* Centra el texto */
 }
+
+/* Estilos para el segundo texto en la cubierta */
 .cover .text .text-2 {
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 15px; /* Establece un tamaño de fuente más pequeño para el segundo texto */
+  font-weight: 500; /* Establece un grosor de fuente menor */
 }
+
+/* Estilos para el contenedor de formularios */
 .container .forms {
-  height: 100%;
-  width: 100%;
-  background: #fff;
+  height: 100%; /* Establece la altura al 100% */
+  width: 100%; /* Establece el ancho al 100% */
+  background: #fff; /* Establece el fondo blanco para los formularios */
 }
+
+/* Estilos para el contenido de los formularios */
 .container .form-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: flex; /* Usa Flexbox para alinear formularios */
+  align-items: center; /* Centra verticalmente los formularios */
+  justify-content: space-between; /* Espacia los formularios de manera equitativa */
 }
+
+/* Estilos para los formularios de inicio de sesión y registro */
 .form-content .login-form,
 .form-content .signup-form {
-  width: calc(100% / 2 - 25px);
+  width: calc(100% / 2 - 25px); /* Establece el ancho de cada formulario a la mitad menos 25px */
 }
+
+/* Estilos para los títulos de los formularios */
 .forms .form-content .title {
-  position: relative;
-  font-size: 24px;
-  font-weight: 500;
-  color: #333;
+  position: relative; /* Permite posicionamiento relativo para el título */
+  font-size: 24px; /* Establece el tamaño de la fuente del título */
+  font-weight: 500; /* Establece el grosor de la fuente del título */
+  color: #333; /* Establece el color del texto a gris oscuro */
 }
+
+/* Estilos para la línea decorativa del título */
 .forms .form-content .title:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 25px;
-  background: #7d2ae8;
+  content: ''; /* Crea un pseudo-elemento vacío */
+  position: absolute; /* Posiciona el pseudo-elemento de manera absoluta */
+  left: 0; /* Alinea a la izquierda */
+  bottom: 0; /* Alinea en la parte inferior */
+  height: 3px; /* Establece la altura de la línea */
+  width: 25px; /* Establece el ancho de la línea */
+  background: #7d2ae8; /* Establece el color de la línea a púrpura */
 }
+
+/* Estilo específico para el título del formulario de registro */
 .forms .signup-form .title:before {
-  width: 20px;
+  width: 20px; /* Establece un ancho diferente para la línea del formulario de registro */
 }
+
+/* Estilos para los cuadros de entrada en los formularios */
 .forms .form-content .input-boxes {
-  margin-top: 30px;
+  margin-top: 30px; /* Añade margen superior para separar los cuadros de entrada */
 }
+
+/* Estilos para cada cuadro de entrada */
 .forms .form-content .input-box {
-  display: flex;
-  align-items: center;
-  height: 50px;
-  width: 100%;
-  margin: 10px 0;
-  position: relative;
+  display: flex; /* Usa Flexbox para alinear los elementos en el cuadro de entrada */
+  align-items: center; /* Centra verticalmente los elementos en el cuadro de entrada */
+  height: 50px; /* Establece una altura fija para el cuadro de entrada */
+  width: 100%; /* Establece el ancho al 100% */
+  margin: 10px 0; /* Añade márgenes verticales para separación */
+  position: relative; /* Permite el posicionamiento de elementos dentro del cuadro de entrada */
 }
+
+/* Estilos para el campo de entrada */
 .form-content .input-box input {
-  height: 100%;
-  width: 100%;
-  outline: none;
-  border: none;
-  padding: 0 30px;
-  font-size: 16px;
-  font-weight: 500;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+  height: 100%; /* Establece la altura al 100% */
+  width: 100%; /* Establece el ancho al 100% */
+  outline: none; /* Elimina el contorno por defecto al enfocar */
+  border: none; /* Elimina el borde por defecto */
+  padding: 0 30px; /* Añade padding interno a los lados */
+  font-size: 16px; /* Establece el tamaño de la fuente */
+  font-weight: 500; /* Establece el grosor de la fuente */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2); /* Añade un borde inferior */
+  transition: all 0.3s ease; /* Añade una transición suave a los cambios de estilo */
 }
+
+/* Estilos para el campo de entrada en enfoque o con contenido válido */
 .form-content .input-box input:focus,
 .form-content .input-box input:valid {
-  border-color: #7d2ae8;
+  border-color: #7d2ae8; /* Cambia el color del borde al enfocar o al ser válido */
 }
+
+/* Estilos para el icono dentro del cuadro de entrada */
 .form-content .input-box i {
-  position: absolute;
-  color: #7d2ae8;
-  font-size: 17px;
+  position: absolute; /* Posiciona el icono de manera absoluta */
+  color: #7d2ae8; /* Establece el color del icono */
+  font-size: 17px; /* Establece el tamaño del icono */
 }
+
+/* Estilos para el texto de ayuda o enlace en los formularios */
 .forms .form-content .text {
-  font-size: 14px;
-  font-weight: 500;
-  color: #333;
+  font-size: 14px; /* Establece el tamaño de la fuente */
+  font-weight: 500; /* Establece el grosor de la fuente */
+  color: #333; /* Establece el color del texto a gris oscuro */
 }
+
+/* Estilos para los enlaces en los formularios */
 .forms .form-content .text a {
-  text-decoration: none;
+  text-decoration: none; /* Elimina el subrayado del enlace */
 }
+
+/* Estilos para el hover en los enlaces */
 .forms .form-content .text a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Añade un subrayado al pasar el mouse */
 }
+
+/* Estilos para el botón en los formularios */
 .forms .form-content .button {
-  color: #fff;
-  margin-top: 40px;
+  color: #fff; /* Establece el color del texto del botón a blanco */
+  margin-top: 40px; /* Añade margen superior para separación */
 }
+
+/* Estilos para el botón de entrada */
 .forms .form-content .button input {
-  color: #fff;
-  background: #7d2ae8;
-  border-radius: 6px;
-  padding: 0;
-  cursor: pointer;
-  transition: all 0.4s ease;
+  color: #fff; /* Establece el color del texto del botón a blanco */
+  background: #7d2ae8; /* Establece el color de fondo del botón a púrpura */
+  border-radius: 6px; /* Añade bordes redondeados al botón */
+  padding: 0; /* Elimina el padding interno del botón */
+  cursor: pointer; /* Cambia el cursor a mano al pasar el mouse */
+  transition: all 0.4s ease; /* Añade una transición suave a los cambios de estilo */
 }
+
+/* Estilos para el hover en el botón */
 .forms .form-content .button input:hover {
-  background: #5b13b9;
+  background: #5b13b9; /* Cambia el color de fondo al pasar el mouse */
 }
+
+/* Estilos para las etiquetas en los formularios */
 .forms .form-content label {
-  color: #5b13b9;
-  cursor: pointer;
+  color: #5b13b9; /* Establece el color de las etiquetas a púrpura */
+  cursor: pointer; /* Cambia el cursor a mano al pasar el mouse */
 }
+
+/* Estilos para el hover en las etiquetas */
 .forms .form-content label:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Añade un subrayado al pasar el mouse */
 }
+
+/* Estilos para el texto en el formulario de inicio de sesión y registro */
 .forms .form-content .login-text,
 .forms .form-content .sign-up-text {
-  text-align: center;
-  margin-top: 25px;
+  text-align: center; /* Centra el texto */
+  margin-top: 25px; /* Añade margen superior para separación */
 }
+
+/* Control para el checkbox que controla la rotación */
 .container #flip {
-  display: none;
+  display: none; /* Oculta el checkbox */
 }
+
+/* Estilos responsivos para pantallas pequeñas */
 @media (max-width: 730px) {
   .container .cover {
-    display: none;
+    display: none; /* Oculta la cubierta en pantallas pequeñas */
   }
   .form-content .login-form,
   .form-content .signup-form {
-    width: 100%;
+    width: 100%; /* Establece el ancho de los formularios al 100% en pantallas pequeñas */
   }
   .form-content .signup-form {
-    display: none;
+    display: none; /* Oculta el formulario de registro por defecto */
   }
   .container #flip:checked ~ .forms .signup-form {
-    display: block;
+    display: block; /* Muestra el formulario de registro al activar el checkbox */
   }
   .container #flip:checked ~ .forms .login-form {
-    display: none;
+    display: none; /* Oculta el formulario de inicio de sesión al activar el checkbox */
   }
 }

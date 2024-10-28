@@ -1,125 +1,124 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;   
-  font-family: 'Poppins', sans-serif; 
+  margin: 0; /* Elimina el margen por defecto de todos los elementos */
+  padding: 0; /* Elimina el padding por defecto de todos los elementos */
+  box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho y alto de los elementos */
+  font-family: 'Poppins', sans-serif; /* Establece la fuente Poppins como la fuente predeterminada */
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-image: url(image/2150861876\ \(2\).jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  display: flex; /* Usa Flexbox para alinear elementos */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  align-items: center; /* Centra verticalmente el contenido */
+  min-height: 100vh; /* Establece una altura mínima de 100% de la altura de la ventana */
+  background-image: url(image/2150861876\ \(2\).jpg); /* Establece una imagen de fondo para el cuerpo */
+  background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+  background-size: cover; /* Hace que la imagen de fondo cubra toda la ventana */
 }
 
 .cards-container {
-  display: flex;
-  flex-direction: column; /* Cambiado a column para apilar las tarjetas */
-  align-items: center; /* Centra las tarjetas horizontalmente */
-  width: 70%; /* Ajusta esto según el espacio disponible */
+  display: flex; /* Usa Flexbox para organizar las tarjetas */
+  flex-direction: column; /* Cambia la dirección a columna para apilar las tarjetas verticalmente */
+  align-items: center; /* Centra las tarjetas horizontalmente en el contenedor */
+  width: 70%; /* Ajusta el ancho del contenedor de tarjetas */
 }
 
 .card {
-  position: relative;
-  width: 300px;
-  height: 400px;
-  margin-bottom: 20px; /* Espacio entre tarjetas */
+  position: relative; /* Establece la posición relativa para permitir el posicionamiento absoluto de elementos hijos */
+  width: 300px; /* Establece un ancho fijo para cada tarjeta */
+  height: 400px; /* Establece una altura fija para cada tarjeta */
+  margin-bottom: 20px; /* Añade espacio entre las tarjetas */
 }
 
 .card .card_landing {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0 5px 10px #fdf9f9;
-  background-position: center;
-  background-size: cover;
-  z-index: 100;
+  position: relative; /* Permite el uso de posicionamiento absoluto en el interior */
+  width: 100%; /* Ocupa todo el ancho de la tarjeta */
+  height: 100%; /* Ocupa toda la altura de la tarjeta */
+  box-shadow: 0 5px 10px #fdf9f9; /* Añade sombra a la tarjeta para un efecto 3D */
+  background-position: center; /* Centra la imagen de fondo */
+  background-size: cover; /* Hace que la imagen de fondo cubra toda la tarjeta */
+  z-index: 100; /* Asegura que la tarjeta de aterrizaje esté por encima de otros elementos */
 }
 
 .card .card_landing h6 {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  font-size: 25px;
-  color: #fff;
+  position: absolute; /* Posiciona el título de manera absoluta dentro de la tarjeta */
+  bottom: 10px; /* Alinea el título al fondo de la tarjeta */
+  left: 10px; /* Alinea el título a la izquierda de la tarjeta */
+  font-size: 25px; /* Establece el tamaño de la fuente para el título */
+  color: #fff; /* Establece el color del texto a blanco */
 }
 
 .card .card_info {
-  position: absolute;
-  width: 90%;
-  height: 90%;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  top: 0;
-  margin: auto;
-  padding: 15px;
-  background-image: url(image/photo-1663970206579-c157cba7edda.jpg);
-  z-index: 90;
-  box-shadow: 0 5px 10px #ffffff;
-  transition: .5s;
+  position: absolute; /* Posiciona la información de la tarjeta de manera absoluta */
+  width: 90%; /* Establece el ancho de la sección de información */
+  height: 90%; /* Establece la altura de la sección de información */
+  left: 0; /* Alinea la sección de información a la izquierda */
+  bottom: 0; /* Alinea la sección de información al fondo */
+  right: 0; /* Alinea la sección de información a la derecha */
+  top: 0; /* Alinea la sección de información en la parte superior */
+  margin: auto; /* Centra la sección de información dentro de la tarjeta */
+  padding: 15px; /* Añade padding a la sección de información */
+  background-image: url(image/photo-1663970206579-c157cba7edda.jpg); /* Establece una imagen de fondo para la sección de información */
+  z-index: 90; /* Asegura que la información esté encima de la tarjeta de aterrizaje */
+  box-shadow: 0 5px 10px #ffffff; /* Añade sombra a la sección de información */
+  transition: .5s; /* Añade una transición suave al pasar el mouse */
 }
 
 .card:hover .card_info {
-  left: 100%;
+  left: 100%; /* Mueve la sección de información fuera de la vista al pasar el mouse */
 }
 
 .card_info .head {
-  padding: 5px 0;
-  border-bottom: solid 1px #1b78e4;
+  padding: 5px 0; /* Añade padding vertical a la cabecera de la tarjeta */
+  border-bottom: solid 1px #1b78e4; /* Añade una línea inferior de separación */
 }
 
 .card_info .head .title {
-  font-size: 20px;
-  font-weight: 700;
-  color: #1b78e4;
+  font-size: 20px; /* Establece el tamaño de la fuente para el título */
+  font-weight: 700; /* Establece el grosor de la fuente a negrita */
+  color: #1b78e4; /* Establece el color del texto del título */
 }
 
 .card_info .head .description {
-  display: flex;
-  gap: 10px;
+  display: flex; /* Usa Flexbox para organizar la descripción */
+  gap: 10px; /* Añade espacio entre los elementos de la descripción */
 }
 
 .card_info .head .description .item {
-  display: flex;
-  gap: 5px;
-  align-items: center;
+  display: flex; /* Usa Flexbox para organizar los elementos dentro de la descripción */
+  gap: 5px; /* Añade espacio entre los elementos dentro del ítem */
+  align-items: center; /* Alinea verticalmente los elementos dentro del ítem */
 }
 
 .card_info .head .description .item i {
-  color: #1b78e4;
-  font-size: 15px;
+  color: #1b78e4; /* Establece el color del icono en la descripción */
+  font-size: 15px; /* Establece el tamaño del icono */
 }
 
 .card_info .head .description .item p {
-  font-size: 13px;
+  font-size: 13px; /* Establece el tamaño de la fuente para el texto de descripción */
 }
 
 .card_info .content {
-  margin-top: 15px;
+  margin-top: 15px; /* Añade espacio en la parte superior del contenido */
 }
 
 .card_info .content .list {
-  padding: 10px 15px;
+  padding: 10px 15px; /* Añade padding a la lista de elementos */
 }
 
 .card_info .content .list li {
-  font-size: 14px;
-  margin-bottom: 5px;
-  color: white;
+  font-size: 14px; /* Establece el tamaño de la fuente para los elementos de la lista */
+  margin-bottom: 5px; /* Añade espacio entre los elementos de la lista */
+  color: white; /* Establece el color del texto de la lista a blanco */
 }
 
 .card_info .action .btn {
-  padding: 10px;
-  color: #fff;
-  width: 100%;
-  text-decoration: none;
-  text-align: center;
-  background: #1b78e4;
-  display: block;
-  margin-top: 10px;
+  padding: 10px; /* Añade padding al botón */
+  color: #fff; /* Establece el color del texto del botón a blanco */
+  width: 100%; /* Establece el ancho del botón al 100% del contenedor */
+  text-decoration: none; /* Elimina el subrayado del texto del botón */
+  text-align: center; /* Centra el texto dentro del botón */
+  background: #1b78e4; /* Establece el color de fondo del botón */
+  display: block; /* Hace que el botón se comporte como un bloque */
+  margin-top: 10px; /* Añade espacio en la parte superior del botón */
 }
-

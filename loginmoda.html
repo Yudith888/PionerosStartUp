@@ -1,83 +1,133 @@
 <!DOCTYPE html>
 <!-- Coding by CodingNepal | www.codingnepalweb.com-->
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-    <title> Inicio de sesion y registro </title>
-    <link rel="stylesheet" href="loginmoda.css">
+<head>
+    <meta charset="UTF-8"> <!-- Establece la codificación de caracteres a UTF-8 -->
+    <title> Inicio de sesion y registro </title> <!-- Título de la página -->
+    <link rel="stylesheet" href="loginmoda.css"> <!-- Vincula la hoja de estilos CSS -->
     <!-- Fontawesome CDN Link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Vincula la biblioteca de iconos Font Awesome -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la página sea responsiva -->
+</head>
 <body>
-  <div class="container">
-    <input type="checkbox" id="flip">
-    <div class="cover">
-      <div class="front">
-        <img src="image/12809572_5059287.jpg" alt="">
-        <div class="text">
-          <span class="text-1">Cada nuevo amigo es una
-            nueva aventura</span>
-          <span class="text-2">Conectémonos</span>
-        </div>
-      </div>
-      <div class="back">
-        <!--<img class="backImg" src="images/backImg.jpg" alt="">-->
-        <div class="text">
-            <img src="image/17788416_5894048.jpg" alt="">
-          <span class="text-1">¡Regístrate y descubre tu estilo único con nosotros!</span>
-        
-        </div>
-      </div>
-    </div>
-    <div class="forms">
-        <div class="form-content">
-          <div class="login-form">
-            <div class="title">Inicio de Sesion</div>
-          <form action="#">
-            <div class="input-boxes">
-              <div class="input-box">
-                <i class="fas fa-envelope"></i>
-                <input type="text" placeholder="Ingresa tu correo" required>
-              </div>
-              <div class="input-box">
-                <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Ingresa tu contraseña" required>
-              </div>
-              <div class="text"><a href="#">Haz olvidado tu contraseña?</a></div>
-              <div class="button input-box">
-                <a href="moda.html"></a>
-                <input type="button" value="Ingresar" onclick="window.location.href='moda.html'">
-              </div>
-              <div class="text sign-up-text">No tienes una cuenta? <label for="flip">Registrate</label></div>
+<div class="container"> <!-- Contenedor principal -->
+    <input type="checkbox" id="flip"> <!-- Checkbox para alternar entre formularios -->
+    <div class="cover"> <!-- Sección de cubierta para efectos visuales -->
+        <div class="front"> <!-- Lado frontal de la cubierta -->
+            <img src="image/12809572_5059287.jpg" alt=""> <!-- Imagen del lado frontal -->
+            <div class="text"> <!-- Texto en el lado frontal -->
+                <span class="text-1">Cada nuevo amigo es una nueva aventura</span> <!-- Texto principal -->
+                <span class="text-2">Conectémonos</span> <!-- Texto secundario -->
             </div>
-        </form>
-      </div>
-        <div class="signup-form">
-          <div class="title">Registrarme</div>
-        <form action="#">
-            <div class="input-boxes">
-              <div class="input-box">
-                <i class="fas fa-user"></i>
-                <input type="text" placeholder="Ingresa tu nombre" required>
-              </div>
-              <div class="input-box">
-                <i class="fas fa-envelope"></i>
-                <input type="text" placeholder="Ingresa tu correo" required>
-              </div>
-              <div class="input-box">
-                <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Ingresa tu contraseña" required>
-              </div>
-              <div class="button input-box">
-                <input type="button" value="Ingresar" onclick="window.location.href='moda.html'" required>
-              </div>
-              <div class="text sign-up-text">Ya tienes una cuenta? <label for="flip">Inicia sesion</label></div>
+        </div>
+        <div class="back"> <!-- Lado trasero de la cubierta -->
+            <div class="text"> <!-- Texto en el lado trasero -->
+                <img src="image/17788416_5894048.jpg" alt=""> <!-- Imagen del lado trasero -->
+                <span class="text-1">¡Regístrate y descubre tu estilo único con nosotros!</span> <!-- Texto principal -->
             </div>
-      </form>
+        </div>
     </div>
+    <div class="forms"> <!-- Sección que contiene los formularios -->
+        <div class="form-content"> <!-- Contenedor del contenido de los formularios -->
+            <div class="login-form"> <!-- Formulario de inicio de sesión -->
+                <div class="title">Inicio de Sesion</div> <!-- Título del formulario -->
+                <form id="loginForm" onsubmit="return validateLoginForm();"> <!-- Formulario con validación en el envío -->
+                    <div class="input-boxes"> <!-- Contenedor de cuadros de entrada -->
+                        <div class="input-box"> <!-- Cuadro de entrada para el email -->
+                            <i class="fas fa-envelope"></i> <!-- Icono de correo -->
+                            <input type="text" id="loginEmail" placeholder="Ingresa tu correo" required> <!-- Campo de entrada para el email -->
+                        </div>
+                        <div class="input-box"> <!-- Cuadro de entrada para la contraseña -->
+                            <i class="fas fa-lock"></i> <!-- Icono de candado -->
+                            <input type="password" id="loginPassword" placeholder="Ingresa tu contraseña" required> <!-- Campo de entrada para la contraseña -->
+                        </div>
+                        <div class="text"><a href="#">Haz olvidado tu contraseña?</a></div> <!-- Enlace para recuperar la contraseña -->
+                        <div class="button input-box"> <!-- Botón de envío -->
+                            <input type="submit" value="Ingresar"> <!-- Texto del botón -->
+                        </div>
+                        <div class="text sign-up-text">No tienes una cuenta? <label for="flip">Registrate</label></div> <!-- Enlace para cambiar al formulario de registro -->
+                    </div>
+                </form>
+            </div>
+            <div class="signup-form"> <!-- Formulario de registro -->
+                <div class="title">Registrarme</div> <!-- Título del formulario -->
+                <form id="signupForm" onsubmit="return validateSignupForm();"> <!-- Formulario con validación en el envío -->
+                    <div class="input-boxes"> <!-- Contenedor de cuadros de entrada -->
+                        <div class="input-box"> <!-- Cuadro de entrada para el nombre -->
+                            <i class="fas fa-user"></i> <!-- Icono de usuario -->
+                            <input type="text" id="signupName" placeholder="Ingresa tu nombre" required> <!-- Campo de entrada para el nombre -->
+                        </div>
+                        <div class="input-box"> <!-- Cuadro de entrada para el email -->
+                            <i class="fas fa-envelope"></i> <!-- Icono de correo -->
+                            <input type="text" id="signupEmail" placeholder="Ingresa tu correo" required> <!-- Campo de entrada para el email -->
+                        </div>
+                        <div class="input-box"> <!-- Cuadro de entrada para la contraseña -->
+                            <i class="fas fa-lock"></i> <!-- Icono de candado -->
+                            <input type="password" id="signupPassword" placeholder="Ingresa tu contraseña" required> <!-- Campo de entrada para la contraseña -->
+                        </div>
+                        <div class="button input-box"> <!-- Botón de envío -->
+                            <input type="submit" value="Registrarme"> <!-- Texto del botón -->
+                        </div>
+                        <div class="text sign-up-text">Ya tienes una cuenta? <label for="flip">Inicia sesion</label></div> <!-- Enlace para cambiar al formulario de inicio de sesión -->
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
+</div>
+
+<!-- Ventana Modal -->
+<div id="myModal" class="modal"> <!-- Contenedor de la ventana modal -->
+    <div class="modal-content"> <!-- Contenido de la ventana modal -->
+        <span class="close" onclick="closeModal()">&times;</span> <!-- Botón para cerrar la ventana modal -->
+        <h2>Redirigiendo a la página...</h2> <!-- Mensaje de redirección -->
+        <p>Por favor, espera un momento.</p> <!-- Mensaje de espera -->
     </div>
-  </div>
+</div>
+
+<script>
+    // Mostrar la ventana modal
+    function showModal() {
+        document.getElementById("myModal").style.display = "block"; // Muestra la ventana modal
+        setTimeout(function () {
+            window.location.href = 'moda.html'; // Redirige después de un tiempo
+        }, 2000); // Espera 2 segundos antes de redirigir
+    }
+
+    // Validar formulario de inicio de sesión
+    function validateLoginForm() {
+        const email = document.getElementById("loginEmail").value; // Obtiene el valor del email
+        const password = document.getElementById("loginPassword").value; // Obtiene el valor de la contraseña
+
+        if (email === "" || password === "") { // Comprueba si algún campo está vacío
+            alert("Por favor, completa todos los campos."); // Muestra una alerta si faltan campos
+            return false; // Evita que el formulario se envíe
+        }
+
+        showModal(); // Muestra la ventana modal
+        return false; // Evita que el formulario se envíe de manera tradicional
+    }
+
+    // Validar formulario de registro
+    function validateSignupForm() {
+        const name = document.getElementById("signupName").value; // Obtiene el valor del nombre
+        const email = document.getElementById("signupEmail").value; // Obtiene el valor del email
+        const password = document.getElementById("signupPassword").value; // Obtiene el valor de la contraseña
+
+        if (name === "" || email === "" || password === "") { // Comprueba si algún campo está vacío
+            alert("Por favor, completa todos los campos."); // Muestra una alerta si faltan campos
+            return false; // Evita que el formulario se envíe
+        }
+
+        showModal(); // Muestra la ventana modal
+        return false; // Evita que el formulario se envíe de manera tradicional
+    }
+
+    // Función para cerrar la ventana modal
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none"; // Oculta la ventana modal
+    }
+</script>
+
 </body>
 </html>

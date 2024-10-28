@@ -1,321 +1,367 @@
-
+/* Reset default margin and padding for body, set width and height for full viewport */
 body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100vh;
-  background-image: url(image/17788416_5894048.jpg);
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  width: 100%; /* Set width to full */
+  height: 100vh; /* Set height to full viewport height */
+  background-image: url(image/17788416_5894048.jpg); /* Set background image */
 }
+
+/* Center the content vertically and horizontally */
 .center {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  flex-direction: column; /* Stack items in a column */
 }
-.imagen{
- justify-content: center;
-}
-.book {
-  width: 400px;
-  height: 300px;
-  position: relative;
-}
-.pages {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-.page {
-  width: 380px;
-  height: 270px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 7mm;
-  margin: 0 6px;
-  transform-style: preserve-3d;
-  transform-origin: left;
-  transition: 0.25s;
-  box-shadow: 1px 2px 0 0 rgba(0, 0, 0, 0.15),
-    1px 3px 1px 0 rgba(0, 0, 0, 0.1);
-}
-.page-side {
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  padding: 20px 30px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-  font-family: poppins;
-  border-radius: 7mm;
-  position: absolute;
-  top: 0;
-  left: 0;
-  backface-visibility: hidden;
-}
-.page-head {
-  width: 100%;
-}
-.page-title {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 40px;
-  font-weight: 500;
-  color: white;
-}
+
+/* Centering specific images */
 .imagen {
-  display: block;
-  margin: 0 auto; /* Asegura que la imagen esté centrada horizontalmente */
+  justify-content: center; /* Center content */
 }
+
+/* Style for book-like elements */
+.book {
+  width: 400px; /* Fixed width */
+  height: 300px; /* Fixed height */
+  position: relative; /* Position relative for absolute child positioning */
+}
+
+/* Set dimensions for the pages */
+.pages {
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  position: relative; /* Position relative for child elements */
+}
+
+/* Style for individual pages */
+.page {
+  width: 380px; /* Width slightly less than container */
+  height: 270px; /* Height slightly less than container */
+  position: absolute; /* Absolute positioning for overlap effect */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  border-radius: 7mm; /* Rounded corners */
+  margin: 0 6px; /* Horizontal margin */
+  transform-style: preserve-3d; /* Preserve 3D transformations */
+  transform-origin: left; /* Set transformation origin */
+  transition: 0.25s; /* Smooth transition effect */
+  box-shadow: 1px 2px 0 0 rgba(0, 0, 0, 0.15), /* Shadow effect */
+    1px 3px 1px 0 rgba(0, 0, 0, 0.1); /* Additional shadow for depth */
+}
+
+/* Style for the sides of the pages */
+.page-side {
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  box-sizing: border-box; /* Include padding/border in width/height */
+  padding: 20px 30px; /* Padding for content spacing */
+  display: flex; /* Use flexbox layout */
+  align-items: flex-start; /* Align items to the start */
+  justify-content: center; /* Center content horizontally */
+  flex-direction: column; /* Stack items vertically */
+  font-family: poppins; /* Font family */
+  border-radius: 7mm; /* Rounded corners */
+  position: absolute; /* Absolute positioning for overlap effect */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  backface-visibility: hidden; /* Hide the back face when flipped */
+}
+
+/* Header style within the page */
+.page-head {
+  width: 100%; /* Full width */
+}
+
+/* Title style for pages */
+.page-title {
+  width: 100%; /* Full width */
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  font-size: 40px; /* Large font size */
+  font-weight: 500; /* Medium font weight */
+  color: white; /* White text color */
+}
+
+/* Center images within pages */
+.imagen {
+  display: block; /* Block display for centering */
+  margin: 0 auto; /* Center horizontally */
+}
+
+/* Content area within pages */
 .page-content {
-  flex-grow: 1;
-  font-size: 18px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  color: white;
+  flex-grow: 1; /* Allow to grow and take available space */
+  font-size: 18px; /* Font size for content */
+  display: flex; /* Use flexbox layout */
+  align-items: flex-end; /* Align content to the bottom */
+  justify-content: center; /* Center content horizontally */
+  color: white; /* White text color */
 }
+
+/* Footer area within pages */
 .page-footer {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 15px;
-  font-size: 14px;
+  width: 100%; /* Full width */
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between items */
+  margin-top: 15px; /* Margin above the footer */
+  font-size: 14px; /* Smaller font size */
 }
+
+/* Style for page numbers */
 .pg-no {
-  width: 14px;
-  padding: 0 15px;
-  height: 20px;
-  line-height: 20px;
-  text-align: center;
-  color: rgb(40, 40, 40);
-  background: white;
-  border-radius: 3mm;
+  width: 14px; /* Fixed width */
+  padding: 0 15px; /* Padding for horizontal spacing */
+  height: 20px; /* Fixed height */
+  line-height: 20px; /* Center text vertically */
+  text-align: center; /* Center text horizontally */
+  color: rgb(40, 40, 40); /* Dark grey text color */
+  background: white; /* White background */
+  border-radius: 3mm; /* Rounded corners */
 }
+
+/* Style for the front page */
 .front {
-  background-image: url(image/un\ fondo\ de\ moda\ \(1\).png);
-  color: rgb(40, 40, 40);
-  padding-left: 40px;
+  background-image: url(image/un\ fondo\ de\ moda\ \(1\).png); /* Background image for front */
+  color: rgb(40, 40, 40); /* Dark grey text color */
+  padding-left: 40px; /* Left padding */
 }
+
+/* Style for the back page */
 .back {
-  background-image: url(image/un\ fondo\ \(1\).png);
-  color: white;
-  padding-right: 40px;
-  transform: rotateY(180deg);
+  background-image: url(image/un\ fondo\ \(1\).png); /* Background image for back */
+  color: white; /* White text color */
+  padding-right: 40px; /* Right padding */
+  transform: rotateY(180deg); /* Flip the page */
 }
 
-
+/* Style for headings */
 h2 {
-  text-align: center;
-  color: #333;
+  text-align: center; /* Center the heading */
+  color: #333; /* Dark grey text color */
 }
+
+/* Label style for form elements */
 label {
-  display: block;
-  margin: 10px 0 5px;
-  color: #666;
+  display: block; /* Block display for proper spacing */
+  margin: 10px 0 5px; /* Margin for spacing */
+  color: #666; /* Light grey text color */
 }
+
+/* Style for input, select, and textarea elements */
 input, select, textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  box-sizing: border-box;
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding for better touch area */
+  margin-bottom: 10px; /* Margin below each element */
+  border-radius: 5px; /* Rounded corners */
+  box-sizing: border-box; /* Include padding/border in width/height */
 }
+
+/* Focus styles for input, select, and textarea elements */
 input:focus, select:focus, textarea:focus {
-  border-color: #007bff;
+  border-color: #007bff; /* Change border color on focus */
 }
 
-
+/* Style for buttons */
 .read {
-  background: linear-gradient(90deg, #3264ee, #22b4ce);
-  padding: 6px;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
+  background: linear-gradient(90deg, #3264ee, #22b4ce); /* Gradient background */
+  padding: 6px; /* Padding for buttons */
+  color: #fff; /* White text color */
+  text-decoration: none; /* Remove underline */
+  border-radius: 8px; /* Rounded corners */
 }
+
+/* Beads for decorative effect */
 .beads {
-  position: absolute;
-  top: 0;
-  left: -12px;
-  height: 270px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-direction: column;
-  z-index: 9999;
+  position: absolute; /* Absolute positioning */
+  top: 0; /* Align to top */
+  left: -12px; /* Offset from left */
+  height: 270px; /* Fixed height */
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Center items vertically */
+  justify-content: space-evenly; /* Even spacing between items */
+  flex-direction: column; /* Stack items vertically */
+  z-index: 9999; /* Ensure it appears above other elements */
 }
+
+/* Individual beads style */
 .bead {
-  width: 36px;
-  height: 12px;
-  background: white;
-  border-radius: 5mm;
-  z-index: 9999;
-  box-shadow: inset 1px 2px 0 0 rgba(0, 0, 0, 0.15),
-    inset 1px 3px 1px 0 rgba(0, 0, 0, 0.1);
+  width: 36px; /* Fixed width */
+  height: 12px; /* Fixed height */
+  background: white; /* White background */
+  border-radius: 5mm; /* Rounded corners */
+  z-index: 9999; /* Ensure it appears above other elements */
+  box-shadow: inset 1px 2px 0 0 rgba(0, 0, 0, 0.15), /* Inner shadow effect */
+    inset 1px 3px 1px 0 rgba(0, 0, 0, 0.1); /* Additional inner shadow for depth */
 }
+
+/* Controls for the pages */
 .controls {
-  width: 350px;
-  height: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: 350px; /* Fixed width */
+  height: fit-content; /* Height based on content */
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between items */
 }
+
+/* Style for control buttons */
 .controls button {
-  background: white;
-  width: 40px;
-  height: 40px;
-  border: 0.4mm solid rgb(40, 40, 40);
-  border-radius: 50%;
-  outline: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+  background: white; /* White background */
+  width: 40px; /* Fixed width */
+  height: 40px; /* Fixed height */
+  border: 0.4mm solid rgb(40, 40, 40); /* Border styling */
+  border-radius: 50%; /* Circular shape */
+  outline: none; /* Remove default outline */
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  cursor: pointer; /* Change cursor to pointer on hover */
 }
 
-/* Header */
+/* Header styling */
 .header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: transparent;
-    padding: 10px 0; /* Aumenta el padding superior e inferior */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: fixed; /* Fixed position for header */
+    top: 0; /* Align to top */
+    width: 100%; /* Full width */
+    background-color: transparent; /* Transparent background */
+    padding: 10px 0; /* Vertical padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    z-index: 1000; /* Ensure it appears above other elements */
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
 }
 
-/* Navegación */
+/* Navigation styling */
 .navigation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px; /* Añade margen superior para bajar el menú */
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    margin-top: 20px; /* Margin above the menu */
 }
 
+/* Style for the navigation list */
 .navigation ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Use flexbox layout */
+    gap: 30px; /* Space between items */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
 
-/* Logo dentro del header */
+/* Content within the header */
 .header-content {
-    margin-right: 20px;
+    margin-right: 20px; /* Right margin for spacing */
 }
 
-
-/* Header */
+/* Repeated header styles for consistency */
 .header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: transparent;
-    padding: 20px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+    position: fixed; /* Fixed position for header */
+    top: 0; /* Align to top */
+    width: 100%; /* Full width */
+    background-color: transparent; /* Transparent background */
+    padding: 20px 0; /* Vertical padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    z-index: 1000; /* Ensure it appears above other elements */
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    color: white; /* White text color */
 }
 
-/* Navegación */
+/* Navigation within the header */
 .navigation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1px;
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    margin-top: 1px; /* Minor margin above the menu */
 }
 
-/* Lista de navegación */
+/* Navigation list styles */
 .navigation ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
-    align-items: center; /* Asegura que todos los elementos del menú, incluidos los logos, estén alineados verticalmente */
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Use flexbox layout */
+    gap: 30px; /* Space between items */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    align-items: center; /* Center items vertically */
 }
 
-/* Logo y otros contenidos */
+/* Styles for logo and content alignment */
 .header-content,
 .logo {
-    display: flex;
-    align-items: center; /* Alinea verticalmente los logos */
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Center items vertically */
 }
 
+/* Logo image styles */
 .logo img {
-    display: block; /* Asegura que las imágenes no tengan espacio en línea sobrante */
-    margin-right: 1px; /* Espacio entre logos y otros elementos si es necesario */
+    display: block; /* Block display for proper spacing */
+    margin-right: 1px; /* Right margin for spacing */
 }
-/* Estilo para quitar las líneas de los enlaces en el menú */
+
+/* Remove underline from navigation links */
 .navigation ul li a {
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: inherit; /* Mantiene el color del texto o el que hayas asignado previamente */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
 }
 
+/* Hover effect for navigation links */
 .navigation ul li a:hover {
-    text-decoration: none; /* Asegura que al pasar el mouse no se muestre el subrayado */
+    text-decoration: none; /* Maintain no underline on hover */
 }
 
+/* Modal window styling */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed position */
+  z-index: 1000; /* Ensure it appears above other elements */
+  left: 0; /* Align to left */
+  top: 0; /* Align to top */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Allow scrolling */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  justify-content: center; /* Center content */
+  align-items: center; /* Center content vertically */
+}
 
-        /* Estilos para la ventana modal */
-        .modal {
-          display: none; /* Oculto por defecto */
-          position: fixed;
-          z-index: 1000;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%;
-          overflow: auto;
-          background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-          justify-content: center;
-          align-items: center;
-      }
+/* Modal content styling */
+.modal-content {
+  background-image: url(image/17788416_5894048.jpg); /* Background image */
+  padding: 20px; /* Padding for spacing */
+  border-radius: 10px; /* Rounded corners */
+  text-align: center; /* Center text */
+  width: 300px; /* Fixed width */
+  margin: auto; /* Center horizontally */
+}
 
-      .modal-content {
-          background-image: url(image/17788416_5894048.jpg);
-          padding: 20px;
-          border-radius: 10px;
-          text-align: center;
-          width: 300px;
-          margin: auto;
-      }
+/* Close button styling */
+.close {
+  color: #aaa; /* Light grey color */
+  float: right; /* Align to right */
+  font-size: 28px; /* Large font size */
+  font-weight: bold; /* Bold text */
+}
 
-      .close {
-          color: #aaa;
-          float: right;
-          font-size: 28px;
-          font-weight: bold;
-      }
+/* Hover effect for close button */
+.close:hover,
+.close:focus {
+  color: black; /* Change color on hover/focus */
+  text-decoration: none; /* Remove underline */
+  cursor: pointer; /* Change cursor to pointer */
+}
 
-      .close:hover,
-      .close:focus {
-          color: black;
-          text-decoration: none;
-          cursor: pointer;
-      }
-
-      /* Estilo para los botones */
-      .botons {
-          padding: 10px 20px;
-          background-color: #333;
-          color: white;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-      }
-  
+/* Button styles */
+.botons {
+  padding: 10px 20px; /* Padding for buttons */
+  background-color: #333; /* Dark background */
+  color: white; /* White text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor to pointer */
+}

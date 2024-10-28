@@ -1,75 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!-- Declaración del tipo de documento y lenguaje -->
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de sesion y registro</title>
-    <link rel="stylesheet" href="logintecno.css">
+    <meta charset="UTF-8"> <!-- Establecer la codificación de caracteres -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibilidad con IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividad -->
+    <title>Inicio de sesion y registro</title> <!-- Título de la página -->
+    <link rel="stylesheet" href="logintecno.css"> <!-- Enlace a la hoja de estilos CSS -->
 </head>
 <body>
-    <div class="wrapper">
-        <img src="image/ai-nuclear-energy-future-innovation-disruptive-technology.jpg" alt="">
-    <h2 class="text-right">Bienvenid@</h2>
+    <div class="wrapper"> <!-- Contenedor principal -->
+        <img src="image/ai-nuclear-energy-future-innovation-disruptive-technology.jpg" alt=""> <!-- Imagen de fondo -->
+        <h2 class="text-right">Bienvenid@</h2> <!-- Título de bienvenida -->
+
+        <!-- Formulario de inicio de sesión -->
         <div class="form-wrapper login">
-            <form action="">
-                <h2>Inicio de Sesion</h2>
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="mail"></ion-icon>
+            <form action=""> <!-- Formulario sin acción definida -->
+                <h2>Inicio de Sesion</h2> <!-- Título del formulario -->
+                <div class="input-box"> <!-- Cuadro de entrada para el email -->
+                    <span class="icon"> <!-- Contenedor para el icono -->
+                        <ion-icon name="mail"></ion-icon> <!-- Icono de correo -->
                     </span>
-                    <input type="email" placeholder="Email" required>
+                    <input type="email" id="iniciosesionEmail" placeholder="Email" required> <!-- Campo de entrada para email -->
                 </div>
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="lock-closed"></ion-icon>
+                <div class="input-box"> <!-- Cuadro de entrada para la contraseña -->
+                    <span class="icon"> <!-- Contenedor para el icono -->
+                        <ion-icon name="lock-closed"></ion-icon> <!-- Icono de candado -->
                     </span>
-                    <input type="password" placeholder="Contraseña" required>
+                    <input type="password" id="iniciosesionPassword" placeholder="Contraseña" required> <!-- Campo de entrada para contraseña -->
                 </div>
-                <div class="forgot-pass">
+                <div class="forgot-pass"> <!-- Enlace para recuperar contraseña -->
                     <a href="#">Haz olvidado tu contraseña?</a>
                 </div>
                 <center>
-                    <input type="button" class="read-more"  value="Ingresar" onclick="window.location.href='tecnologia.html'" required>
-
+                    <input type="button" class="read-more" value="Iniciar Sesion" onclick="iniciosesionUser()" required> <!-- Botón para iniciar sesión -->
                 </center>
-                <div class="sign-link">
-                    <p>No tienes cuenta? <a href="#" class="read-more"  onclick="registerActive()">Registrarme</a></p>
+                <div class="sign-link"> <!-- Enlace para registrarse -->
+                    <p>No tienes cuenta? <a href="#" class="read-more" onclick="registerActive()">Registrarme</a></p>
                 </div>
             </form>
         </div>
+
+        <!-- Formulario de registro -->
         <div class="form-wrapper register">
-            <form action="">
-                <h2>Registrate</h2>
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="person"></ion-icon>
+            <form action=""> <!-- Formulario sin acción definida -->
+                <h2>Registrate</h2> <!-- Título del formulario -->
+                <div class="input-box"> <!-- Cuadro de entrada para el nombre -->
+                    <span class="icon"> <!-- Contenedor para el icono -->
+                        <ion-icon name="person"></ion-icon> <!-- Icono de persona -->
                     </span>
-                    <input type="text" placeholder="Nombre" required>
+                    <input type="text" id="registerName" placeholder="Nombre" required> <!-- Campo de entrada para nombre -->
                 </div>
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="mail"></ion-icon>
+                <div class="input-box"> <!-- Cuadro de entrada para el email -->
+                    <span class="icon"> <!-- Contenedor para el icono -->
+                        <ion-icon name="mail"></ion-icon> <!-- Icono de correo -->
                     </span>
-                    <input type="email" placeholder="Email" required>
+                    <input type="email" id="registerEmail" placeholder="Email" required> <!-- Campo de entrada para email -->
                 </div>
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="lock-closed"></ion-icon>
+                <div class="input-box"> <!-- Cuadro de entrada para la contraseña -->
+                    <span class="icon"> <!-- Contenedor para el icono -->
+                        <ion-icon name="lock-closed"></ion-icon> <!-- Icono de candado -->
                     </span>
-                    <input type="password" placeholder="Contraseña" required>
+                    <input type="password" id="registerPassword" placeholder="Contraseña" required> <!-- Campo de entrada para contraseña -->
                 </div>
                 <center>
-                    <input type="button" class="read-more"  value="Ingresar" onclick="window.location.href='tecnologia.html'" required>
+                    <input type="button" class="read-more" value="Registrarme" onclick="registerUser()" required> <!-- Botón para registrarse -->
                 </center>
-                <div class="sign-link">
+                <div class="sign-link"> <!-- Enlace para iniciar sesión -->
                     <p>Ya tienes una cuenta? <a href="#" class="read-more" onclick="loginActive()">Inicia Sesion</a></p>
                 </div>
             </form>
         </div>
     </div>
+
+    <!-- Scripts para cargar iconos de Ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="logintecno.js"></script>
+    <script src="logintecno.js"></script> <!-- Enlace al archivo JavaScript para la funcionalidad -->
 </body>
 </html>

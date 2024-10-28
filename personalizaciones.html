@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadatos básicos para codificación y compatibilidad -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personalizaciones</title>
-    <link rel="stylesheet" href="personalizaciones.css">
+    <link rel="stylesheet" href="personalizaciones.css"> <!-- Archivo CSS externo -->
 </head>
 <body>
+    <!-- Encabezado con navegación -->
     <header class="header">
         <nav class="navigation">
             <ul>
                 <div class="header-content">
                     <div class="logo"><img src="image/start-up.png" alt="" width="50px" height="50px"></div>
                 </div>
+                <!-- Menú de navegación -->
                 <li><a href="inciio.html">Inicio</a></li>
                 <li><a href="moda.html">Moda</a></li>
                 <li><a href="nuevosdiseños.html">Nuevos diseños</a></li>
@@ -24,54 +27,113 @@
                 <li><a href="emprendedores.html">Emprendedores</a></li>
                 <li><a href="contactanos.html">Contáctanos</a></li>
                 <div class="logo"><a href="compras.html"><img src="image/carro-de-la-compra.png" alt="" width="50px" height="50px"></a></div>
-
             </ul>
         </nav>
     </header>
-    <a href="#">
-        <div class="card">
-            <div class="wrapper"> 
-                <center><p class="read">Pulseras personalizadas <br>$20.000 </p></center>
-                <img src="image/fondo de pantalla para celular.png" class="cover-image" />
-            </div>
-            <img src="image/una pulsera.png" class="title" />
-        </div>
-        <center> <button class="read">Agregar</button></center>
-    </a>
 
-    <a href="#">
-        <div class="card">
-            <div class="wrapper">
-                <center><p class="read">Reloj personalizados
-                    para hombre <br>$50.000 </p></center>
-                <img src="image/fondo de pantalla para celular (1).png" class="cover-image" />
-            </div>
-            <img src="image/un reloj para hombre.png" class="title" />
+   <!-- Sección de Productos -->
+   <a href="#">
+    <div class="card">
+        <div class="wrapper"> 
+            <center><p class="read">Pulseras personalizadas <br>$20.000 </p></center>
+            <img src="image/fondo de pantalla para celular.png" class="cover-image" />
         </div>
-        <center> <button class="read">Agregar</button></center>
-    </a>
+        <img src="image/una pulsera.png" class="title" />
+    </div>
+    <center> <button class="read" onclick="openModal('Pulseras')">Agregar</button></center> <!-- Botón para abrir el modal -->
+</a>
 
-    <a href="#">
-        <div class="card">
-            <div class="wrapper">
-                <center><p class="read">Collares personalizado <br>$30.000 </p></center>
-                <img src="image/un fondo de pantalla.png" class="cover-image" />
-            </div>
-            <img src="image/un collar para mujer.png" class="title" />
+<!-- Repetición de productos -->
+<a href="#">
+    <div class="card">
+        <div class="wrapper">
+            <center><p class="read">Reloj personalizados para hombre <br>$50.000 </p></center>
+            <img src="image/fondo de pantalla para celular (1).png" class="cover-image" />
         </div>
-        <center> <button class="read">Agregar</button></center>
-    </a>
+        <img src="image/un reloj para hombre.png" class="title" />
+    </div>
+    <center> <button class="read" onclick="openModal('Relojes')">Agregar</button></center>
+</a>
 
-    <a href="#">
-        <div class="card">
-            <div class="wrapper">
-                <center><p class="read">Sombreros personalizados
-                    para hombre <br>$18.000 </p></center>
-                <img src="image/un fondo.png" class="cover-image" />
-            </div>
-            <img src="image/Sombrero para hombre.png" class="title" />
+<a href="#">
+    <div class="card">
+        <div class="wrapper">
+            <center><p class="read">Collares personalizado <br>$30.000 </p></center>
+            <img src="image/un fondo de pantalla.png" class="cover-image" />
         </div>
-        <center> <button class="read">Agregar</button></center>
-    </a>
+        <img src="image/un collar para mujer.png" class="title" />
+    </div>
+    <center> <button class="read" onclick="openModal('Collares')">Agregar</button></center>
+</a>
+
+<a href="#">
+    <div class="card">
+        <div class="wrapper">
+            <center><p class="read">Sombreros personalizados para hombre <br>$18.000 </p></center>
+            <img src="image/un fondo.png" class="cover-image" />
+        </div>
+        <img src="image/Sombrero para hombre.png" class="title" />
+    </div>
+    <center> <button class="read" onclick="openModal('Sombreros')">Agregar</button></center>
+</a>
+
+<!-- Modal para opciones de personalización -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span> <!-- Botón para cerrar el modal -->
+        <h2>Categorías disponibles</h2>
+        <div id="category-content"></div> <!-- Contenedor de categorías -->
+        <center><button class="read" onclick="confirmCustomization()">Confirmar</button></center> <!-- Confirmación de personalización -->
+    </div>
+</div>
+
+    <script>
+        // Función para abrir el modal y mostrar categorías
+        function openModal(product) {
+            const modal = document.getElementById("modal");
+            const categoryContent = document.getElementById("category-content");
+
+            // Definir categorías según el producto seleccionado
+            let categories = "";
+            switch (product) {
+                case "Pulseras":
+                    categories = "<p>Materiales: Oro, Plata, Cuero</p><p>Estilo: Minimalista, Clásico, Moderno</p>";
+                    break;
+                case "Relojes":
+                    categories = "<p>Materiales: Acero, Cuero, Titanio</p><p>Función: Análogico, Digital</p>";
+                    break;
+                case "Collares":
+                    categories = "<p>Materiales: Oro, Plata, Piedras Preciosas</p><p>Longitud: Corto, Medio, Largo</p>";
+                    break;
+                case "Sombreros":
+                    categories = "<p>Materiales: Lana, Paja, Algodón</p><p>Estilo: Fedora, Panamá, Cowboy</p>";
+                    break;
+                default:
+                    categories = "<p>No hay categorías disponibles</p>";
+            }
+
+            categoryContent.innerHTML = categories;
+            modal.style.display = "flex"; // Mostrar el modal centrado
+        }
+
+        // Función para confirmar la personalización
+        function confirmCustomization() {
+            alert("Estamos trabajando en tu personalización...");
+            closeModal(); // Cierra el modal después de mostrar la alerta
+        }
+
+        // Función para cerrar el modal
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+
+        // Cerrar el modal si se hace clic fuera de la ventana modal
+        window.onclick = function(event) {
+            const modal = document.getElementById("modal");
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
 </body>
 </html>

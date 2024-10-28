@@ -1,18 +1,27 @@
 <!DOCTYPE html>
+<!-- Declara que el documento es un documento HTML5 -->
 <html lang="es">
+<!-- Inicia la estructura del documento HTML, especificando que el idioma es español -->
 
 <head>
     <meta charset="UTF-8">
+    <!-- Define la codificación de caracteres del documento como UTF-8 -->
     <title>Tecno Emprende</title>
+    <!-- Establece el título que aparecerá en la pestaña del navegador -->
     <link rel="stylesheet" href="tecnoemprende.css">
+    <!-- Enlaza el archivo CSS externo para aplicar estilos al documento -->
 </head>
 
 <body>
     <header class="header">
+    <!-- Sección de encabezado que contiene la navegación principal -->
         <nav class="navigation">
+        <!-- Elemento de navegación -->
             <ul>
                 <div class="header-content">
+                <!-- Contenedor para el contenido del encabezado -->
                     <div class="logo"><img src="image/start-up.png" alt="" width="50px" height="50px"></div>
+                    <!-- Logo de la empresa -->
                 </div>
                 <li><a href="inciio.html">Inicio</a></li>
                 <li><a href="tecnologia.html">Tecnologia</a></li>
@@ -22,16 +31,16 @@
                 <li><a href="gadgets.html">Gadgets</a></li>
                 <li><a href="tecnoemprende.html">Emprendedores</a></li>
                 <li><a href="tecnocontactos.html">Contáctanos</a></li>
-                <div class="logo"><a href="tecnocompras.html"><img src="image/carro-de-la-compra.png" alt=""
-                            width="50px" height="50px"></a></div>
+                <div class="logo"><a href="tecnocompras.html"><img src="image/carro-de-la-compra.png" alt="" width="50px" height="50px"></a></div>
+                <!-- Logo del carrito de compras que enlaza a la página correspondiente -->
             </ul>
         </nav>
     </header>
     
-    
-
     <div class="contenedor">
+    <!-- Contenedor principal para las secciones de contenido -->
         <div class="caja1">
+        <!-- Primera caja de contenido -->
             <br>
             <br>
             <br>
@@ -42,9 +51,11 @@
             <br>
             <center>
                 <button class="btn" onclick="openModal('modal1')">Conoce más</button>
+                <!-- Botón que abre el modal para más información sobre EcoCharge -->
             </center>
         </div>
         <div class="caja2">
+        <!-- Segunda caja de contenido -->
             <br>
             <br>
             <br>
@@ -55,13 +66,15 @@
             <center>
                 <h2>EcoCharge</h2>
                 <p>Una startup especializada en el desarrollo de soluciones de energía renovable portátiles.</p>
+                <!-- Título y descripción de EcoCharge -->
             </center>
         </div>
     </div>
     
-
     <div class="contenedor">
+    <!-- Otro contenedor principal para más contenido -->
         <div class="caj3">
+        <!-- Caja para el botón de modal 2 -->
             <br>
             <br>
             <br>
@@ -71,8 +84,10 @@
             <br>
             <br>
             <center><button class="btn" onclick="openModal('modal2')">Conoce más</button></center>
+            <!-- Botón que abre el modal para más información sobre EduConnect VR -->
         </div>
         <div class="caj4">
+        <!-- Caja para información sobre EduConnect VR -->
             <br>
             <br>
             <br>
@@ -83,13 +98,15 @@
             <center>
                 <h2>EduConnect VR</h2>
                 <p>Combina VR con análisis de datos para personalizar la experiencia de aprendizaje de cada usuario.</p>
+                <!-- Título y descripción de EduConnect VR -->
             </center>
         </div>
     </div>
     
-
     <div class="contenedor">
+    <!-- Otro contenedor principal para más contenido -->
         <div class="caja5">
+        <!-- Caja para el botón de modal 3 -->
             <br>
             <br>
             <br>
@@ -99,8 +116,10 @@
             <br>
             <br>
             <center><button class="btn" onclick="openModal('modal3')">Conoce más</button></center>
+            <!-- Botón que abre el modal para más información sobre ZeroWaste Tech -->
         </div>
         <div class="caja6">
+        <!-- Caja para información sobre ZeroWaste Tech -->
             <br>
             <br>
             <br>
@@ -110,61 +129,123 @@
             <br>
             <center>
                 <h2>ZeroWaste Tech</h2>
-                <p>Basureros inteligentes conectados a una app que recomienda formas de reducir, reciclar o reutilizar
-                    productos.</p>
+                <p>Basureros inteligentes conectados a una app que recomienda formas de reducir, reciclar o reutilizar productos.</p>
+                <!-- Título y descripción de ZeroWaste Tech -->
             </center>
         </div>
     </div>
 
-    
     <!-- Modal 1 -->
     <div id="modal1" class="modal">
+        <!-- Contenedor del primer modal -->
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal1')">&times;</span>
-
+            <!-- Botón para cerrar el modal -->
             <img src="image/energía renovable (2).png" alt="" width="200px" height="200px">
             <h2>EcoCharge</h2>
             <p>Integración de paneles solares ultradelgados en mochilas, maletines y otros accesorios de uso diario.</p>
-
-
+            <!-- Contenido del modal que muestra información adicional sobre EcoCharge -->
         </div>
     </div>
 
     <!-- Modal 2 -->
     <div id="modal2" class="modal">
+        <!-- Contenedor del segundo modal -->
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <!-- Botón para cerrar el modal -->
             <img src="image/plataforma de aprendizaje con gafas virtuales.png" alt="" width="200px" height="200px">
             <h2>EduConnect VR</h2>
-            <p>Plataforma educativa que ofrece lecciones y experiencias inmersivas a través de realidad virtual (VR).
-            </p>
-
+            <p>Plataforma educativa que ofrece lecciones y experiencias inmersivas a través de realidad virtual (VR).</p>
+            <!-- Contenido del modal que muestra información adicional sobre EduConnect VR -->
         </div>
     </div>
 
     <!-- Modal 3 -->
     <div id="modal3" class="modal">
+        <!-- Contenedor del tercer modal -->
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <!-- Botón para cerrar el modal -->
             <img src="image/intelligent waste management system.png" alt="" width="200px" height="200px">
             <h2>ZeroWaste Tech</h2>
-            <p>Empresa que desarrolla soluciones tecnológicas para reducir el desperdicio en el hogar mediante un
-                sistema automatizado de gestión de residuos.</p>
-            <h3>Formulario de Inscripción</h3>
-
+            <p>Empresa que desarrolla soluciones tecnológicas para reducir el desperdicio en el hogar mediante un sistema automatizado de gestión de residuos.</p>
+            <!-- Contenido del modal que muestra información adicional sobre ZeroWaste Tech -->
         </div>
     </div>
     
+    <!-- Botón flotante para abrir el formulario -->
+    <button class="floating-button" onclick="openModal('myModal')">+</button>
+
+    <!-- Ventana Modal del Formulario -->
+    <div id="myModal" class="modal" style="display: none;">
+        <!-- Contenedor del modal del formulario, inicialmente oculto -->
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('myModal')">&times;</span>
+            <!-- Botón para cerrar el modal -->
+            <div class="form-container">
+                <h2>Formulario de inscripción</h2>
+                <form id="registration-form" onsubmit="validateForm(event)">
+                    <!-- Formulario para la inscripción -->
+                    <label for="name">Nombre completo:</label>
+                    <input type="text" id="name" name="name" placeholder="Ingresa tu nombre completo" required>
+                    <!-- Campo de texto para el nombre, obligatorio -->
+
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
+                    <!-- Campo de texto para el correo electrónico, obligatorio -->
+
+                    <label for="phone">Teléfono:</label>
+                    <input type="text" id="phone" name="phone" placeholder="Ingresa tu número de teléfono" required>
+                    <!-- Campo de texto para el número de teléfono, obligatorio -->
+
+                    <label for="project">Nombre de tu emprendimiento:</label>
+                    <input type="text" id="project" name="project" placeholder="Nombre del proyecto/emprendimiento" required>
+                    <!-- Campo de texto para el nombre del emprendimiento, obligatorio -->
+
+                    <label for="sector">Sector de tu emprendimiento:</label>
+                    <select id="sector" name="sector" required>
+                        <option value="">Selecciona el sector</option>
+                        <option value="moda">Moda</option>
+                        <option value="tecnología">Tecnología</option>
+                        <!-- Desplegable para seleccionar el sector del emprendimiento, obligatorio -->
+                    </select>
+
+                    <label for="description">Descripción breve de tu emprendimiento:</label>
+                    <textarea id="description" name="description" rows="4" placeholder="Describe tu emprendimiento en pocas palabras..." required></textarea>
+                    <!-- Campo de texto para una breve descripción, obligatorio -->
+
+                    <!-- Botón de envío -->
+                    <button type="submit" class="read">Enviar Inscripción</button>
+                </form>
+                <!-- Modal de confirmación -->
+                <div id="confirmationModal" class="modal" style="display: none;">
+                    <!-- Contenedor del modal de confirmación, inicialmente oculto -->
+                    <div class="modal-content">
+                        <span class="close" onclick="closeConfirmationModal()">&times;</span>
+                        <!-- Botón para cerrar el modal de confirmación -->
+                        <h2>¡Inscripción recibida!</h2>
+                        <p>En los próximos días te llamaremos para confirmar tu inscripción.</p>
+                        <!-- Mensaje de confirmación para el usuario -->
+                        <center><button class="read" onclick="closeConfirmationModal()">Aceptar</button></center>
+                        <!-- Botón para aceptar y cerrar el modal -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         // Función para abrir una ventana modal
         function openModal(modalId) {
             document.getElementById(modalId).style.display = "flex";
+            // Cambia el estilo del modal a 'flex' para mostrarlo
         }
 
         // Función para cerrar una ventana modal
         function closeModal(modalId) {
             document.getElementById(modalId).style.display = "none";
+            // Cambia el estilo del modal a 'none' para ocultarlo
         }
 
         // Cerrar modal al hacer clic fuera del contenido
@@ -173,13 +254,22 @@
             for (var i = 0; i < modals.length; i++) {
                 if (event.target == modals[i]) {
                     modals[i].style.display = "none";
+                    // Cierra el modal si se hace clic fuera del contenido
                 }
             }
         }
+
+        function validateForm(event) {
+            event.preventDefault(); // Evita el envío del formulario
+            // Aquí puedes agregar la lógica de validación del formulario
+            openModal('confirmationModal'); // Muestra el modal de confirmación
+        }
+
+        function closeConfirmationModal() {
+            closeModal('confirmationModal');
+            closeModal('myModal'); // Cierra también el modal del formulario
+        }
     </script>
-            
-    
-  
 </body>
 
 </html>

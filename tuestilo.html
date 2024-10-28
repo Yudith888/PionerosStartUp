@@ -85,113 +85,132 @@
         </div>
     </div>
 
-    <!-- Modal Maquillaje -->
-    <div id="modalMaquillaje" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modalMaquillaje')">&times;</span>
-            <h2>Agenda tu cita de Maquillaje</h2>
-            <form>
-                <input type="text" placeholder="Nombre completo" required>
-                <input type="number" placeholder="Teléfono" required>
-                <input type="date" required>
-                <label for="time-maquillaje">Hora:</label>
-                <select id="time-maquillaje" required>
-                    <option value="">Selecciona una hora</option>
-                    <option value="09:00">09:00 AM</option>
-                    <option value="10:00">10:00 AM</option>
-                    <option value="11:00">11:00 AM</option>
-                    <option value="12:00">12:00 PM</option>
-                    <option value="13:00">01:00 PM</option>
-                    <option value="14:00">02:00 PM</option>
-                    <option value="15:00">03:00 PM</option>
-                    <option value="16:00">04:00 PM</option>
-                    <option value="17:00">05:00 PM</option>
-                </select>
-                <center><button class="read" >Agendar</button></center>
-            </form>
-        </div>
+<!-- Modal Maquillaje -->
+<div id="modalMaquillaje" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modalMaquillaje')">&times;</span>
+        <h2>Agenda tu cita de Maquillaje</h2>
+        <form id="formMaquillaje">
+            <input type="text" placeholder="Nombre completo" required>
+            <input type="number" placeholder="Teléfono" required>
+            <input type="date" required>
+            <label for="time-maquillaje">Hora:</label>
+            <select id="time-maquillaje" required>
+                <option value="">Selecciona una hora</option>
+                <option value="09:00">09:00 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="13:00">01:00 PM</option>
+                <option value="14:00">02:00 PM</option>
+                <option value="15:00">03:00 PM</option>
+                <option value="16:00">04:00 PM</option>
+                <option value="17:00">05:00 PM</option>
+            </select>
+            <center><button type="button" class="read" onclick="confirmarCita('formMaquillaje')">Agendar</button></center>
+        </form>
     </div>
+</div>
 
-    <!-- Modal Cambio de vestuario -->
-    <div id="modalVestuario" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modalVestuario')">&times;</span>
-            <h2>Agenda tu cita de Cambio de Vestuario</h2>
-            <form>
-                <input type="text" placeholder="Nombre completo" required>
-                <input type="number" placeholder="Teléfono" required>
-                <input type="date" required>
-                <label for="time-vestuario">Hora:</label>
-                <select id="time-vestuario" required>
-                    <option value="">Selecciona una hora</option>
-                    <option value="09:00">09:00 AM</option>
-                    <option value="10:00">10:00 AM</option>
-                    <option value="11:00">11:00 AM</option>
-                    <option value="12:00">12:00 PM</option>
-                    <option value="13:00">01:00 PM</option>
-                    <option value="14:00">02:00 PM</option>
-                    <option value="15:00">03:00 PM</option>
-                    <option value="16:00">04:00 PM</option>
-                    <option value="17:00">05:00 PM</option>
-                </select>
-                <center><button class="read" >Agendar</button></center>
-            </form>
-        </div>
+<!-- Modal Cambio de vestuario -->
+<div id="modalVestuario" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modalVestuario')">&times;</span>
+        <h2>Agenda tu cita de Cambio de Vestuario</h2>
+        <form id="formVestuario">
+            <input type="text" placeholder="Nombre completo" required>
+            <input type="number" placeholder="Teléfono" required>
+            <input type="date" required>
+            <label for="time-vestuario">Hora:</label>
+            <select id="time-vestuario" required>
+                <option value="">Selecciona una hora</option>
+                <option value="09:00">09:00 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="13:00">01:00 PM</option>
+                <option value="14:00">02:00 PM</option>
+                <option value="15:00">03:00 PM</option>
+                <option value="16:00">04:00 PM</option>
+                <option value="17:00">05:00 PM</option>
+            </select>
+            <center><button type="button" class="read" onclick="confirmarCita('formVestuario')">Agendar</button></center>
+        </form>
     </div>
+</div>
 
-    <!-- Modal Cuidados de la piel -->
-    <div id="modalPiel" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modalPiel')">&times;</span>
-            <h2>Agenda tu cita de Cuidados para la Piel</h2>
-            <form>
-                <input type="text" placeholder="Nombre completo" required>
-                <input type="number" placeholder="Teléfono" required>
-                <input type="date" required>
-                <label for="time-piel">Hora:</label>
-                <select id="time-piel" required>
-                    <option value="">Selecciona una hora</option>
-                    <option value="09:00">09:00 AM</option>
-                    <option value="10:00">10:00 AM</option>
-                    <option value="11:00">11:00 AM</option>
-                    <option value="12:00">12:00 PM</option>
-                    <option value="13:00">01:00 PM</option>
-                    <option value="14:00">02:00 PM</option>
-                    <option value="15:00">03:00 PM</option>
-                    <option value="16:00">04:00 PM</option>
-                    <option value="17:00">05:00 PM</option>
-                </select>
-                <center><button class="read" >Agendar</button></center>
-            </form>
-        </div>
+<!-- Modal Cuidados de la piel -->
+<div id="modalPiel" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modalPiel')">&times;</span>
+        <h2>Agenda tu cita de Cuidados para la Piel</h2>
+        <form id="formPiel">
+            <input type="text" placeholder="Nombre completo" required>
+            <input type="number" placeholder="Teléfono" required>
+            <input type="date" required>
+            <label for="time-piel">Hora:</label>
+            <select id="time-piel" required>
+                <option value="">Selecciona una hora</option>
+                <option value="09:00">09:00 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="13:00">01:00 PM</option>
+                <option value="14:00">02:00 PM</option>
+                <option value="15:00">03:00 PM</option>
+                <option value="16:00">04:00 PM</option>
+                <option value="17:00">05:00 PM</option>
+            </select>
+            <center><button type="button" class="read" onclick="confirmarCita('formPiel')">Agendar</button></center>
+        </form>
     </div>
+</div>
 
-    <!-- Modal Tratamientos capilares -->
-    <div id="modalCapilares" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modalCapilares')">&times;</span>
-            <h2>Agenda tu cita de Tratamientos Capilares</h2>
-            <form>
-                <input type="text" placeholder="Nombre completo" required>
-                <input type="number" placeholder="Teléfono" required>
-                <input type="date" required>
-                <label for="time-capilares">Hora:</label>
-                <select id="time-capilares" required>
-                    <option value="">Selecciona una hora</option>
-                    <option value="09:00">09:00 AM</option>
-                    <option value="10:00">10:00 AM</option>
-                    <option value="11:00">11:00 AM</option>
-                    <option value="12:00">12:00 PM</option>
-                    <option value="13:00">01:00 PM</option>
-                    <option value="14:00">02:00 PM</option>
-                    <option value="15:00">03:00 PM</option>
-                    <option value="16:00">04:00 PM</option>
-                    <option value="17:00">05:00 PM</option>
-                </select>
-                <center><button class="read" >Agendar</button></center>
-            </form>
-        </div>
+<!-- Modal Tratamientos capilares -->
+<div id="modalCapilares" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modalCapilares')">&times;</span>
+        <h2>Agenda tu cita de Tratamientos Capilares</h2>
+        <form id="formCapilares">
+            <input type="text" placeholder="Nombre completo" required>
+            <input type="number" placeholder="Teléfono" required>
+            <input type="date" required>
+            <label for="time-capilares">Hora:</label>
+            <select id="time-capilares" required>
+                <option value="">Selecciona una hora</option>
+                <option value="09:00">09:00 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="13:00">01:00 PM</option>
+                <option value="14:00">02:00 PM</option>
+                <option value="15:00">03:00 PM</option>
+                <option value="16:00">04:00 PM</option>
+                <option value="17:00">05:00 PM</option>
+            </select>
+            <center><button type="button" class="read" onclick="confirmarCita('formCapilares')">Agendar</button></center>
+        </form>
     </div>
+</div>
+
+<!-- Modal de Confirmación -->
+<div id="modalConfirmacion" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modalConfirmacion')">&times;</span>
+        <h2>Confirmación</h2>
+        <p>Tu cita quedó agendada.</p>
+        <button class="read"  onclick="closeModal('modalConfirmacion')">Aceptar</button>
+    </div>
+</div>
+    <!-- Modal de Confirmación -->
+<div id="modalConfirmacion" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modalConfirmacion')">&times;</span>
+        <h2>Confirmación</h2>
+        <p>Tu cita quedó agendada.</p>
+        <button onclick="closeModal('modalConfirmacion')">Aceptar</button>
+    </div>
+</div>
 
     <script>
         // Funciones para abrir y cerrar modales
@@ -250,8 +269,50 @@
                     input.setAttribute('min', minDate);
                 });
             }
+            function confirmarCita() {
+                alert("Tu cita quedó agendada");
+            }
+            
+            function openModal(modalId) {
+                document.getElementById(modalId).style.display = "block";
+            }
         
+            function closeModal(modalId) {
+                document.getElementById(modalId).style.display = "none";
+            }
         
+            function confirmarCita() {
+                openModal('modalConfirmacion');
+            }
+            function openModal(modalId) {
+                document.getElementById(modalId).style.display = "block";
+            }
+        
+            function closeModal(modalId) {
+                document.getElementById(modalId).style.display = "none";
+            }
+        
+            function confirmarCita(formId) {
+                const form = document.getElementById(formId);
+                if (form.checkValidity()) { // Verifica si el formulario es válido
+                    openModal('modalConfirmacion'); // Abre el modal de confirmación
+                } else {
+                    alert("Por favor, completa todos los campos obligatorios.");
+                }
+            }
+            document.addEventListener("DOMContentLoaded", function () {
+                // Obtén la fecha actual en formato YYYY-MM-DD
+                const today = new Date().toISOString().split("T")[0];
+                
+                // Selecciona todos los campos de fecha en los formularios
+                const dateInputs = document.querySelectorAll("input[type='date']");
+                
+                // Establece la fecha mínima en cada campo de fecha
+                dateInputs.forEach(input => {
+                    input.setAttribute("min", today);
+                });
+            });
+            
     </script>
 </body>
 </html>

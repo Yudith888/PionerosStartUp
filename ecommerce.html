@@ -1,90 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Define el tipo de documento como HTML5 -->
+<html lang="en"> <!-- Abre la etiqueta HTML y establece el idioma como inglés -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="ecommerce.css">
-    <title>E-commerce</title>
+    <meta charset="UTF-8"> <!-- Establece la codificación de caracteres a UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para dispositivos móviles -->
+    <link rel="stylesheet" href="ecommerce.css"> <!-- Enlaza el archivo CSS para estilos -->
+    <title>E-commerce</title> <!-- Título de la página que aparece en la pestaña del navegador -->
 </head>
 <body>
-    <header class="header">
-        <nav class="navigation">
-            <ul>
-                <div class="header-content">
-                    <div class="logo"><img src="image/start-up.png" alt="" width="50px" height="50px"></div>
+    <header class="header"> <!-- Cabecera de la página -->
+        <nav class="navigation"> <!-- Navegación principal -->
+            <ul> <!-- Lista no ordenada para los elementos del menú -->
+                <div class="header-content"> <!-- Contenido del encabezado -->
+                    <div class="logo"><img src="image/start-up.png" alt="" width="50px" height="50px"> <!-- Logo de la empresa -->
+                    </div>
                 </div>
-                <li><a href="inciio.html">Inicio</a></li>
-                <li><a href="moda.html">Moda</a></li>
-                <li><a href="nuevosdiseños.html">Nuevos diseños</a></li>
-                <li><a href="tuestilo.html">Tu estilo</a></li>
-                <li><a href="ventaderopa.html">Venta de ropa</a></li>
-                <li><a href="ecommerce.html">E-commerce</a></li>
-                <li><a href="personalizaciones.html">Personalizaciones</a></li>
-                <li><a href="emprendedores.html">Emprendedores</a></li>
-                <li><a href="contactanos.html">Contáctanos</a></li>
-                <div class="logo"><a href="compras.html"><img src="image/carro-de-la-compra.png" alt="" width="50px" height="50px"></a></div>
-
+                <li><a href="inciio.html">Inicio</a></li> <!-- Enlace a la página de inicio -->
+                <li><a href="moda.html">Moda</a></li> <!-- Enlace a la página de moda -->
+                <li><a href="nuevosdiseños.html">Nuevos diseños</a></li> <!-- Enlace a la página de nuevos diseños -->
+                <li><a href="tuestilo.html">Tu estilo</a></li> <!-- Enlace a la página "Tu estilo" -->
+                <li><a href="ventaderopa.html">Venta de ropa</a></li> <!-- Enlace a la página de venta de ropa -->
+                <li><a href="ecommerce.html">E-commerce</a></li> <!-- Enlace a la página de comercio electrónico -->
+                <li><a href="personalizaciones.html">Personalizaciones</a></li> <!-- Enlace a la página de personalizaciones -->
+                <li><a href="emprendedores.html">Emprendedores</a></li> <!-- Enlace a la página de emprendedores -->
+                <li><a href="contactanos.html">Contáctanos</a></li> <!-- Enlace a la página de contacto -->
+                <div class="logo"><a href="compras.html"><img src="image/carro-de-la-compra.png" alt="" width="50px" height="50px"></a></div> <!-- Icono de carrito de compras -->
             </ul>
         </nav>
     </header>
     
-    <div class="wrapper">
-        <div class="container">
-            <input type="radio" name="slide" id="c1" checked>
-            <label for="c1" class="card">
-                <div class="row">
-                    <div class="icon">$25.000</div>
-                    <div class="description">
-                        <h4>Aretes para toda ocasion</h4>
-                        <p>Candongas en oro y perlas de fantasia</p>
-                        
-                         <center><button class="read">Añadir</button></center>
+    <div class="wrapper"> <!-- Contenedor principal -->
+        <div class="container"> <!-- Contenedor para las tarjetas de productos -->
+            <input type="radio" name="slide" id="c1" checked> <!-- Entrada de tipo radio para la primera tarjeta, seleccionada por defecto -->
+            <label for="c1" class="card"> <!-- Etiqueta que actúa como tarjeta de producto -->
+                <div class="row"> <!-- Fila que contiene información del producto -->
+                    <div class="icon">$25.000</div> <!-- Precio del producto -->
+                    <div class="description"> <!-- Descripción del producto -->
+                        <h4>Aretes para toda ocasión</h4> <!-- Título del producto -->
+                        <p>Candongas en oro y perla de fantasía</p> <!-- Descripción corta del producto -->
+                        <center><button class="read" onclick="addToCart('Candongas en oro y perla de fantasia', 25000)">Agregar</button> <!-- Botón para agregar al carrito -->
                     </div>
                 </div>
             </label>
 
-
-
-            <input type="radio" name="slide" id="c2" >
-            <label for="c2" class="card">
-                <div class="row">
-                    <div class="icon">$30.000</div>
-                    <div class="description">
-                        <h4>Brasalete para lucir 
-                            en cualquier momento</h4>
-                        <p>Brasalete de plata con dije en el centro</p>
-                         <center><button class="read">Añadir</button></center>
+            <input type="radio" name="slide" id="c2"> <!-- Entrada de tipo radio para la segunda tarjeta -->
+            <label for="c2" class="card"> <!-- Etiqueta para la tarjeta de producto -->
+                <div class="row"> <!-- Fila que contiene información del producto -->
+                    <div class="icon">$30.000</div> <!-- Precio del producto -->
+                    <div class="description"> <!-- Descripción del producto -->
+                        <h4>Brasalete para lucir en cualquier momento</h4> <!-- Título del producto -->
+                        <p>Brasalete de plata con dije en el centro</p> <!-- Descripción corta del producto -->
+                        <center><button class="read" onclick="addToCart('Brasalete de plata con dije en el centro', 30000)">Agregar</button> <!-- Botón para agregar al carrito -->
                     </div>
                 </div>
             </label>
 
-
-            <input type="radio" name="slide" id="c3" >
-            <label for="c3" class="card">
-                <div class="row">
-                    <div class="icon">$100.000</div>
-                    <div class="description">
-                        <h4>Conjunto de 
-                            plata y oro</h4>
-                        <p>Collar, anillo y aretes de plata y oro en un precio increible</p>
-                        <center><button class="read">Añadir</button></center>
-                    </div>
+            <input type="radio" name="slide" id="c3"> <!-- Entrada de tipo radio para la tercera tarjeta -->
+            <label for="c3" class="card"> <!-- Etiqueta para la tarjeta de producto -->
+                <div class="row"> <!-- Fila que contiene información del producto -->
+                    <div class="icon">$100.000</div> <!-- Precio del producto -->
+                    <div class="description"> <!-- Descripción del producto -->
+                        <h4>Conjunto de plata y oro</h4> <!-- Título del producto -->
+                        <p>Collar, anillo y aretes de plata y oro en un precio increíble</p> <!-- Descripción corta del producto -->
+                        <center><button class="read" onclick="addToCart('Collar, anillo y aretes de plata y oro', 100000)">Agregar</button> <!-- Botón para agregar al carrito -->
+                        </div>
                 </div>
             </label>
 
-
-            <input type="radio" name="slide" id="c4" >
-            <label for="c4" class="card">
-                <div class="row">
-                    <div class="icon">$30.000</div>
-                    <div class="description">
-                        <h4>Collares para hombre</h4>
-                        <p>Cadena de oro </p>
-                         <center><button class="read">Añadir</button></center>
+            <input type="radio" name="slide" id="c4"> <!-- Entrada de tipo radio para la cuarta tarjeta -->
+            <label for="c4" class="card"> <!-- Etiqueta para la tarjeta de producto -->
+                <div class="row"> <!-- Fila que contiene información del producto -->
+                    <div class="icon">$30.000</div> <!-- Precio del producto -->
+                    <div class="description"> <!-- Descripción del producto -->
+                        <h4>Collar para hombre</h4> <!-- Título del producto -->
+                        <p>Cadena en oro</p> <!-- Descripción corta del producto -->
+                        <center><button class="read" onclick="addToCart('Cadena en oro', 30000)">Agregar</button> <!-- Botón para agregar al carrito -->
                     </div>
                 </div>
             </label>
         </div>
     </div>
+
+    <script>
+         // Función para añadir producto al carrito
+         function addToCart(productName, productPrice) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || []; // Obtiene el carrito del almacenamiento local o inicializa un nuevo array
+            cart.push({ name: productName, price: productPrice }); // Añade el nuevo producto al carrito
+            localStorage.setItem('cart', JSON.stringify(cart)); // Guarda el carrito actualizado en el almacenamiento local
+            alert(`${productName} ha sido añadido al carrito.`); // Muestra un mensaje de confirmación
+        }
+    </script>
+
+    <script src="compras.js"></script> <!-- Enlaza un script adicional para funcionalidades de compras -->
 </body>
 </html>

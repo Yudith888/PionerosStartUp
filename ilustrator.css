@@ -1,3 +1,4 @@
+/* Elimina el margen y padding predeterminado de todos los elementos y aplica un box-sizing uniforme */
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +6,7 @@
     font-family: sans-serif;
 }
 
+/* Estilos generales del body para centrar contenido y agregar un fondo */
 body {
     display: flex;
     flex-wrap: wrap;
@@ -14,7 +16,7 @@ body {
     background-image: url(image/17788416_5894048.jpg);
 }
 
-
+/* Configuración de la tarjeta */
 .card {
     position: relative;
     width: 300px;
@@ -22,28 +24,32 @@ body {
     margin: 10px;
 }
 
+/* Estilos de las dos caras de la tarjeta */
 .card .face {
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden;
+    backface-visibility: hidden; /* Oculta la cara no visible */
     border-radius: 10px;
     overflow: hidden;
-    transition: .5s;
+    transition: .5s; /* Transición para el efecto giratorio */
 }
 
+/* Estilo de la cara frontal */
 .card .front {
-    transform: perspective(600px) rotateY(0deg);
-    box-shadow: 0 5px 10px #000;
+    transform: perspective(600px) rotateY(0deg); /* Inicializa la posición en el eje Y */
+    box-shadow: 0 5px 10px #000; /* Sombra para dar profundidad */
 }
 
+/* Imagen de fondo en la cara frontal */
 .card .front img {
     position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Ajusta la imagen al tamaño de la tarjeta */
 }
 
+/* Título en la parte inferior de la cara frontal */
 .card .front h3 {
     position: absolute;
     bottom: 0;
@@ -51,12 +57,13 @@ body {
     height: 45px;
     line-height: 45px;
     color: #fff;
-    background: rgba(0,0,0,.4);
+    background: rgba(0,0,0,.4); /* Fondo semitransparente para resaltar el texto */
     text-align: center;
 }
 
+/* Estilo de la cara trasera */
 .card .back {
-    transform: perspective(600px) rotateY(180deg);
+    transform: perspective(600px) rotateY(180deg); /* Inicializa en una rotación de 180 grados */
     background: rgb(3, 35, 54);
     padding: 15px;
     color: #f3f3f3;
@@ -64,91 +71,96 @@ body {
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-    box-shadow: 0 5px 10px #000;
+    box-shadow: 0 5px 10px #000; /* Sombra en la cara trasera */
 }
 
+/* Estilo para el enlace en la parte inferior de la cara trasera */
 .card .back .link {
     border-top: solid 1px #f3f3f3;
     height: 50px;
     line-height: 50px;
 }
 
+/* Estilo de los enlaces en la cara trasera */
 .card .back .link a {
     color: #f3f3f3;
 }
 
+/* Título grande en la cara trasera */
 .card .back h3 {
     font-size: 30px;
     margin-top: 20px;
     letter-spacing: 2px;
 }
 
+/* Texto descriptivo en la cara trasera */
 .card .back p {
     letter-spacing: 1px;
     margin: 70px;
 } 
 
+/* Efecto de giro al pasar el cursor sobre la tarjeta */
 .card:hover .front {
-    transform: perspective(600px) rotateY(180deg);
+    transform: perspective(600px) rotateY(180deg); /* Gira la cara frontal hacia atrás */
 }
 
 .card:hover .back {
-    transform: perspective(600px) rotateY(360deg);
+    transform: perspective(600px) rotateY(360deg); /* Gira la cara trasera hacia adelante */
 }
 
-/* Header */
+/* Encabezado */
 .header {
     position: fixed;
     top: 0;
     width: 100%;
     background-color: transparent;
     padding: 20px 0;
-    box-shadow: 0 4px 8px rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgb(255, 255, 255); /* Sombra para resaltar el encabezado */
     z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  /* Navegación */
-  .navigation {
+}
+
+/* Contenedor de la navegación */
+.navigation {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 1px;
-  }
-  
-  /* Lista de navegación */
-  .navigation ul {
-    list-style: none;
+}
+
+/* Lista de navegación */
+.navigation ul {
+    list-style: none; /* Elimina puntos de lista */
     display: flex;
-    gap: 30px;
+    gap: 30px; /* Espacio entre elementos de la lista */
     margin: 0;
     padding: 0;
-    align-items: center; /* Asegura que todos los elementos del menú, incluidos los logos, estén alineados verticalmente */
-  }
-  
-  /* Logo y otros contenidos */
-  .header-content,
-  .logo {
+    align-items: center; /* Alineación vertical de los elementos */
+}
+
+/* Contenido del encabezado y logo */
+.header-content,
+.logo {
     display: flex;
-    align-items: center; /* Alinea verticalmente los logos */
-  }
-  
-  .logo img {
-    display: block; /* Asegura que las imágenes no tengan espacio en línea sobrante */
-    margin-right: 1px; /* Espacio entre logos y otros elementos si es necesario */
-  }
-  
-  /* Estilo para quitar las líneas de los enlaces en el menú y hacer el texto blanco */
-  .navigation ul li a {
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: white; /* Cambia el color de los enlaces a blanco */
-    font-size: 16px; /* Tamaño de letra (opcional, ajustable) */
-  }
-  
-  .navigation ul li a:hover {
-    text-decoration: none; /* Asegura que al pasar el mouse no se muestre el subrayado */
-    color: #5fccff; /* Efecto hover con un color llamativo al pasar el mouse */
-  }
-  
+    align-items: center; /* Alinea verticalmente el logo */
+}
+
+.logo img {
+    display: block; /* Elimina espacios en línea sobrantes */
+    margin-right: 1px; /* Espacio entre el logo y otros elementos */
+}
+
+/* Estilos de los enlaces en la navegación */
+.navigation ul li a {
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: white; /* Color blanco para el texto de los enlaces */
+    font-size: 16px;
+}
+
+/* Efecto hover para los enlaces en la navegación */
+.navigation ul li a:hover {
+    text-decoration: none;
+    color: #5fccff; /* Color destacado al pasar el mouse */
+}

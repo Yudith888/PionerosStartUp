@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moda - Ventana Modal</title>
     <link rel="stylesheet" href="nuevosdiseños.css">
 </head>
+
 <body>
     <header class="header">
         <nav class="navigation">
@@ -24,7 +26,6 @@
                 <li><a href="contactanos.html">Contáctanos</a></li>
                 <div class="logo"><a href="compras.html"><img src="image/carro-de-la-compra.png" alt="" width="50px"
                             height="50px"></a></div>
-
             </ul>
         </nav>
     </header>
@@ -40,11 +41,12 @@
             <div class="cardInside">
                 <div class="inside-text">
                     <br><br><br><br><br>
-                    <h2 class="bday">$80.000</h2>                    
+                    <h2 class="bday">$80.000</h2>
                 </div>
                 <div class="wishes">
-                    <img src="image/realistic image of a woman in a blouse and skirt.png" alt="" width="180px" height="180px">
-                    <center><button class="read" onclick="openModal('modal1')">Agregar</button></center>
+                    <img src="image/realistic image of a woman in a blouse and skirt.png" alt="" width="180px"
+                        height="180px">
+                        <center><button class="read" onclick="openModal('modal1')">Agregar</button></center>
                 </div>
             </div>
         </div>
@@ -68,6 +70,7 @@
             </div>
         </div>
 
+        <!-- Tarjeta 3 -->
         <div class="birthdayCard">
             <div class="cardFront">
                 <div class="front-text">
@@ -80,12 +83,14 @@
                     <h2 class="bday">$100.000</h2>
                 </div>
                 <div class="wishes">
-                    <img src="image/realistic image of a denim jacket and shirt.png" alt="" width="180px" height="180px">
-                    <center><button class="read" onclick="openModal('modal3')">Agregar</button></center>
+                    <img src="image/realistic image of a denim jacket and shirt.png" alt="" width="180px"
+                        height="180px">
+                        <center><button class="read" onclick="openModal('modal3')">Agregar</button></center>
                 </div>
             </div>
         </div>
 
+        <!-- Tarjeta 4 -->
         <div class="birthdayCard">
             <div class="cardFront">
                 <div class="front-text">
@@ -98,15 +103,15 @@
                     <h2 class="bday">$300.000</h2>
                 </div>
                 <div class="wishes">
-                    <img src="image/realistic image of a man and a woman in a hoodie.png" alt="" width="180px" height="180px">
-                    <center><button class="read" onclick="openModal('modal4')">Agregar</button></center>
+                    <img src="image/realistic image of a man and a woman in a hoodie.png" alt="" width="180px"
+                        height="180px">
+                        <center><button class="read" onclick="openModal('modal4')">Agregar</button></center>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Ventana Modal 1 -->
-    <div id="modal1" class="modal">
+     <!-- Ventana Modal 1 -->
+     <div id="modal1" class="modal">
         <div class="modal-content">
             
             <span class="close" onclick="closeModal('modal1')">&times;</span>
@@ -131,7 +136,8 @@
             <label for="">XXL</label> <br>
             <input type="checkbox"> 
             <label for="">XXXL</label> <br>
-            <center><button class="read">Añadir</button></center>
+            <center><button class="read" onclick="addToCart('Conjunto blusa y falda', 80000)">Agregar</button>
+            </center>
         </div>
     </div>
 
@@ -194,7 +200,8 @@
             <label for="">XXL</label> <br>
             <input type="checkbox"> 
             <label for="">XXXL</label> <br>
-            <center><button class="read">Añadir</button></center>
+            <center><button class="read" onclick="addToCart('Conjunto hombre y mujer', 200000)">Agregar</button>
+            </center>
             
         </div>
     </div>
@@ -257,7 +264,8 @@
             <label for="">XXL</label> <br>
             <input type="checkbox"> 
             <label for="">XXXL</label> <br>
-            <center><button class="read">Añadir</button></center>
+            <center><button class="read"
+                onclick="addToCart('Chaqueta de jean y camisa', 100000)">Agregar</button></center>
             
         </div>
     </div>
@@ -325,25 +333,28 @@
             <label for="">XXL</label> <br>
             <input type="checkbox"> 
             <label for="">XXXL</label> <br>
-            <center><button class="read">Añadir</button></center>
+            <center><button class="read"
+                onclick="addToCart('Sudadera de hombre y mujer', 300000)">Agregar</button></center>
             
         </div>
     </div>
     </div>
 
+    
+
     <script>
-        // Función para abrir el modal
+       
+
+        // Funciones para abrir y cerrar el modal
         function openModal(modalId) {
             document.getElementById(modalId).style.display = "block";
         }
 
-        // Función para cerrar el modal
         function closeModal(modalId) {
             document.getElementById(modalId).style.display = "none";
         }
 
-        // Cierra el modal cuando se hace clic fuera de él
-        window.onclick = function(event) {
+        window.onclick = function (event) {
             let modals = document.getElementsByClassName("modal");
             for (let i = 0; i < modals.length; i++) {
                 if (event.target === modals[i]) {
@@ -351,6 +362,15 @@
                 }
             }
         }
+        // Función para añadir producto al carrito
+        function addToCart(productName, productPrice) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: productPrice });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${productName} ha sido añadido al carrito.`);
+        }
+
     </script>
 </body>
+
 </html>

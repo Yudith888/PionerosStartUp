@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Configuración de la codificación y ajuste de pantalla -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título de la página que aparece en la pestaña del navegador -->
     <title>Compras</title>
+    
+    <!-- Enlace al archivo de estilos CSS para la apariencia de la página -->
     <link rel="stylesheet" href="compras.css">
 </head>
 <body>
+    
+    <!-- Encabezado de la página -->
     <header class="header">
+        <!-- Barra de navegación principal -->
         <nav class="navigation">
             <ul>
+                <!-- Contenedor del logo en el encabezado -->
                 <div class="header-content">
                     <div class="logo"><img src="image/start-up.png" alt="" width="50px" height="50px"></div>
                 </div>
+                
+                <!-- Enlaces de navegación que dirigen a diferentes páginas del sitio -->
                 <li><a href="inciio.html">Inicio</a></li>
                 <li><a href="tecnologia.html">Tecnologia</a></li>
                 <li><a href="creaciones.html">Creaciones</a></li>
@@ -21,11 +32,34 @@
                 <li><a href="gadgets.html">Gadgets</a></li>
                 <li><a href="tecnoemprende.html">Emprendedores</a></li>
                 <li><a href="tecnocontactos.html">Contáctanos</a></li>
-                <div class="logo"><a href="tecnocompras.html"><img src="image/carro-de-la-compra.png" alt="" width="50px" height="50px"></a></div>
-
+                
+                <!-- Ícono de carrito de compras que dirige a la página de compras -->
+                <div class="logo">
+                    <a href="tecnocompras.html"><img src="image/carro-de-la-compra.png" alt="" width="50px" height="50px"></a>
+                </div>
             </ul>
         </nav>
     </header>
+
+    <!-- Sección principal de la página de compras -->
+    <div class="compras">
+        <h1>Tu Carro de Compras</h1>
+        
+        <!-- Contenedor para mostrar los artículos agregados al carrito -->
+        <div id="cartItems"></div>
+        
+        <!-- Contenedor para mostrar el precio total del carrito -->
+        <div id="totalPrice"></div>
+        
+        <!-- Botón para proceder con el pago de los artículos en el carrito -->
+        <button id="checkout">Proceder al pago</button>
+        
+        <!-- Botón para vaciar todos los artículos del carrito -->
+        <button id="emptyCart">Vaciar carrito</button>
+    </div>
+
+    <!-- Enlace al archivo de JavaScript para gestionar el carrito de compras -->
+    <script src="compras.js"></script>
     
 </body>
 </html>

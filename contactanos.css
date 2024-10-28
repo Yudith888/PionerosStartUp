@@ -1,86 +1,96 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-image: url('image/17788416_5894048.jpg');
-  }
-  
-  .form-register {
-    width: 400px;
-    background: #64abf3;
-    padding: 30px;
-    margin: auto;
-    margin-top: 100px;
-    border-radius: 4px;
-    font-family: 'calibri';
-    color: white;
-    box-shadow: 7px 13px 37px #000;
-  }
-  ::placeholder{
-    color: white;
-  }
-  .form-register h4 {
-    font-size: 22px;
-    margin-bottom: 20px;
-  }
-  
-  .controls {
-    width: 100%;
-    background: transparent;
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 16px;
-    border: 1px solid #e4e5e9;
-    font-family: 'calibri';
-    font-size: 18px;
-    color: white;
-  }
-  
-  .form-register p {
-    height: 40px;
-    text-align: center;
-    font-size: 18px;
-    line-height: 40px;
-    color: white;
-  }
-  
-  .form-register a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .form-register a:hover {
-    color: white;
-    text-decoration: underline;
-  }
-  
-  .form-register .botons {
-    width: 100%;
-    background: #1f53c5;
-    border: none;
-    padding: 12px;
-    color: white;
-    margin: 16px 0;
-    font-size: 16px;
-  }
-/* Header */
-.header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: transparent;
-  padding: 20px 0;
-  box-shadow: 0 4px 8px rgb(255, 255, 255);
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Asegura que el tamaño de los elementos incluya padding y border */
 }
 
-/* Navegación */
+body {
+  background-image: url('image/17788416_5894048.jpg'); /* Imagen de fondo */
+}
+
+/* Contenedor del formulario de registro */
+.form-register {
+  width: 400px; /* Ancho del formulario */
+  background: #64abf3; /* Color de fondo */
+  padding: 30px; /* Espaciado interno */
+  margin: auto; /* Centra horizontalmente el formulario */
+  margin-top: 100px; /* Espaciado superior */
+  border-radius: 4px; /* Bordes redondeados */
+  font-family: 'calibri'; /* Fuente */
+  color: white; /* Color de texto */
+  box-shadow: 7px 13px 37px #000; /* Sombra alrededor */
+}
+
+/* Color del texto de los placeholders */
+::placeholder {
+  color: white;
+}
+
+/* Título del formulario */
+.form-register h4 {
+  font-size: 22px; /* Tamaño del texto */
+  margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Campos de entrada */
+.controls {
+  width: 100%; /* Ocupa el ancho completo */
+  background: transparent; /* Fondo transparente */
+  padding: 10px; /* Espaciado interno */
+  border-radius: 4px; /* Bordes redondeados */
+  margin-bottom: 16px; /* Espaciado inferior */
+  border: 1px solid #e4e5e9; /* Borde claro */
+  font-family: 'calibri'; /* Fuente */
+  font-size: 18px; /* Tamaño del texto */
+  color: white; /* Color de texto */
+}
+
+/* Párrafos dentro del formulario */
+.form-register p {
+  height: 40px; /* Altura */
+  text-align: center; /* Texto centrado */
+  font-size: 18px; /* Tamaño de texto */
+  line-height: 40px; /* Centra verticalmente el texto */
+  color: white;
+}
+
+/* Enlaces dentro del formulario */
+.form-register a {
+  color: white; /* Color de enlace */
+  text-decoration: none; /* Sin subrayado */
+}
+
+.form-register a:hover {
+  color: white;
+  text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+/* Botón de envío en el formulario */
+.form-register .botons {
+  width: 100%; /* Ocupa el ancho completo */
+  background: #1f53c5; /* Color de fondo */
+  border: none; /* Sin borde */
+  padding: 12px; /* Espaciado interno */
+  color: white; /* Color de texto */
+  margin: 16px 0; /* Espaciado superior e inferior */
+  font-size: 16px; /* Tamaño de texto */
+}
+
+/* Encabezado fijo en la parte superior */
+.header {
+  position: fixed;
+  top: 0; /* Fijado en la parte superior */
+  width: 100%; /* Ancho completo */
+  background-color: transparent; /* Fondo transparente */
+  padding: 20px 0; /* Espaciado superior e inferior */
+  box-shadow: 0 4px 8px rgb(255, 255, 255); /* Sombra en el encabezado */
+  z-index: 1000; /* Se muestra sobre otros elementos */
+  display: flex;
+  justify-content: center; /* Centra horizontalmente el contenido */
+  align-items: center; /* Centra verticalmente el contenido */
+}
+
+/* Contenedor de navegación */
 .navigation {
   display: flex;
   justify-content: center;
@@ -90,34 +100,34 @@
 
 /* Lista de navegación */
 .navigation ul {
-  list-style: none;
+  list-style: none; /* Sin viñetas */
   display: flex;
-  gap: 30px;
+  gap: 30px; /* Espacio entre elementos */
   margin: 0;
   padding: 0;
-  align-items: center; /* Asegura que todos los elementos del menú, incluidos los logos, estén alineados verticalmente */
+  align-items: center; /* Alinea verticalmente todos los elementos */
 }
 
-/* Logo y otros contenidos */
+/* Logo dentro del encabezado */
 .header-content,
 .logo {
   display: flex;
-  align-items: center; /* Alinea verticalmente los logos */
+  align-items: center; /* Alinea verticalmente el logo */
 }
 
 .logo img {
-  display: block; /* Asegura que las imágenes no tengan espacio en línea sobrante */
-  margin-right: 1px; /* Espacio entre logos y otros elementos si es necesario */
+  display: block; /* Elimina el espacio sobrante en línea */
+  margin-right: 1px; /* Espaciado a la derecha del logo */
 }
 
-/* Estilo para quitar las líneas de los enlaces en el menú y hacer el texto blanco */
+/* Estilo para los enlaces de navegación */
 .navigation ul li a {
-  text-decoration: none; /* Elimina el subrayado de los enlaces */
-  color: white; /* Cambia el color de los enlaces a blanco */
-  font-size: 16px; /* Tamaño de letra (opcional, ajustable) */
+  text-decoration: none; /* Sin subrayado */
+  color: white; /* Color blanco del texto */
+  font-size: 16px; /* Tamaño del texto */
 }
 
 .navigation ul li a:hover {
-  text-decoration: none; /* Asegura que al pasar el mouse no se muestre el subrayado */
-  color: #5fccff; /* Efecto hover con un color llamativo al pasar el mouse */
+  text-decoration: none; /* Sin subrayado al pasar el mouse */
+  color: #5fccff; /* Color de hover */
 }

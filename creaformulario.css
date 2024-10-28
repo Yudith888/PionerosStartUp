@@ -1,56 +1,185 @@
+.read {
+    background: linear-gradient(90deg, #3264ee, #22b4ce); /* Degradado de color para el fondo del enlace */
+    padding: 6px; /* Espaciado interno */
+    color: #fff; /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    border-radius: 8px; /* Bordes redondeados */
+}
 
 body {
-    font-family: Arial, sans-serif;
-    background-image: url(image/17788416_5894048.jpg);
-    margin: 0;
-    padding: 0;
-}
-.container {
-    width: 100%;
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 8px;
-}
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-.form-group {
-    margin-bottom: 15px;
-}
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-.form-group textarea {
-    resize: vertical;
-}
-.form-group input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-}
-.form-group input[type="submit"]:hover {
-    background-color: #45a049;
+    font-family: Arial, sans-serif; /* Tipo de fuente */
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 20px; /* Espaciado interno en el body */
+    background-image: url(image/17788416_5894048.jpg); /* Imagen de fondo */
 }
 
-.read {
-    background: linear-gradient(90deg, #3264ee, #22b4ce);
-    padding: 6px;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 8px;
- }
+.container {
+    max-width: 600px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde alrededor del contenedor */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra del contenedor */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Espaciado inferior entre grupos de formulario */
+}
+
+.form-group label {
+    display: block; /* Hace que la etiqueta ocupe toda la línea */
+    margin-bottom: 5px; /* Espaciado inferior de la etiqueta */
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%; /* Ancho completo */
+    padding: 8px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+    border: 1px solid #ccc; /* Borde alrededor de los campos de entrada */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+.form-group button {
+    padding: 10px 15px; /* Espaciado interno del botón */
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.form-group button:hover {
+    background-color: #0056b3; /* Color de fondo del botón al pasar el mouse */
+}
+
+/* Estilo básico para la ventana modal */
+.modal-container {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Posiciona el contenedor de la modal de manera fija */
+    z-index: 1; /* Asegura que la modal esté por encima de otros elementos */
+    left: 0; /* Alinea a la izquierda */
+    top: 0; /* Alinea en la parte superior */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    overflow: auto; /* Agrega scroll si es necesario */
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro semi-transparente */
+}
+
+.modal {
+    background-color: #fefefe; /* Color de fondo de la modal */
+    margin: 15% auto; /* Centra la modal verticalmente y horizontalmente */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #888; /* Borde de la modal */
+    width: 80%; /* Ancho del 80% */
+    max-width: 500px; /* Ancho máximo de la modal */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.close {
+    color: #aaa; /* Color del texto de cerrar */
+    float: right; /* Alinea a la derecha */
+    font-size: 28px; /* Tamaño de la fuente del botón de cerrar */
+    font-weight: bold; /* Negrita */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Color al pasar el mouse o enfocar el botón de cerrar */
+    text-decoration: none; /* Elimina el subrayado */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón de cerrar */
+}
+/* Establece la fuente y el espaciado del cuerpo del documento */
+body {
+    font-family: Arial, sans-serif; /* Define la fuente utilizada en el cuerpo */
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 20px; /* Agrega un relleno de 20 píxeles alrededor del contenido */
+}
+
+/* Contenedor principal del formulario */
+.container {
+    max-width: 600px; /* Ancho máximo de 600 píxeles */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Agrega un relleno interno de 20 píxeles */
+    border: 1px solid #ccc; /* Borde gris claro alrededor del contenedor */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para un efecto de profundidad */
+}
+
+/* Estilos para cada grupo de formulario */
+.form-group {
+    margin-bottom: 15px; /* Espaciado inferior de 15 píxeles entre grupos */
+}
+
+/* Estilo para las etiquetas de los campos de entrada */
+.form-group label {
+    display: block; /* Asegura que la etiqueta ocupe todo el ancho disponible */
+    margin-bottom: 5px; /* Espaciado inferior de 5 píxeles */
+}
+
+/* Estilo para los campos de entrada, áreas de texto y selectores */
+.form-group input, 
+.form-group textarea, 
+.form-group select {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 8px; /* Relleno interno de 8 píxeles */
+    box-sizing: border-box; /* Incluye el relleno y el borde en el cálculo del ancho */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+/* Estilo para los botones de envío */
+.form-group button {
+    padding: 10px 15px; /* Relleno interno de 10 píxeles arriba/abajo y 15 píxeles a los lados */
+    background-color: #007bff; /* Color de fondo azul */
+    color: white; /* Color del texto en blanco */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* Efecto hover para el botón */
+.form-group button:hover {
+    background-color: #0056b3; /* Color de fondo más oscuro al pasar el mouse */
+}
+
+/* Estilo básico para la ventana modal */
+.modal-container {
+    display: none; /* Oculto por defecto, se mostrará con JavaScript */
+    position: fixed; /* Posición fija en la pantalla */
+    z-index: 1; /* Asegura que esté por encima de otros elementos */
+    left: 0; /* Alineado a la izquierda */
+    top: 0; /* Alineado en la parte superior */
+    width: 100%; /* Ancho completo de la ventana */
+    height: 100%; /* Alto completo de la ventana */
+    overflow: auto; /* Permite el desplazamiento si el contenido es demasiado grande */
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro semi-transparente */
+}
+
+/* Estilo para el contenido de la modal */
+.modal {
+    background-color: #fefefe; /* Color de fondo blanco para el contenido */
+    margin: 15% auto; /* Margen superior de 15% y centrado horizontalmente */
+    padding: 20px; /* Relleno interno de 20 píxeles */
+    border: 1px solid #888; /* Borde gris oscuro */
+    width: 80%; /* Ancho del 80% de la ventana */
+    max-width: 500px; /* Ancho máximo de 500 píxeles */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo para el botón de cerrar en la modal */
+.close {
+    color: #aaa; /* Color gris claro */
+    float: right; /* Alineado a la derecha */
+    font-size: 28px; /* Tamaño de fuente grande */
+    font-weight: bold; /* Negrita */
+}
+
+/* Efecto hover para el botón de cerrar */
+.close:hover,
+.close:focus {
+    color: black; /* Cambia a negro al pasar el mouse */
+    text-decoration: none; /* Sin subrayado */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}

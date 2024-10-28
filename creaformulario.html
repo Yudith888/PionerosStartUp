@@ -1,99 +1,96 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="creaformulario.css">
-    <link rel="stylesheet" href="modal.css">
-    <title>Formulario de Creación de Sitios Web</title>
-   
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para dispositivos móviles -->
+    <title>Formulario para Emprendedores</title> <!-- Título que se muestra en la pestaña del navegador -->
+    <link rel="stylesheet" href="creaformulario.css"> <!-- Enlaza el archivo CSS para estilos -->
 </head>
 <body>
 
-<div class="container">
-    <h2>Formulario para Creación de Sitio Web</h2>
-    <form action="" method="post">
-        <!-- Nombre del sitio -->
-        <div class="form-group">
-            <label for="nombre_sitio">Nombre del Sitio Web:</label>
-            <input type="text" id="nombre_sitio" name="nombre_sitio" placeholder="Ej: Mi Sitio Web" required>
+<div class="container"> <!-- Contenedor principal para el formulario -->
+    <h2>Formulario para Emprendedores</h2> <!-- Título del formulario -->
+    <form id="entrepreneurForm" action="" method="post"> <!-- Formulario con ID y método POST -->
+        <div class="form-group"> <!-- Grupo de formulario para el nombre -->
+            <label for="nombre">Nombre:</label> <!-- Etiqueta para el campo de nombre -->
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required> <!-- Campo de texto para el nombre, requerido -->
         </div>
 
-        <!-- Propósito del sitio -->
-        <div class="form-group">
-            <label for="proposito">Propósito del Sitio:</label>
-            <select id="proposito" name="proposito" required>
-                <option value="" disabled selected>Selecciona el propósito</option>
-                <option value="blog">Blog</option>
-                <option value="tienda_online">Tienda Online</option>
-                <option value="portafolio">Portafolio</option>
-                <option value="informativo">Sitio Informativo</option>
-                <option value="otro">Otro</option>
+        <div class="form-group"> <!-- Grupo de formulario para el correo electrónico -->
+            <label for="correo">Correo Electrónico:</label> <!-- Etiqueta para el campo de correo -->
+            <input type="email" id="correo" name="correo" placeholder="Ingresa tu correo" required> <!-- Campo de correo electrónico, requerido -->
+        </div>
+
+        <div class="form-group"> <!-- Grupo de formulario para el teléfono -->
+            <label for="telefono">Teléfono:</label> <!-- Etiqueta para el campo de teléfono -->
+            <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu teléfono" required> <!-- Campo de teléfono, requerido -->
+        </div>
+
+        <div class="form-group"> <!-- Grupo de formulario para el nombre del proyecto -->
+            <label for="nombre_proyecto">Nombre del Proyecto:</label> <!-- Etiqueta para el campo del nombre del proyecto -->
+            <input type="text" id="nombre_proyecto" name="nombre_proyecto" placeholder="Ej: Mi Empresa" required> <!-- Campo de texto para el nombre del proyecto, requerido -->
+        </div>
+
+        <div class="form-group"> <!-- Grupo de formulario para el sector -->
+            <label for="sector">Sector:</label> <!-- Etiqueta para el campo del sector -->
+            <select id="sector" name="sector" required> <!-- Menú desplegable para seleccionar el sector, requerido -->
+                <option value="" disabled selected>Selecciona el sector</option> <!-- Opción predeterminada deshabilitada -->
+                <option value="tecnologia">Tecnología</option> <!-- Opción para el sector de tecnología -->
+                <option value="moda">Moda</option> <!-- Opción para el sector de moda -->
             </select>
         </div>
 
-        <!-- Esquema de colores -->
-        <div class="form-group">
-            <label for="colores">Esquema de Colores Preferido:</label>
-            <input type="text" id="colores" name="colores" placeholder="Ej: Azul y blanco" required>
+        <div class="form-group"> <!-- Grupo de formulario para la descripción del proyecto -->
+            <label for="descripcion">Descripción del Proyecto:</label> <!-- Etiqueta para el campo de descripción -->
+            <textarea id="descripcion" name="descripcion" rows="4" placeholder="Describe tu proyecto" required></textarea> <!-- Área de texto para la descripción, requerida -->
         </div>
 
-        <!-- Tipo de contenido -->
-        <div class="form-group">
-            <label for="contenido">Tipo de Contenido Principal:</label>
-            <select id="contenido" name="contenido" required>
-                <option value="" disabled selected>Selecciona el tipo de contenido</option>
-                <option value="texto">Texto</option>
-                <option value="imagenes">Imágenes</option>
-                <option value="videos">Videos</option>
-                <option value="multimedia">Multimedia (varios tipos)</option>
-            </select>
+        <div class="form-group"> <!-- Grupo de formulario para el botón de envío -->
+            <center> <!-- Centra el botón -->
+            <button type="button" id="submitBtn" class="read">Enviar</button> <!-- Botón que al hacer clic enviará el formulario -->
+            </center>
         </div>
-        
-        <div class="form-group">
-            <label for="paginas">Ingresa tu correo:</label>
-            <input class="controls" type="email" name="correo" id="correo" placeholder="Ingresa tu Correo">
-        </div>
-        <!-- Número de páginas -->
-        <div class="form-group">
-            <label for="paginas">Número Aproximado de Páginas:</label>
-            <input type="number" id="paginas" name="paginas" min="1" placeholder="Ej: 5" required>
-        </div>
-
-        <!-- Funcionalidades adicionales -->
-        <div class="form-group">
-            <label for="funcionalidades">Funcionalidades Adicionales (Opcional):</label>
-            <textarea id="funcionalidades" name="funcionalidades" rows="4" placeholder="Ej: Carrito de compras, chat en vivo, formulario de contacto"></textarea>
-        </div>
-
-        <!-- Información adicional -->
-        <div class="form-group">
-            <label for="info_adicional">Información Adicional (Opcional):</label>
-            <textarea id="info_adicional" name="info_adicional" rows="4" placeholder="Proporciona cualquier detalle adicional que consideres importante"></textarea>
-        </div>
-
-        <!-- Enviar -->
-        <div class="form-group">
-            
-        </div>
-        
     </form>
-    <a href="#modal-container" class="modal-trigger">Enviar</a>
-            <div class="modal-container" id="modal-container">
-                <div class="modal">
-                    <a href="#" class="close">&times;</a>
-                    <div class="modal-header">
-                        <h1>Gracias por confiar en Pioneros Start Up</h1>
-                    </div>
-                    <div class="modal-body">
-                        <p>Enviaremos toda la informacion y contacto al correo que haz registrado</p>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="creacionsitiosweb.html" class="read">Gracias por tu confianza</a>
-                    </div>
-                </div>
-            </div>
 </div>
+
+<!-- Ventana modal -->
+<div class="modal-container" id="modal-container"> <!-- Contenedor para la ventana modal -->
+    <div class="modal"> <!-- Elemento de la ventana modal -->
+        <span class="close">&times;</span> <!-- Botón de cierre de la ventana modal -->
+        <h1>Inscripción recibida</h1> <!-- Título dentro de la ventana modal -->
+        <p>Hemos recibido tu información y pronto estaremos en contacto contigo.</p> <!-- Mensaje dentro de la ventana modal -->
+        <center><a href="creacionsitiosweb.html" class="read">Regresar</a></center> <!-- Enlace para regresar, centrado -->
+    </div>
+</div>
+
+<script>
+    // Agrega un evento de clic al botón de envío
+    document.getElementById('submitBtn').addEventListener('click', function() {
+        const form = document.getElementById('entrepreneurForm'); // Obtiene el formulario
+
+        // Verificar si el formulario es válido
+        if (form.checkValidity()) { // Comprueba la validez del formulario
+            // Mostrar la ventana modal
+            document.getElementById('modal-container').style.display = 'block'; // Muestra la ventana modal si el formulario es válido
+        } else {
+            // Forzar la validación del formulario
+            form.reportValidity(); // Muestra mensajes de error si el formulario no es válido
+        }
+    });
+
+    // Cerrar la modal
+    document.querySelector('.close').addEventListener('click', function() { // Agrega un evento de clic al botón de cierre
+        document.getElementById('modal-container').style.display = 'none'; // Oculta la ventana modal al hacer clic en el botón de cierre
+    });
+
+    // Cerrar modal al hacer clic fuera del contenido
+    window.addEventListener('click', function(event) { // Agrega un evento de clic a la ventana
+        const modalContainer = document.getElementById('modal-container'); // Obtiene el contenedor de la ventana modal
+        if (event.target === modalContainer) { // Verifica si el clic fue fuera del contenido de la modal
+            modalContainer.style.display = 'none'; // Oculta la ventana modal
+        }
+    });
+</script>
 
 </body>
 </html>

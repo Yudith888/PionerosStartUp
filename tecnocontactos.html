@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Configuración de la codificación y ajuste de pantalla -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Enlace a los archivos de estilos CSS para el formulario y el modal -->
     <link rel="stylesheet" href="contactanos.css">
     <link rel="stylesheet" href="modalcontactos.css">
-    <title>Formulario Registro</title>
     
+    <!-- Título de la página -->
+    <title>Formulario Registro</title>
 </head>
 <body>
+    <!-- Encabezado de la página con navegación -->
     <header class="header">
         <nav class="navigation">
             <ul>
+                <!-- Contenedor del logo en el encabezado -->
                 <div class="header-content">
                     <div class="logo"><img src="image/start-up.png" alt="" width="50px" height="50px"></div>
                 </div>
+                
+                <!-- Enlaces de navegación -->
                 <li><a href="inciio.html">Inicio</a></li>
                 <li><a href="tecnologia.html">Tecnologia</a></li>
                 <li><a href="creaciones.html">Creaciones</a></li>
@@ -24,21 +32,34 @@
                 <li><a href="gadgets.html">Gadgets</a></li>
                 <li><a href="tecnoemprende.html">Emprendedores</a></li>
                 <li><a href="tecnocontactos.html">Contáctanos</a></li>
-                <div class="logo"><a href="tecnocompras.html"><img src="image/carro-de-la-compra.png" alt="" width="50px" height="50px"></a></div>
+                
+                <!-- Ícono de carrito de compras -->
+                <div class="logo">
+                    <a href="tecnocompras.html"><img src="image/carro-de-la-compra.png" alt="" width="50px" height="50px"></a>
+                </div>
             </ul>
         </nav>
     </header>
+
+    <!-- Sección del formulario de registro -->
     <section class="form-register">
         <h4>Formulario Registro</h4>
+        
+        <!-- Campos de entrada del formulario -->
         <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre" required>
         <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido" required>
         <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo" required>
         <input class="controls" type="text" name="mensaje" id="mensaje" placeholder="Mensaje" required>
-        <p>Estoy de acuerdo con <a href="#">Términos y Condiciones</a></p>
-        <button class="botons" onclick="openModal()">Enviar</button>
+        
+        <!-- Checkbox para aceptar términos y condiciones -->
+        <input type="checkbox" id="terms" required>
+        <label for="terms">Estoy de acuerdo con <a href="#">Términos y Condiciones</a></label>
+        
+        <!-- Botón de envío con validación de formulario -->
+        <button class="botons" onclick="validateForm()">Enviar</button>
     </section>
 
-    <!-- Ventana Modal -->
+    <!-- Ventana modal que se muestra tras enviar el formulario -->
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
@@ -47,6 +68,7 @@
         </div>
     </div>
 
+    <!-- Scripts para el funcionamiento del modal y la validación del formulario -->
     <script>
         // Función para abrir la ventana modal
         function openModal() {
@@ -58,7 +80,23 @@
             document.getElementById("myModal").style.display = "none";
         }
 
-        // Cerrar la ventana modal al hacer clic fuera del contenido
+        // Función para validar el formulario antes de abrir el modal
+        function validateForm() {
+            // Obtener los campos del formulario
+            const nombres = document.getElementById("nombres");
+            const apellidos = document.getElementById("apellidos");
+            const correo = document.getElementById("correo");
+            const mensaje = document.getElementById("mensaje");
+
+            // Verificar que todos los campos estén llenos
+            if (nombres.value && apellidos.value && correo.value && mensaje.value) {
+                openModal(); // Abre el modal si todos los campos son válidos
+            } else {
+                alert("Por favor, completa todos los campos requeridos."); // Muestra un mensaje de error si falta información
+            }
+        }
+
+        // Cierra la ventana modal al hacer clic fuera del contenido de la ventana
         window.onclick = function(event) {
             var modal = document.getElementById("myModal");
             if (event.target == modal) {
@@ -66,6 +104,5 @@
             }
         }
     </script>
-
 </body>
 </html>

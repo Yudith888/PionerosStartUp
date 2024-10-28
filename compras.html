@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compras</title>
-    <link rel="stylesheet" href="compras.css">
+    <meta charset="UTF-8"> <!-- Establece la codificación de caracteres a UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la visualización en dispositivos móviles -->
+    <title>Compras</title> <!-- Título de la página -->
+    <link rel="stylesheet" href="compras.css"> <!-- Enlace al archivo de estilos CSS externo -->
 </head>
 <body>
+    <!-- Encabezado de la página -->
     <header class="header">
         <nav class="navigation">
             <ul>
+                <!-- Contenedor para el logo principal -->
                 <div class="header-content">
                     <div class="logo"><img src="image/start-up.png" alt="" width="50px" height="50px"></div>
                 </div>
-                <li><a href="inciio.html">Inicio</a></li>
+                <!-- Enlaces de navegación -->
+                <li><a href="inicio.html">Inicio</a></li>
                 <li><a href="moda.html">Moda</a></li>
                 <li><a href="nuevosdiseños.html">Nuevos diseños</a></li>
                 <li><a href="tuestilo.html">Tu estilo</a></li>
@@ -22,11 +25,22 @@
                 <li><a href="personalizaciones.html">Personalizaciones</a></li>
                 <li><a href="emprendedores.html">Emprendedores</a></li>
                 <li><a href="contactanos.html">Contáctanos</a></li>
+                <!-- Icono de carrito de compras -->
                 <div class="logo"><a href="compras.html"><img src="image/carro-de-la-compra.png" alt="" width="50px" height="50px"></a></div>
-
             </ul>
         </nav>
     </header>
-    
+
+    <!-- Sección de compras -->
+    <div class="compras">
+        <h1>Tu Carro de Compras</h1> <!-- Título del carrito de compras -->
+        <div id="cartItems"></div> <!-- Contenedor para los artículos del carrito -->
+        <div id="totalPrice"></div> <!-- Contenedor para mostrar el precio total -->
+        <button id="checkout">Proceder al pago</button> <!-- Botón para proceder al pago -->
+        <button id="emptyCart">Vaciar carrito</button> <!-- Botón para vaciar el carrito -->
+    </div>
+
+    <!-- Enlace al archivo de JavaScript externo -->
+    <script src="compras.js"></script>
 </body>
 </html>

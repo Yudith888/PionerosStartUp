@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="modal.css">
-    <title>Modal</title>
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Asegura la compatibilidad con IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para dispositivos móviles -->
+    <link rel="stylesheet" href="modal.css"> <!-- Enlaza el archivo CSS para los estilos del modal -->
+    <title>Modal</title> <!-- Título de la página que se mostrará en la pestaña del navegador -->
 </head>
 <body>
+    <!-- Enlace que activa la aparición del modal al hacer clic -->
     <a href="#modal-container" class="modal-trigger">Abrir Modal</a>
 
+    <!-- Contenedor principal del modal -->
     <div class="modal-container" id="modal-container">
-        <div class="modal">
-            <a href="#" class="close">&times;</a>
-            <div class="modal-header">
-                <h1>Modal</h1>
+        <div class="modal"> <!-- Contenedor del contenido del modal -->
+            <a href="#" class="close">&times;</a> <!-- Botón para cerrar el modal (símbolo de "X") -->
+            <div class="modal-header"> <!-- Sección del encabezado del modal -->
+                <h1>Modal</h1> <!-- Título del modal -->
             </div>
-            <div class="modal-body">
+            <div class="modal-body"> <!-- Cuerpo del modal donde se coloca el contenido -->
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus velit neque eligendi animi labore culpa pariatur ratione in beatae. Recusandae culpa dolore maiores? Culpa provident odio magni suscipit facilis saepe.</p>
+                <!-- Texto de ejemplo en el cuerpo del modal -->
             </div>
-            <div class="modal-footer">
-                <p>Gracias por todo tu apoyo</p>
+            <div class="modal-footer"> <!-- Sección del pie del modal -->
+                <p>Gracias por todo tu apoyo</p> <!-- Mensaje de agradecimiento en el pie del modal -->
             </div>
         </div>
     </div>

@@ -1,13 +1,20 @@
-*{
+/* Reseteo de margen y padding para todos los elementos,
+   y configuración de box-sizing para controlar el espacio de los elementos */
+   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html, body{
+
+/* Definición de ancho y alto completos para el html y el body */
+html, body {
     width: 100%;
     height: 100%;
 }
-body{
+
+/* Configuración de la apariencia general del body:
+   fondo color púrpura, centrado de contenido */
+body {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -15,14 +22,19 @@ body{
     align-items: center;
     background: #6464d0;
 }
-.box{
+
+/* Estilo para la caja principal, posición y tamaño */
+.box {
     top: 100px;
     position: relative;
     width: 20rem;
     height: 25rem;
     cursor: pointer;
 }
-.bg{
+
+/* Fondo de la caja, con una imagen de fondo que cubre toda el área,
+   y un borde redondeado y sombra */
+.bg {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -33,15 +45,17 @@ body{
     box-shadow: 0 10px 10px;
 }
 
-.box:hover .bg{
+/* Efecto hover en .bg: al pasar el cursor, se aplican transformaciones 3D */
+.box:hover .bg {
     transform: perspective(20px) rotateX(2deg) translateY(-50px);
 }
 
-.bird{
+/* Estilo de una imagen o icono con animación */
+.bird {
     margin-left: 20px;
     top: 30px;
     position: absolute;
-    width: 2rem ;
+    width: 2rem;
     height: 2rem;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -49,26 +63,35 @@ body{
     animation-play-state: paused!important;
     transition: 1s;
 }
-p{
+
+/* Configuración de espaciado y color de párrafos */
+p {
     letter-spacing: 1px;
     margin: 70px;
     color: white;
 }
-h4{
+
+/* Configuración de espaciado y color de encabezados h4 */
+h4 {
     letter-spacing: 1px;
     margin: 70px;
     color: white;
 }
-.box:hover .bird{
-    animation-play-state:running!important;
+
+/* Efecto hover en bird: se reanuda la animación y se ajusta su posición */
+.box:hover .bird {
+    animation-play-state: running!important;
     transform: translateY(-200px) translateX(-10px);
 }
 
-@keyframes gifAnimation{
-  
+/* Definición de la animación gifAnimation */
+@keyframes gifAnimation {
+    /* Definir aquí los pasos de la animación */
 }
 
-/* Header */
+/* --- Estilos de la cabecera --- */
+
+/* Configuración de la cabecera: fija, transparente, sombra, y centrado */
 .header {
     position: fixed;
     top: 0;
@@ -80,47 +103,50 @@ h4{
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  /* Navegación */
-  .navigation {
+}
+
+/* --- Estilos de la navegación --- */
+
+/* Configuración de la navegación: centrado y alineación */
+.navigation {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 1px;
-  }
-  
-  /* Lista de navegación */
-  .navigation ul {
+}
+
+/* Lista de navegación: quita puntos de lista, añade espacio entre elementos */
+.navigation ul {
     list-style: none;
     display: flex;
     gap: 30px;
     margin: 0;
     padding: 0;
-    align-items: center; /* Asegura que todos los elementos del menú, incluidos los logos, estén alineados verticalmente */
-  }
-  
-  /* Logo y otros contenidos */
-  .header-content,
-  .logo {
+    align-items: center; /* Alinea verticalmente los elementos */
+}
+
+/* Configuración de los contenidos y logo de la cabecera */
+.header-content,
+.logo {
     display: flex;
-    align-items: center; /* Alinea verticalmente los logos */
-  }
-  
-  .logo img {
-    display: block; /* Asegura que las imágenes no tengan espacio en línea sobrante */
-    margin-right: 1px; /* Espacio entre logos y otros elementos si es necesario */
-  }
-  
-  /* Estilo para quitar las líneas de los enlaces en el menú y hacer el texto blanco */
-  .navigation ul li a {
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: white; /* Cambia el color de los enlaces a blanco */
-    font-size: 16px; /* Tamaño de letra (opcional, ajustable) */
-  }
-  
-  .navigation ul li a:hover {
-    text-decoration: none; /* Asegura que al pasar el mouse no se muestre el subrayado */
-    color: #5fccff; /* Efecto hover con un color llamativo al pasar el mouse */
-  }
-  
+    align-items: center;
+}
+
+/* Estilo para la imagen del logo */
+.logo img {
+    display: block; /* Asegura que la imagen no tenga espacio en línea sobrante */
+    margin-right: 1px;
+}
+
+/* Estilos para los enlaces del menú: sin subrayado y color blanco */
+.navigation ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+/* Estilo hover para enlaces: cambia de color sin subrayado */
+.navigation ul li a:hover {
+    text-decoration: none;
+    color: #5fccff;
+}

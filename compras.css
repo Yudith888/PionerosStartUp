@@ -1,91 +1,160 @@
-body{
-    background-image: url(image/17788416_5894048.jpg);
+body {
+    background-image: url(image/17788416_5894048.jpg); /* Fondo de la página con una imagen */
 }
+
 /* Header */
 .header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: transparent;
-    padding: 10px 0; /* Aumenta el padding superior e inferior */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: fixed; /* Posición fija para que el header permanezca en la parte superior */
+    top: 0; /* Alineado al borde superior */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    background-color: transparent; /* Fondo transparente */
+    padding: 10px 0; /* Espacio superior e inferior */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra debajo del header */
+    z-index: 1000; /* Coloca el header encima de otros elementos */
+    display: flex; /* Flexbox para la alineación */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
 }
 
 /* Navegación */
 .navigation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px; /* Añade margen superior para bajar el menú */
+    display: flex; /* Flexbox para la alineación */
+    justify-content: center; /* Centra la lista horizontalmente */
+    align-items: center; /* Alinea el contenido verticalmente */
+    margin-top: 20px; /* Espacio superior para bajar el menú */
 }
 
 .navigation ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
+    list-style: none; /* Quita los puntos de la lista */
+    display: flex; /* Flexbox para organizar los elementos horizontalmente */
+    gap: 30px; /* Espacio entre los elementos */
+    margin: 0; /* Sin margen superior */
+    padding: 0; /* Sin espacio de relleno */
 }
 
 /* Logo dentro del header */
 .header-content {
-    margin-right: 20px;
+    margin-right: 20px; /* Espacio a la derecha del logo */
 }
 
-
-/* Header */
+/* Otra definición del Header */
 .header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: transparent;
-    padding: 20px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: fixed; /* Posición fija */
+    top: 0; /* Posición en la parte superior */
+    width: 100%; /* Ancho completo */
+    background-color: transparent; /* Fondo transparente */
+    padding: 20px 0; /* Espaciado superior e inferior */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    z-index: 1000; /* Capa superior */
+    display: flex; /* Flexbox */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
 }
 
-/* Navegación */
+/* Navegación con menos margen */
 .navigation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1px;
+    display: flex; /* Flexbox */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    margin-top: 1px; /* Margen superior menor */
 }
 
 /* Lista de navegación */
 .navigation ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
-    align-items: center; /* Asegura que todos los elementos del menú, incluidos los logos, estén alineados verticalmente */
+    list-style: none; /* Sin estilo de lista */
+    display: flex; /* Flexbox */
+    gap: 30px; /* Espacio entre elementos */
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin padding */
+    align-items: center; /* Alineación vertical de los elementos */
 }
 
 /* Logo y otros contenidos */
 .header-content,
 .logo {
-    display: flex;
-    align-items: center; /* Alinea verticalmente los logos */
+    display: flex; /* Flexbox */
+    align-items: center; /* Alineación vertical */
 }
 
 .logo img {
-    display: block; /* Asegura que las imágenes no tengan espacio en línea sobrante */
-    margin-right: 1px; /* Espacio entre logos y otros elementos si es necesario */
+    display: block; /* Elimina espacio en línea sobrante */
+    margin-right: 1px; /* Espacio entre el logo y otros elementos */
 }
-/* Estilo para quitar las líneas de los enlaces en el menú */
+
+/* Estilo para enlaces del menú */
 .navigation ul li a {
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: white; /* Mantiene el color del texto o el que hayas asignado previamente */
+    text-decoration: none; /* Sin subrayado */
+    color: white; /* Color blanco */
 }
 
 .navigation ul li a:hover {
-    text-decoration: none; /* Asegura que al pasar el mouse no se muestre el subrayado */
+    text-decoration: none; /* Sin subrayado al pasar el mouse */
+}
+
+/* Estilo general del cuerpo */
+body {
+    font-family: Arial, sans-serif; /* Fuente */
+    margin: 0; /* Sin margen */
+    padding: 20px; /* Padding general */
+}
+
+/* Espacio para los artículos del carrito */
+#cartItems {
+    margin-top: 20px; /* Espacio superior */
+}
+
+#totalPrice {
+    margin-top: 20px; /* Espacio superior */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Botones de interacción */
+button {
+    margin-top: 20px; /* Espacio superior */
+    padding: 10px; /* Espaciado interno */
+    background-color: #28a745; /* Color de fondo verde */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor a mano */
+}
+
+/* Estilos del contenedor de compras */
+.compras {
+    margin-top: 100px; /* Espacio superior */
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Elementos en columna */
+    align-items: center; /* Centrado horizontal */
+    justify-content: center; /* Centrado vertical */
+    text-align: center; /* Texto centrado */
+    background: white; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    padding: 20px; /* Espaciado interno */
+    width: 80%; /* Ancho del contenedor */
+    max-width: 600px; /* Ancho máximo */
+    margin-left: auto; /* Centrado horizontal */
+    margin-right: auto; /* Centrado horizontal */
+}
+
+/* Estilos para los títulos en el contenedor de compras */
+.compras h1 {
+    color: #333; /* Color del texto */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Botones de acción */
+button {
+    background-color: #ff4081; /* Fondo rosado */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    cursor: pointer; /* Cursor de mano */
+    font-size: 16px; /* Tamaño de fuente */
+    margin: 10px; /* Espacio entre botones */
+    transition: background-color 0.3s; /* Transición */
+}
+
+button:hover {
+    background-color: #e91e63; /* Color rosado más oscuro al pasar el mouse */
 }

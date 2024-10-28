@@ -1,148 +1,199 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+/* Importar fuentes de Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap'); /* Fuente Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap'); /* Fuente Parisienne */
+
+/* Estilos generales para todos los elementos */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    margin: 0; /* Eliminar margen */
+    padding: 0; /* Eliminar padding */
+    box-sizing: border-box; /* Incluir el padding y borde en el tamaño total del elemento */
+    font-family: 'Poppins', sans-serif; /* Establecer la fuente a Poppins */
 }
+
+/* Estilo del body */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #f9f9f9;
+    display: flex; /* Usar flexbox para centrar el contenido */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    min-height: 100vh; /* Altura mínima de la pantalla completa */
+    background: #f9f9f9; /* Color de fondo */
 }
+
+/* Estilo del botón de "Leer más" */
 .read-more {
-    background: linear-gradient(90deg, #3730a3, #7e22ce);
-    padding: 12px;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 8px;
- }
+    background: linear-gradient(90deg, #3730a3, #7e22ce); /* Gradiente de fondo */
+    padding: 12px; /* Espaciado interno */
+    color: #fff; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Estilo del contenedor principal */
 .wrapper {
-    position: relative;
-    width: 800px;
-    height: 500px;
-    background-image:url(image/photo-1663970206579-c157cba7edda.jpg);
-    border-radius: 50px;
-    box-shadow: 0 0 60px rgba(0, 0, 0, .3);
-    padding: 60px;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
+    position: relative; /* Posicionamiento relativo para los elementos hijos */
+    width: 800px; /* Ancho del contenedor */
+    height: 500px; /* Altura del contenedor */
+    background-image: url(image/photo-1663970206579-c157cba7edda.jpg); /* Imagen de fondo */
+    border-radius: 50px; /* Bordes redondeados */
+    box-shadow: 0 0 60px rgba(0, 0, 0, .3); /* Sombra */
+    padding: 60px; /* Espaciado interno */
+    display: flex; /* Usar flexbox para alineación */
+    align-items: center; /* Alinear verticalmente al centro */
+    overflow: hidden; /* Ocultar el contenido que se desborda */
 }
+
+/* Estilo del texto en el lado derecho del contenedor */
 .wrapper .text-right {
-    position: absolute;
-    top: 60px;
-    right: 180px;
-    color: #f2f2f2;
-    text-shadow: 0 0 20px rgba(0, 0, 0, .3);
-    font-size: 50px;
-    user-select: none;
-    font-family: 'Parisienne', cursive;
+    position: absolute; /* Posicionamiento absoluto */
+    top: 60px; /* Distancia desde la parte superior */
+    right: 180px; /* Distancia desde la derecha */
+    color: #f2f2f2; /* Color del texto */
+    text-shadow: 0 0 20px rgba(0, 0, 0, .3); /* Sombra del texto */
+    font-size: 50px; /* Tamaño de la fuente */
+    user-select: none; /* Evitar que el texto sea seleccionable */
+    font-family: 'Parisienne', cursive; /* Fuente para este texto */
 }
+
+/* Antes del contenido del texto a la derecha */
 .wrapper .text-right::before {
-    content: 'Pioneros Start Up te da la bienvenida';
-    position: absolute;
-    top: 60px;
-    right: -100px;
+    content: 'Pioneros Start Up te da la bienvenida'; /* Texto que aparecerá antes */
+    position: absolute; /* Posicionamiento absoluto */
+    top: 60px; /* Distancia desde la parte superior */
+    right: -100px; /* Fuera de la pantalla a la derecha */
 }
+
+/* Estilo de la imagen dentro del contenedor */
 .wrapper img {
-    position: absolute;
-    right: -40px;
-    bottom: -160px;
-    width: 60%;
-    transform: rotate(260deg);
+    position: absolute; /* Posicionamiento absoluto */
+    right: -40px; /* Desplazamiento desde la derecha */
+    bottom: -160px; /* Desplazamiento desde el fondo */
+    width: 60%; /* Ancho de la imagen */
+    transform: rotate(260deg); /* Rotar la imagen */
 }
+
+/* Contenedor para los formularios */
 .form-wrapper {
-    z-index: 2;
+    z-index: 2; /* Asegurarse de que esté por encima de otros elementos */
 }
+
+/* Estilo del formulario de inicio de sesión */
 .wrapper .form-wrapper.login {
-    transition: .7s ease-in-out;
-    transition-delay: .7s;
+    transition: .7s ease-in-out; /* Transición suave */
+    transition-delay: .7s; /* Retraso en la transición */
 }
+
+/* Efecto de transición al activar el contenedor */
 .wrapper.active .form-wrapper.login {
-    transition-delay: 0s;
-    transform: translateX(-400px);
+    transition-delay: 0s; /* Sin retraso en la transición */
+    transform: translateX(-400px); /* Mover a la izquierda */
 }
+
+/* Estilo del formulario de registro */
 .wrapper .form-wrapper.register {
-    position: absolute;
-    margin-top: 15px;
-    transform: translateX(-400px);
-    transition: .7s ease-in-out;
+    position: absolute; /* Posicionamiento absoluto */
+    margin-top: 15px; /* Margen superior */
+    transform: translateX(-400px); /* Mover a la izquierda inicialmente */
+    transition: .7s ease-in-out; /* Transición suave */
 }
+
+/* Efecto de transición al activar el contenedor de registro */
 .wrapper.active .form-wrapper.register {
-    transition-delay: .7s;
-    transform: translateX(0);
+    transition-delay: .7s; /* Retraso en la transición */
+    transform: translateX(0); /* Regresar a la posición original */
 }
+
+/* Estilo del título de los formularios */
 h2 {
-    font-size: 2em;
-    text-align: center;
-    color: #f2f2f2;
+    font-size: 2em; /* Tamaño de la fuente */
+    text-align: center; /* Centrar el texto */
+    color: #f2f2f2; /* Color del texto */
 }
+
+/* Estilo de los cuadros de entrada */
 .input-box {
-    position: relative;
-    width: 320px;
-    margin: 30px 0;
+    position: relative; /* Posicionamiento relativo */
+    width: 320px; /* Ancho del cuadro de entrada */
+    margin: 30px 0; /* Margen superior e inferior */
 }
+
+/* Estilo del campo de entrada */
 .input-box input {
-    width: 100%;
-    height: 50px;
-    background: transparent;
-    border: 2px solid #f2f2f2;
-    outline: none;
-    border-radius: 40px;
-    font-size: 1em;
-    color: #f2f2f2;
-    padding: 0 20px 0 40px;
+    width: 100%; /* Ancho completo */
+    height: 50px; /* Altura del campo */
+    background: transparent; /* Fondo transparente */
+    border: 2px solid #f2f2f2; /* Borde */
+    outline: none; /* Sin contorno al seleccionar */
+    border-radius: 40px; /* Bordes redondeados */
+    font-size: 1em; /* Tamaño de la fuente */
+    color: #f2f2f2; /* Color del texto */
+    padding: 0 20px 0 40px; /* Espaciado interno */
 }
+
+/* Estilo del placeholder en los campos de entrada */
 .input-box input::placeholder {
-    color: rgba(255, 255, 255, .3);
+    color: rgba(255, 255, 255, .3); /* Color del placeholder */
 }
+
+/* Estilo del icono dentro de los cuadros de entrada */
 .input-box .icon {
-    position: absolute;
-    left: 15px;
-    color: #f2f2f2;
-    font-size: 1.2em;
-    line-height: 55px;
+    position: absolute; /* Posicionamiento absoluto */
+    left: 15px; /* Distancia desde la izquierda */
+    color: #f2f2f2; /* Color del icono */
+    font-size: 1.2em; /* Tamaño del icono */
+    line-height: 55px; /* Alineación vertical */
 }
+
+/* Estilo del enlace para recuperar la contraseña */
 .forgot-pass {
-    margin: -15px 0 15px 15px;
+    margin: -15px 0 15px 15px; /* Margen alrededor */
 }
+
+/* Estilo del enlace de "olvidé mi contraseña" */
 .forgot-pass a {
-    color: #f2f2f2;
-    font-size: .9em;
-    text-decoration: none;
+    color: #f2f2f2; /* Color del enlace */
+    font-size: .9em; /* Tamaño de la fuente */
+    text-decoration: none; /* Sin subrayado */
 }
+
+/* Estilo para el efecto hover en el enlace de contraseña */
 .forgot-pass a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Subrayado al pasar el cursor */
 }
+
+/* Estilo del botón */
 button {
-    width: 100%;
-    height: 45px;
-    background: #f2f2f2;
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    cursor: pointer;
-    font-size: 1em;
-    color: #54880e;
-    font-weight: 500;
+    width: 100%; /* Ancho completo */
+    height: 45px; /* Altura del botón */
+    background: #f2f2f2; /* Color de fondo */
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno */
+    border-radius: 40px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar */
+    font-size: 1em; /* Tamaño de la fuente */
+    color: #54880e; /* Color del texto */
+    font-weight: 500; /* Grosor de la fuente */
 }
+
+/* Estilo de los enlaces para iniciar sesión/registrarse */
 .sign-link {
-    font-size: .9em;
-    text-align: center;
-    margin: 25px 0;
+    font-size: .9em; /* Tamaño de la fuente */
+    text-align: center; /* Centrar el texto */
+    margin: 25px 0; /* Margen alrededor */
 }
+
+/* Estilo del texto en la sección de enlaces */
 .sign-link p {
-    color: #f2f2f2;
+    color: #f2f2f2; /* Color del texto */
 }
+
+/* Estilo del enlace dentro de la sección de enlaces */
 .sign-link p a {
-    color: #f2f2f2;
-    text-decoration: none;
-    font-weight: 600;
+    color: #f2f2f2; /* Color del enlace */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: 600; /* Grosor de la fuente */
 }
+
+/* Estilo para el efecto hover en el enlace */
 .sign-link p a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Subrayado al pasar el cursor */
 }

@@ -1,170 +1,174 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box; /* Establece el modelo de caja para que el padding y el borde se incluyan en el ancho y alto total de los elementos */
+    margin: 0; /* Elimina los márgenes predeterminados de los elementos */
+    padding: 0; /* Elimina el padding predeterminado de los elementos */
+    font-family: Arial, Helvetica, sans-serif; /* Define la fuente general del documento */
 }
 
 body {
-    background-image: url(image/17788416_5894048.jpg);
+    background-image: url(image/17788416_5894048.jpg); /* Establece una imagen de fondo para el cuerpo de la página */
 }
 
 .wrapper {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%; /* Ancho del contenedor principal al 100% */
+    height: 100vh; /* Altura del contenedor principal igual a la altura de la ventana */
+    display: flex; /* Utiliza Flexbox para alinear elementos dentro del contenedor */
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: center; /* Centra horizontalmente los elementos */
 }
 
 .container {
-    height: 400px;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: start;
+    height: 400px; /* Establece una altura fija para el contenedor de tarjetas */
+    display: flex; /* Utiliza Flexbox para alinear las tarjetas en una fila */
+    flex-wrap: nowrap; /* Evita que las tarjetas se envuelvan en varias filas */
+    justify-content: start; /* Alinea las tarjetas al inicio del contenedor */
 }
 
 .card {
-    width: 80px;
-    border-radius: .75rem;
-    background-size: cover;
-    cursor: pointer;
-    overflow: hidden;
-    border-radius: 2rem;
-    margin: 0 10px;
-    display: flex;
-    align-items: flex-end;
-    transition: .6s cubic-bezier(.28,-0.03,0,.99);
-    box-shadow: 0px 10px 30px -5px rgb(255, 255, 255);
+    width: 80px; /* Ancho de cada tarjeta */
+    border-radius: .75rem; /* Bordes redondeados para cada tarjeta */
+    background-size: cover; /* Asegura que la imagen de fondo cubra completamente la tarjeta */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la tarjeta */
+    overflow: hidden; /* Oculta el contenido que se desborda de la tarjeta */
+    border-radius: 2rem; /* Bordes redondeados más prominentes (elimina el anterior) */
+    margin: 0 10px; /* Margen horizontal entre tarjetas */
+    display: flex; /* Utiliza Flexbox para alinear elementos dentro de la tarjeta */
+    align-items: flex-end; /* Alinea el contenido al final (parte inferior) de la tarjeta */
+    transition: .6s cubic-bezier(.28,-0.03,0,.99); /* Transición suave para las propiedades de CSS al cambiar */
+    box-shadow: 0px 10px 30px -5px rgb(255, 255, 255); /* Sombra para dar profundidad a la tarjeta */
 }
 
 .card > .row {
-    color: white;
-    display: flex;
-    flex-wrap: nowrap;
+    color: white; /* Color del texto dentro de la fila */
+    display: flex; /* Utiliza Flexbox para alinear los elementos dentro de la fila */
+    flex-wrap: nowrap; /* Evita que los elementos de la fila se envuelvan */
 }
 
 .card > .row > .icon {
-    background: rgb(82, 82, 240);
-    color: white;
-    border-radius: 50%;
-    width: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
+    background: rgb(82, 82, 240); /* Color de fondo para el ícono */
+    color: white; /* Color del texto en el ícono */
+    border-radius: 50%; /* Hace el ícono circular */
+    width: 80px; /* Ancho del ícono */
+    display: flex; /* Utiliza Flexbox para centrar el contenido dentro del ícono */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    margin: 20px; /* Margen alrededor del ícono */
 }
 
 .card > .row > .description {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    overflow: hidden;
-    height: 80px;
-    width: 520px;
-    opacity: 0;
-    transform: translateY(30px);
-    transition-delay: .3s;
-    transition: all .3s ease;
+    display: flex; /* Utiliza Flexbox para alinear la descripción dentro de la tarjeta */
+    justify-content: center; /* Centra horizontalmente la descripción */
+    flex-direction: column; /* Alinea los elementos de la descripción en una columna */
+    overflow: hidden; /* Oculta el contenido que se desborda de la descripción */
+    height: 80px; /* Altura fija para la descripción */
+    width: 520px; /* Ancho fijo para la descripción */
+    opacity: 0; /* Inicialmente oculta la descripción */
+    transform: translateY(30px); /* Desplaza la descripción hacia abajo inicialmente */
+    transition-delay: .3s; /* Retraso en la transición de la opacidad */
+    transition: all .3s ease; /* Transición suave para todas las propiedades */
 }
 
 .description p {
-    color: #ffffff;
-    padding-top: 5px;
+    color: #ffffff; /* Color del texto en el párrafo de la descripción */
+    padding-top: 5px; /* Espaciado superior para el párrafo */
 }
 
 .description h4 {
-    text-transform: uppercase;
+    text-transform: uppercase; /* Convierte el texto del encabezado a mayúsculas */
 }
 
 input {
-    display: none;
+    display: none; /* Oculta los elementos de entrada (checkboxes) */
 }
 
 input:checked + label {
-    width: 600px;
+    width: 600px; /* Cambia el ancho de la etiqueta asociada al input si el input está marcado */
 }
 
 input:checked + label .description {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
+    opacity: 1 !important; /* Muestra la descripción si el input está marcado */
+    transform: translateY(0) !important; /* Restaura la posición de la descripción */
 }
 
+/* Imágenes de fondo para cada tarjeta */
 .card[for="c1"] {
-    background-image: url('image/aesthetic-golden-earrings-assortment-flat-lay.jpg');
+    background-image: url('image/aesthetic-golden-earrings-assortment-flat-lay.jpg'); /* Fondo de la tarjeta 1 */
 }
 .card[for="c2"] {
-    background-image: url('image/female-with-fashionable-silver-bracelet-with-pendant.jpg');
+    background-image: url('image/female-with-fashionable-silver-bracelet-with-pendant.jpg'); /* Fondo de la tarjeta 2 */
 }
 .card[for="c3"] {
-    background-image: url('image/Conjunto\ sencillo\ de\ plata\ y\ oro\ con\ collar\,\ aretes\ y\ anillo.png');
+    background-image: url('image/Conjunto\ sencillo\ de\ plata\ y\ oro\ con\ collar\,\ aretes\ y\ anillo.png'); /* Fondo de la tarjeta 3 */
 }
 .card[for="c4"] {
-    background-image: url('image/young-man-wearing-chain-necklace.jpg');
+    background-image: url('image/young-man-wearing-chain-necklace.jpg'); /* Fondo de la tarjeta 4 */
 }
 
+/* Estilo para el enlace "Leer más" */
 .read {
-    background: linear-gradient(90deg, #3264ee, #22b4ce);
-    padding: 6px;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 8px;
-    margin-left: 60%;
-  }
+    background: linear-gradient(90deg, #3264ee, #22b4ce); /* Gradiente de fondo para el botón */
+    padding: 6px; /* Espaciado interno para el botón */
+    color: #fff; /* Color del texto en el botón */
+    text-decoration: none; /* Elimina el subrayado del texto */
+    border-radius: 8px; /* Bordes redondeados para el botón */
+    margin-left: 60%; /* Margen izquierdo para desplazar el botón */
+}
 
-
-
-
-/* Header */
+/* Estilos del encabezado */
 .header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: transparent;
-    padding: 20px 0;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+    position: fixed; /* Fija el encabezado en la parte superior de la página */
+    top: 0; /* Posiciona el encabezado en la parte superior */
+    width: 100%; /* Ancho del encabezado al 100% */
+    background-color: transparent; /* Fondo transparente para el encabezado */
+    padding: 20px 0; /* Espaciado superior e inferior para el encabezado */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Sombra sutil para el encabezado */
+    z-index: 1000; /* Asegura que el encabezado esté por encima de otros elementos */
+    display: flex; /* Utiliza Flexbox para alinear el contenido dentro del encabezado */
+    justify-content: center; /* Centra horizontalmente el contenido del encabezado */
+    align-items: center; /* Centra verticalmente el contenido del encabezado */
+    color: white; /* Color del texto en el encabezado */
 }
 
 /* Navegación */
 .navigation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1px;
+    display: flex; /* Utiliza Flexbox para alinear los elementos del menú */
+    justify-content: center; /* Centra horizontalmente los elementos del menú */
+    align-items: center; /* Centra verticalmente los elementos del menú */
+    margin-top: 1px; /* Margen superior para el menú */
 }
 
 /* Lista de navegación */
 .navigation ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
-    align-items: center; /* Asegura que todos los elementos del menú, incluidos los logos, estén alineados verticalmente */
+    list-style: none; /* Elimina los estilos de lista de los elementos */
+    display: flex; /* Utiliza Flexbox para alinear los elementos de la lista en una fila */
+    gap: 30px; /* Espacio entre los elementos de la lista */
+    margin: 0; /* Elimina márgenes de la lista */
+    padding: 0; /* Elimina padding de la lista */
+    align-items: center; /* Asegura que todos los elementos del menú estén alineados verticalmente */
 }
 
 /* Logo y otros contenidos */
 .header-content,
 .logo {
-    display: flex;
-    align-items: center; /* Alinea verticalmente los logos */
+    display: flex; /* Utiliza Flexbox para alinear el contenido del encabezado */
+    align-items: center; /* Alinea verticalmente los logos y otros elementos */
 }
 
 .logo img {
     display: block; /* Asegura que las imágenes no tengan espacio en línea sobrante */
     margin-right: 1px; /* Espacio entre logos y otros elementos si es necesario */
 }
+
 /* Estilo para quitar las líneas de los enlaces en el menú */
 .navigation ul li a {
     text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: inherit; /* Mantiene el color del texto o el que hayas asignado previamente */
+    color: inherit; /* Mantiene el color del texto del enlace */
 }
 
 .navigation ul li a:hover {
     text-decoration: none; /* Asegura que al pasar el mouse no se muestre el subrayado */
+}
+
+.comprar {
+    margin-top: 200px; /* Margen superior para el contenedor de compra */
 }

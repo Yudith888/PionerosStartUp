@@ -1,18 +1,57 @@
+/* Variables de tamaño de las tarjetas */
 :root {
-    --card-height: 350px;
-    --card-width: calc(var(--card-height) / 1.5);
-  }
-*{
-    box-sizing: border-box;
+    --card-height: 350px; /* Altura de la tarjeta */
+    --card-width: calc(var(--card-height) / 1.5); /* Ancho de la tarjeta, proporcional a la altura */
 }
 
+* {
+    box-sizing: border-box; /* Incluye el padding y border en el tamaño total de los elementos */
+}
+
+/* Estilos de la ventana modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijado para superponer a la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    z-index: 1000; /* Colocado encima del resto */
+    justify-content: center; /* Centra el contenido horizontal */
+    align-items: center; /* Centra el contenido vertical */
+}
+
+/* Estilo del contenido de la ventana modal */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    max-width: 90%;
+    text-align: center;
+}
+
+/* Botón para cerrar la ventana modal */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Estilos para un botón de lectura */
 .read {
     background: linear-gradient(90deg, #3264ee, #22b4ce);
     padding: 6px;
     color: #fff;
     text-decoration: none;
     border-radius: 8px;
-  }
+}
+
+/* Estilos del cuerpo de la página */
 body {
     width: 100vw;
     height: 100vh;
@@ -20,38 +59,46 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(image/17788416_5894048.jpg);
-  }
-  .card {
-    width: var(--card-width);
-    height: var(--card-height);
+    background-image: url(image/17788416_5894048.jpg); /* Fondo de la página */
+}
+
+/* Estilos para las tarjetas */
+.card {
+    width: var(--card-width); /* Usa el ancho definido en :root */
+    height: var(--card-height); /* Usa la altura definida en :root */
     position: relative;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     padding: 0 36px;
-    perspective: 2500px;
+    perspective: 2500px; /* Añade perspectiva para efectos 3D */
     margin: 0 50px;
-  }
-.cover-image{
+}
+
+/* Imagen de fondo para las tarjetas */
+.cover-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.wrapper{
+
+/* Contenedor de la tarjeta */
+.wrapper {
     transition: all 0.5s;
     position: absolute;
     width: 100%;
     z-index: -1;
 }
-.card:hover .wrapper{
-    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
-    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow:2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow:2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+
+/* Efecto 3D al pasar el mouse sobre la tarjeta */
+.card:hover .wrapper {
+    transform: perspective(900px) translateY(-5%) rotateX(25deg);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75); /* Sombra para la tarjeta */
 }
+
+/* Sombras en la tarjeta */
 .wrapper::before,
-.wrapper::after{
+.wrapper::after {
     content: "";
     opacity: 0;
     width: 100%;
@@ -60,53 +107,66 @@ body {
     position: absolute;
     left: 0;
 }
-.wrapper::before{
+
+/* Gradiente superior */
+.wrapper::before {
     top: 0;
     height: 100%;
     background-image: linear-gradient(
         to top,
         transparent 46%,
-        rgba(12, 13, 19, 0.5)68%,
+        rgba(12, 13, 19, 0.5) 68%,
         rgba(12, 13, 19) 97%
     );
 }
-.wrapper::after{
+
+/* Gradiente inferior */
+.wrapper::after {
     bottom: 0;
     opacity: 1;
     background-image: linear-gradient(
         to bottom,
         transparent 46%,
         rgba(12, 13, 19, 0.5) 68%,
-        rgba(12, 13, 19)97%
+        rgba(12, 13, 19) 97%
     );
 }
+
+/* Muestra las sombras al pasar el mouse */
 .card:hover .wrapper::before,
-.wrapper::after{
+.wrapper::after {
     opacity: 1;
 }
-.card:hover .wrapper::after{
-    height: 120px;
+
+.card:hover .wrapper::after {
+    height: 120px; /* Aumenta la sombra inferior en hover */
 }
+
+/* Título de la tarjeta */
 .title {
     width: 100%;
     transition: transform 0.5s;
-  }
-  .card:hover .title {
-    transform: translate3d(0%, -50px, 100px);
-  }
-  .character {
+}
+
+.card:hover .title {
+    transform: translate3d(0%, -50px, 100px); /* Mueve el título en hover */
+}
+
+/* Estilos para el personaje */
+.character {
     width: 100%;
     opacity: 0;
     transition: all 0.5s;
     position: absolute;
     z-index: -1;
-  }
-  .card:hover .character {
-    opacity: 1;
+}
+
+.card:hover .character {
+    opacity: 1; /* Aparece el personaje en hover */
     transform: translate3d(0%, -30%, 100px);
-  }
-  
-/* Header */
+}
+
+/* Estilos del encabezado */
 .header {
     position: fixed;
     top: 0;
@@ -131,31 +191,34 @@ body {
 
 /* Lista de navegación */
 .navigation ul {
-    list-style: none;
+    list-style: none; /* Sin puntos de lista */
     display: flex;
-    gap: 30px;
+    gap: 30px; /* Espaciado entre elementos */
     margin: 0;
     padding: 0;
-    align-items: center; /* Asegura que todos los elementos del menú, incluidos los logos, estén alineados verticalmente */
+    align-items: center;
 }
 
-/* Logo y otros contenidos */
+/* Logo y contenidos adicionales del encabezado */
 .header-content,
 .logo {
     display: flex;
-    align-items: center; /* Alinea verticalmente los logos */
+    align-items: center;
 }
 
+/* Imagen del logo */
 .logo img {
-    display: block; /* Asegura que las imágenes no tengan espacio en línea sobrante */
-    margin-right: 1px; /* Espacio entre logos y otros elementos si es necesario */
-}
-/* Estilo para quitar las líneas de los enlaces en el menú */
-.navigation ul li a {
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: inherit; /* Mantiene el color del texto o el que hayas asignado previamente */
+    display: block; /* Elimina espacios innecesarios */
+    margin-right: 1px;
 }
 
+/* Estilos para los enlaces de la navegación */
+.navigation ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Efecto hover en los enlaces */
 .navigation ul li a:hover {
-    text-decoration: none; /* Asegura que al pasar el mouse no se muestre el subrayado */
+    text-decoration: none;
 }

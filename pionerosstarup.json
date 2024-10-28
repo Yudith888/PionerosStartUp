@@ -1,0 +1,383 @@
+{
+    "titulo": "Moda",
+    "nuevosdisenos": [
+        {
+            "nombre": "Conjunto blusa y falda",
+            "precio": "$80.000",
+            "color": [
+                "Negro",
+                "Blanco",
+                "Rojo"
+            ],
+            "Tallas": [
+                "M",
+                "S",
+                "L",
+                "XL",
+                "XXL",
+                "XXXL"
+            ]
+        },
+        {
+            "nombre": "Conjunto hombre y mujer",
+            "precio": "$200.000",
+            "sexo": [
+                "Mujer",
+                "Hombre"
+            ],
+            "color": [
+                "Negro",
+                "Blanco",
+                "Rojo",
+                "Gris"
+            ],
+            "Tallas": [
+                "M",
+                "S",
+                "L",
+                "XL",
+                "XXL",
+                "XXXL"
+            ]
+        },
+        {
+            "nombre": "Chaqueta de jean y camisa (Hombre)",
+            "precio": "$100.000",
+            "camisa": [
+                "Negro",
+                "Blanco",
+                "Rojo",
+                "Gris"
+            ],
+            "tallascamisa": [
+                "M",
+                "S",
+                "L",
+                "XL",
+                "XXL",
+                "XXXL"
+            ],
+            "chaqueta de jean": [
+                "Negro",
+                "Blanco",
+                "Rojo",
+                "Gris"
+            ],
+            "tallachaqueta": [
+                "M",
+                "S",
+                "L",
+                "XL",
+                "XXL",
+                "XXXL"
+            ]
+        },
+        {
+            "nombre": "Sudadera de hombre y mujer",
+            "precio": "$300.000",
+            "sexo": [
+                "Mujer",
+                "Hombre"
+            ],
+            "color": [
+                "Negro",
+                "Blanco",
+                "Rojo",
+                "Gris"
+            ],
+            "Tallas": [
+                "M",
+                "S",
+                "L",
+                "XL",
+                "XXL",
+                "XXXL"
+            ]
+        }
+    ],
+    "tuestilo agendamiento de citas": [
+        {
+            "nombrecompleto": [],
+            "telefono": [],
+            "fecha": [],
+            "hora": [],
+            "seccion": [
+                "Maquillaje",
+                "Cambio de vestuario",
+                "Cuidados para la piel",
+                "Tratamientos capilares"
+            ]
+        },
+        {
+            "nombreseccion": "Maquillaje",
+            "descripcion": "¡Maquíllate en nuestro centro y descubre tu mejor versión!."
+        },
+        {
+            "nombreseccion": "Cambio de vestuario",
+            "descripcion": "Renueva tu estilo, cambia tu vestuario con nosotros."
+        },
+        {
+            "nombreseccion": "Cuidados para la piel",
+            "descripcion": "Cuida tu piel, ilumina tu belleza con nuestros expertos."
+        },
+        {
+            "nombreseccion": "Tratamientos capilares",
+            "descripcion": "Cuida tu piel, ilumina tu belleza con nuestros expertos."
+        }
+    ],
+    "Venta de ropa": [
+        {
+            "nombre": "Jogger para hombre",
+            "descripcion": "¡Renueva tu estilo y ahorra! Encuentra los joggers de hombre de segunda mano perfectos para lucir genial sin gastar de más.",
+            "precio": "$15.000"
+        },
+        {
+            "nombre": "Blusa elegante para mujer",
+            "descripcion": "¡Descubre la elegancia que te mereces! Nuestras blusas de mujer son perfectas para brillar en cualquier ocasión.",
+            "precio": "$15.000"
+        },
+        {
+            "nombre": "Camisa manga corta para hombre",
+            "descripcion": "Con nuestras camisas de manga corta, cada día es una oportunidad para expresarte. ¡Haz que cada look cuente!",
+            "precio": "$30.000"
+        },
+        {
+            "nombre": "Saco en hilo para mujer",
+            "descripcion": "Realza tu estilo con nuestros sacos de hilo, perfectos para darle un toque chic a tu look diario.",
+            "precio": "$25.000"
+        }
+    ],
+    "Ecommerce": [
+        {
+            "nombre": "ARETES PARA TODA OCASION",
+            "descripcion": "Candongas en oro y perlas de fantasia",
+            "precio": "$25.000"
+        },
+        {
+            "nombre": "BRASALETE PARA LUCIR EN CUALQUIER MOMENTO",
+            "descripcion": "Brasalete de plata con dije en el centro",
+            "precio": "$30.000"
+        },
+        {
+            "nombre": "CONJUNTO DE PLATA Y ORO",
+            "descripcion": "Collar, anillo y aretes de plata y oro en un precio increible",
+            "precio": "$100.000"
+        },
+        {
+            "nombre": "COLLARES PARA HOMBRE",
+            "descripcion": "Cadena de oro",
+            "precio": "$30.000"
+        }
+    ],
+    "Personalizacion": [
+        {
+            "nombre": "Pulseras personalizadas",
+            "precio": "$20.000"
+        },
+        {
+            "nombre": "Reloj personalizados para hombre",
+            "precio": "$50.000"
+        },
+        {
+            "nombre": "Collares personalizados",
+            "precio": "$30.000"
+        },
+        {
+            "nombre": "Sombreros personalizados para hombre",
+            "precio": "$18.000"
+        }
+    ],
+    "Emprendedor": [
+        {
+            "descripcion": "¿Te gustaria ser parte de nuestra red de emprendedores de moda para colaborar en diseños unicos y compartir tendencias emergentes?"
+        },
+        {
+            "titulo": "Pasion por la moda"
+        },
+        {
+            "titulo": "Habilidades de diseño"
+        },
+        {
+            "titulo": "Habilidad para trabajar en equipo"
+        },
+        {
+            "titulo": "Habilidad para trabajar en equipo"
+        }
+    ],
+    "FormEmprendimiento": [
+        {
+            "nombrecompleto": "Miryam",
+            "correoelectronico": "yud@gmail.com",
+            "telefono": "3245162567",
+            "nombredetuemprendimiento": "Sueños en ruta",
+            "sectordetuemprendimiento": [
+                "Moda",
+                "Tecnologia"
+            ],
+            "descripcionbrevedetuemprendimiento": "Una aerolinea"
+        }
+    ],
+    "Contactanos": [
+        {
+            "nombrecompleto": "Miryam",
+            "apellidocompleto": "Sabogal",
+            "correoelectronico": "yud@gmail.com",
+            "mensaje": "Quisiera solicitar una asesoria"
+        }
+    ],
+    "Login": [
+        {
+            "email": "yud@gmail.com",
+            "contrasena": "12345678"
+        }
+    ],
+    "Registro": [
+        {
+            "nombrecompleto": "Miryam",
+            "email": "yud@gmail.com",
+            "contrasena": "12345678"
+        }
+    ],
+    "Titu": "Tecnologia",
+    "Creaciones": [
+        {
+            "nombre": "HTML y CSS",
+            "titulo0": "Sueños en ruta",
+            "descripcion": "Desarrollo de un sitio web para una agencia de viajes, con un diseño limpio y profesional. Implementando una solucion en HTML y CSS",
+            "titulo1": "Interfaz",
+            "descripcion1": "Uso de un diseño moderno y visualmente atractivo con imagenes de alta calidad de destinos turisticos",
+            "titulo2": "Programacion",
+            "descripcion2": "Informacion detallada sobre cada destino, incluyendo atracciones, clima y actividades recomendadas",
+            "titulo3": "Informacion",
+            "descripcion3": "Presentacion de hoteles populares en una galeria de imagenes con efectos hover para mostrar informacion adicional"
+        },
+        {
+            "nombre": "WordPress",
+            "titulo0": "Estilo Emprende",
+            "descripcion": "El proyecto consiste en el desarrollo de un sitio web para un emprendimiento de moda, diseñado para mostrar y vender colecciones de ropa y accesorios de manera atractiva y funcional",
+            "titulo1": "Interfaz",
+            "descripcion1": "Menu de navegacion claro y fijo en la parte superior con enlaces a las diferentes secciones del sitio Inicio, Servicios, Galeria, Sobre nosotros, Consultoria y tus compras",
+            "titulo2": "Desarrollo",
+            "descripcion2": "Paginas individuales para cada producto con imagenes de alta resolucion, descripciones detalladas y opciones de agregar al carrito",
+            "titulo3": "Informacion",
+            "descripcion3": "Formulario sencillo y accesible creado con Elementor para que los usuarios puedan enviar sus consultas"
+        },
+        {
+            "nombre": "Ilustrator",
+            "titulo0": "Estilo Emprende",
+            "descripcion": "La maquetacion servira como guia para el desarrollo del sitio web, asegurando coherencia y estilo en todas las paginas",
+            "titulo1": "Interfaz",
+            "descripcion1": "Seccion para destacar promociones y descuentos",
+            "titulo2": "Diseño",
+            "descripcion2": "Una galeria visualmente atractiva con imagenes de alta calidad de cada coleccion",
+            "titulo3": "Informacion",
+            "descripcion3": "Elementos graficos diseñados para enriquecer el contenido visual"
+        }
+    ],
+    "Creaciondesitiosweb": [
+        {
+            "descripcion": "Un sitio web a medida para tus grandes ideas",
+            "descripcion1": "Lleva tu negocio al mundo con un sitio web unico",
+            "descripcion2": "Da el primer paso digital con un sitio web impactante",
+            "descripcion3": "Inicia hoy, no esperes mas"
+        }
+    ],
+    "Serviciotecnico": [
+        {
+            "nombre": "Reparación de computadoras",
+            "descripcion": " Cansado de reparaciones sin futuro, en Pioneros Start Up tenemos las mejores garantías para las reparaciones que necesites"
+        },
+        {
+            "nombre": "Instalación de componentes",
+            "descripcion": "  Instalación de forma sencilla y sin cobrar más"
+        },
+        {
+            "nombre": "Instalación de cualquier programa<",
+            "descripcion": " Office, Adobe o cualquier otro programa"
+        },
+        {
+            "nombre": "Reparación de CPU",
+            "descripcion": " Garantizamos nuestro trabajo, ponte en contacto con nosotross"
+        }
+    ],
+    "Gadgets": [
+        {
+            "nombre": "Smartwatch",
+            "precio": "$50.0000"
+        },
+        {
+            "nombre": "Auriculares inalámbricos con cancelación de ruido",
+            "precio": "$200.000"
+        },
+        {
+            "nombre": "Tablet híbrida (2 en 1)",
+            "precio": "$800.000"
+        },
+        {
+            "nombre": "Drones con cámara",
+            "precio": "$180.000"
+        },
+        {
+            "nombre": " Cargador inalámbrico",
+            "precio": "$15.000"
+        },
+        {
+            "nombre": "Lentes de realidad aumentada",
+            "precio": "$80.000"
+        },
+        {
+            "nombre": "Teclado mecánico retroiluminado",
+            "precio": "$55.000"
+        },
+        {
+            "nombre": " Purificador de aire portátil",
+            "precio": "$18.000"
+        },
+        {
+            "nombre": "Estación de carga múltiple",
+            "precio": "$60.000"
+        },
+        {
+            "nombre": "Controlador de hogar inteligente",
+            "precio": "$500.000"
+        },
+        {
+            "nombre": "Mini proyector portátil",
+            "precio": "$85.000"
+        },
+        {
+            "nombre": "Cámara de seguridad inteligente",
+            "precio": "$100.000"
+        }
+    ],
+
+    
+    "Emprendedores": [
+        {
+            "nombre": "EcoCharge",
+            "descripcion": "Una startup especializada en el desarrollo de soluciones de energía renovable portátiles.",
+            "modal": "Integración de paneles solares ultradelgados en mochilas, maletines y otros accesorios de uso diario."
+        },
+        {
+            "nombre": "EduConnect VR",
+            "descripcion": "Combina VR con análisis de datos para personalizar la experiencia de aprendizaje de cada usuario",
+             "modal": "Plataforma educativa que ofrece lecciones y experiencias inmersivas a través de realidad virtual (VR)."
+        },
+        {
+            "nombre": "ZeroWaste Tech",
+            "descripcion": "Basureros inteligentes conectados a una app que recomienda formas de reducir, reciclar o reutilizar productos.",
+             "modal": "Empresa que desarrolla soluciones tecnológicas para reducir el desperdicio en el hogar mediante un sistema automatizado de gestión de residuos."
+        }
+    ],
+
+    "Tucompras": [
+        {
+            "nombre": "Tu Carro de Compras",
+            "Productos": "Auriculares inalámbricos con cancelacion de ruido",
+            "total": "$200.000"
+        }
+    ]
+
+
+
+}

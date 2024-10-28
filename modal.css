@@ -1,72 +1,82 @@
+/* Importa la fuente Poppins desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+/* Aplica el modelo de caja y la fuente Poppins a todos los elementos */
 * {
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho y alto total */
+    font-family: 'Poppins', sans-serif; /* Establece la fuente Poppins para todo el documento */
 }
 
+/* Estilo del enlace que activa el modal */
 .modal-trigger {
-    position: absolute;
-    top: 149%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-decoration: none;
-    border: 3px solid #229395;
-    padding: 1px 1px;
-    font-size: 28px;
-    color: #000;
+    position: absolute; /* Posiciona el elemento de forma absoluta dentro de su contenedor */
+    top: 149%; /* Coloca el elemento un 49% más allá de la altura del contenedor */
+    left: 50%; /* Centra el elemento horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición para centrarlo verticalmente */
+    text-decoration: none; /* Elimina el subrayado del texto */
+    border: 3px solid #229395; /* Establece un borde de 3px de color verde */
+    padding: 1px 1px; /* Agrega padding de 1px arriba y abajo, 1px a los lados */
+    font-size: 28px; /* Establece el tamaño de la fuente a 28px */
+    color: #000; /* Establece el color del texto a negro */
 }
 
+/* Estilo del contenedor del modal */
 .modal-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s;
+    position: fixed; /* Fija el contenedor del modal en la ventana del navegador */
+    top: 0; /* Alínea la parte superior al 0% del viewport */
+    left: 0; /* Alínea la parte izquierda al 0% del viewport */
+    width: 100%; /* Establece el ancho al 100% del viewport */
+    height: 100vh; /* Establece la altura a 100vh (100% de la altura de la ventana) */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro semitransparente */
+    opacity: 0; /* Inicialmente, el modal es invisible */
+    visibility: hidden; /* Oculta el modal inicialmente */
+    transition: all 0.3s; /* Transición suave para todos los cambios de propiedad */
 }
 
+/* Estilo del modal en sí */
 .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 50%;
-    transition: all .3s .3s;
-    box-shadow: 0 35px 35px rgba(0, 0, 0, .3);
+    position: absolute; /* Posiciona el modal de forma absoluta dentro del contenedor */
+    top: 50%; /* Coloca el modal en el medio del contenedor */
+    left: 50%; /* Coloca el modal en el medio del contenedor */
+    transform: translate(-50%, -50%); /* Centra el modal en ambas direcciones */
+    text-align: center; /* Alinea el texto al centro */
+    width: 50%; /* Establece el ancho del modal al 50% del contenedor */
+    transition: all .3s .3s; /* Transición suave para el modal, con un retraso */
+    box-shadow: 0 35px 35px rgba(0, 0, 0, .3); /* Sombra para dar profundidad */
 }
 
+/* Estilo para el botón de cerrar el modal */
 .close {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    cursor: pointer;
-    font-size: 24px;
-    font-weight: 600;
-    color: #FFF;
-    text-decoration: none;
+    position: absolute; /* Posiciona el botón de cerrar de forma absoluta dentro del modal */
+    top: 16px; /* Coloca el botón en la parte superior del modal */
+    right: 16px; /* Coloca el botón a la derecha del modal */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar por encima */
+    font-size: 24px; /* Establece el tamaño de la fuente a 24px */
+    font-weight: 600; /* Establece el grosor de la fuente a 600 */
+    color: #FFF; /* Establece el color del texto a blanco */
+    text-decoration: none; /* Elimina el subrayado del texto */
 }
 
+/* Estilo del encabezado y pie del modal */
 .modal-header,
 .modal-footer {
-    padding: 8px;
-    background-color: #229395;
+    padding: 8px; /* Agrega padding de 8px en el encabezado y pie */
+    background-color: #229395; /* Establece un fondo verde para el encabezado y pie */
 }
 
+/* Estilo del cuerpo del modal */
 .modal-body {
-    padding: 64px;
-    background-color: #7ACBCD;
+    padding: 64px; /* Agrega padding de 64px en el cuerpo del modal */
+    background-color: #7ACBCD; /* Establece un fondo de color azul claro */
 }
 
+/* Estilo para mostrar el modal cuando es seleccionado (target) */
 .modal-container:target {
-    opacity: 1;
-    visibility: visible;
+    opacity: 1; /* Cambia la opacidad a 1 para hacer visible el modal */
+    visibility: visible; /* Cambia la visibilidad a visible */
 }
 
+/* Estilo para animar el modal cuando es seleccionado (target) */
 .modal-container:target .modal {
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* Ajusta la posición para centrarlo correctamente */
 }
